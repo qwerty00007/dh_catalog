@@ -1,0 +1,27 @@
+image:
+  repository: dh.tccr.io/truecharts/snapdrop
+  tag: latest@sha256:a502d477dc26d0fe541f5eb7841af6d45a9ddd108168e7e15c1fd4757c09a3fd
+  pullPolicy: IfNotPresent
+
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+
+podSecurityContext:
+  runAsUser: 0
+  runAsGroup: 0
+
+service:
+  main:
+    ports:
+      main:
+        port: 10215
+        targetPort: 80
+
+persistence:
+  config:
+    enabled: true
+    mountPath: "/config"
+
+portal:
+  enabled: true

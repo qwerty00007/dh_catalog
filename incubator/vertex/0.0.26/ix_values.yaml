@@ -1,0 +1,28 @@
+env:
+  PORT: "3000"
+image:
+  pullPolicy: IfNotPresent
+  repository: dh.tccr.io/truecharts/vertex
+  tag: vstable@sha256:6d5ebadc08f40d57097399026dff334184c1ad5c5a85a7a2b9df82c4aa33fb05
+persistence:
+  config:
+    enabled: true
+    mountPath: /vertex
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+service:
+  main:
+    enabled: true
+    ports:
+      main:
+        enabled: true
+        port: 3000
+        protocol: TCP
+        targetPort: 3000
+
+portal:
+  enabled: true
