@@ -269,19 +269,6 @@ questions:
                       label: Value
                       schema:
                         type: string
-  - variable: env
-    group: "Container Configuration"
-    label: "Image Environment"
-    schema:
-      additional_attrs: true
-      type: dict
-      attrs:
-        - variable: USE_HTTPS
-          label: "USE HTTPS"
-          description: "Should the web interface use HTTPS(true) or HTTP?(false)"
-          schema:
-            type: boolean
-            default: false
   - variable: secretEnv
     group: "Container Configuration"
     label: "Image Secrets"
@@ -304,6 +291,19 @@ questions:
             private: true
             required: true
             default: ""
+  - variable: env
+    group: "Container Configuration"
+    label: "Image Environment"
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: USE_HTTPS
+          label: "USE HTTPS"
+          description: "Should the web interface use HTTPS(true) or HTTP?(false)"
+          schema:
+            type: boolean
+            default: false
   - variable: service
     group: Networking and Services
     label: Configure Service(s)
@@ -443,6 +443,1600 @@ questions:
                                   schema:
                                     type: int
                                     default: 10278
+        - variable: minecraft-java-tcp
+          label: "Minecraft Java Service"
+          description: "Minecraft Java Service"
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: enabled
+                label: Enable the Service
+                schema:
+                  type: boolean
+                  default: true
+                  hidden: true
+              - variable: type
+                label: Service Type
+                description: "ClusterIP's are only internally available, nodePorts expose the container to the host node System, Loadbalancer exposes the service using the system loadbalancer"
+                schema:
+                  type: string
+                  default: Simple
+                  enum:
+                    - value: Simple
+                      description: Simple
+                    - value: ClusterIP
+                      description: ClusterIP
+                    - value: NodePort
+                      description: NodePort (Advanced)
+                    - value: LoadBalancer
+                      description: LoadBalancer (Advanced)
+              - variable: loadBalancerIP
+                label: LoadBalancer IP
+                description: LoadBalancerIP
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: string
+                  default: ""
+              - variable: externalIPs
+                label: "External IP's"
+                description: "External IP's"
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: externalIP
+                      label: External IP
+                      schema:
+                        type: string
+              - variable: ipFamilyPolicy
+                label: IP Family Policy
+                description: (Advanced) Specify the IP Policy
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: string
+                  default: SingleStack
+                  enum:
+                    - value: SingleStack
+                      description: SingleStack
+                    - value: PreferDualStack
+                      description: PreferDualStack
+                    - value: RequireDualStack
+                      description: RequireDualStack
+              - variable: ipFamilies
+                label: (Advanced) IP Families
+                description: (Advanced) The IP Families that should be used
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: ipFamily
+                      label: IP Family
+                      schema:
+                        type: string
+              - variable: ports
+                label: "Service's Port(s) Configuration"
+                schema:
+                  additional_attrs: true
+                  type: dict
+                  attrs:
+                    - variable: mc-port-1-tcp
+                      label: "MC Port 1 TCP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25565
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25565
+                    - variable: mc-port-2-tcp
+                      label: "MC Port 2 TCP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25566
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25566
+                    - variable: mc-port-3-tcp
+                      label: "MC Port 3 TCP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25567
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25567
+                    - variable: mc-port-4-tcp
+                      label: "MC Port 4 TCP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25568
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25568
+                    - variable: mc-port-5-tcp
+                      label: "MC Port 5 TCP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25569
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25569
+                    - variable: mc-port-6-tcp
+                      label: "MC Port 6 TCP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25570
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25570
+        - variable: minecraft-java-udp
+          label: "Minecraft Java Service"
+          description: "Minecraft Java Service"
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: enabled
+                label: Enable the Service
+                schema:
+                  type: boolean
+                  default: true
+                  hidden: true
+              - variable: type
+                label: Service Type
+                description: "ClusterIP's are only internally available, nodePorts expose the container to the host node System, Loadbalancer exposes the service using the system loadbalancer"
+                schema:
+                  type: string
+                  default: Simple
+                  enum:
+                    - value: Simple
+                      description: Simple
+                    - value: ClusterIP
+                      description: ClusterIP
+                    - value: NodePort
+                      description: NodePort (Advanced)
+                    - value: LoadBalancer
+                      description: LoadBalancer (Advanced)
+              - variable: loadBalancerIP
+                label: LoadBalancer IP
+                description: LoadBalancerIP
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: string
+                  default: ""
+              - variable: externalIPs
+                label: "External IP's"
+                description: "External IP's"
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: externalIP
+                      label: External IP
+                      schema:
+                        type: string
+              - variable: ipFamilyPolicy
+                label: IP Family Policy
+                description: (Advanced) Specify the IP Policy
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: string
+                  default: SingleStack
+                  enum:
+                    - value: SingleStack
+                      description: SingleStack
+                    - value: PreferDualStack
+                      description: PreferDualStack
+                    - value: RequireDualStack
+                      description: RequireDualStack
+              - variable: ipFamilies
+                label: (Advanced) IP Families
+                description: (Advanced) The IP Families that should be used
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: ipFamily
+                      label: IP Family
+                      schema:
+                        type: string
+              - variable: ports
+                label: "Service's Port(s) Configuration"
+                schema:
+                  additional_attrs: true
+                  type: dict
+                  attrs:
+                    - variable: mc-port-1-udp
+                      label: "MC Port 1 UDP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25565
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25565
+                    - variable: mc-port-2-udp
+                      label: "MC Port 2 UDP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25566
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25566
+                    - variable: mc-port-3-udp
+                      label: "MC Port 3 UDP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25567
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25567
+                    - variable: mc-port-4-udp
+                      label: "MC Port 4 UDP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25568
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25568
+                    - variable: mc-port-5-udp
+                      label: "MC Port 5 UDP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25569
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25569
+                    - variable: mc-port-6-udp
+                      label: "MC Port 6 UDP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25570
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25570
+        - variable: minecraft-br
+          label: "Minecraft Bedrock Service"
+          description: "Minecraft Bedrock Service"
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: enabled
+                label: Enable the Service
+                schema:
+                  type: boolean
+                  default: true
+                  hidden: true
+              - variable: type
+                label: Service Type
+                description: "ClusterIP's are only internally available, nodePorts expose the container to the host node System, Loadbalancer exposes the service using the system loadbalancer"
+                schema:
+                  type: string
+                  default: Simple
+                  enum:
+                    - value: Simple
+                      description: Simple
+                    - value: ClusterIP
+                      description: ClusterIP
+                    - value: NodePort
+                      description: NodePort (Advanced)
+                    - value: LoadBalancer
+                      description: LoadBalancer (Advanced)
+              - variable: loadBalancerIP
+                label: LoadBalancer IP
+                description: LoadBalancerIP
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: string
+                  default: ""
+              - variable: externalIPs
+                label: "External IP's"
+                description: "External IP's"
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: externalIP
+                      label: External IP
+                      schema:
+                        type: string
+              - variable: ipFamilyPolicy
+                label: IP Family Policy
+                description: (Advanced) Specify the IP Policy
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: string
+                  default: SingleStack
+                  enum:
+                    - value: SingleStack
+                      description: SingleStack
+                    - value: PreferDualStack
+                      description: PreferDualStack
+                    - value: RequireDualStack
+                      description: RequireDualStack
+              - variable: ipFamilies
+                label: (Advanced) IP Families
+                description: (Advanced) The IP Families that should be used
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: ipFamily
+                      label: IP Family
+                      schema:
+                        type: string
+              - variable: ports
+                label: "Service's Port(s) Configuration"
+                schema:
+                  additional_attrs: true
+                  type: dict
+                  attrs:
+                    - variable: br-port-1-udp
+                      label: "MC Port 1 UDP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 19132
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 19132
+                    - variable: br-port-2-udp
+                      label: "MC Port 2 UDP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 19133
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 19133
+                    - variable: br-port-3-udp
+                      label: "MC Port 3 UDP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 19134
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 19134
+                    - variable: br-port-4-udp
+                      label: "MC Port 4 UDP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 19135
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 19135
+                    - variable: br-port-5-udp
+                      label: "MC Port 5 UDP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 19136
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 19136
+                    - variable: br-port-6-udp
+                      label: "MC Port 6 UDP"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 19137
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 19137
+        - variable: minecraft-rcon
+          label: "Minecraft RCON Service"
+          description: "Minecraft RCON Service"
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: enabled
+                label: Enable the Service
+                schema:
+                  type: boolean
+                  default: true
+                  hidden: true
+              - variable: type
+                label: Service Type
+                description: "ClusterIP's are only internally available, nodePorts expose the container to the host node System, Loadbalancer exposes the service using the system loadbalancer"
+                schema:
+                  type: string
+                  default: Simple
+                  enum:
+                    - value: Simple
+                      description: Simple
+                    - value: ClusterIP
+                      description: ClusterIP
+                    - value: NodePort
+                      description: NodePort (Advanced)
+                    - value: LoadBalancer
+                      description: LoadBalancer (Advanced)
+              - variable: loadBalancerIP
+                label: LoadBalancer IP
+                description: LoadBalancerIP
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: string
+                  default: ""
+              - variable: externalIPs
+                label: "External IP's"
+                description: "External IP's"
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: externalIP
+                      label: External IP
+                      schema:
+                        type: string
+              - variable: ipFamilyPolicy
+                label: IP Family Policy
+                description: (Advanced) Specify the IP Policy
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: string
+                  default: SingleStack
+                  enum:
+                    - value: SingleStack
+                      description: SingleStack
+                    - value: PreferDualStack
+                      description: PreferDualStack
+                    - value: RequireDualStack
+                      description: RequireDualStack
+              - variable: ipFamilies
+                label: (Advanced) IP Families
+                description: (Advanced) The IP Families that should be used
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: ipFamily
+                      label: IP Family
+                      schema:
+                        type: string
+              - variable: ports
+                label: "Service's Port(s) Configuration"
+                schema:
+                  additional_attrs: true
+                  type: dict
+                  attrs:
+                    - variable: mc-rcon-1
+                      label: "MC Port 1 RCON"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25575
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25575
+                    - variable: mc-rcon-2
+                      label: "MC Port 2 RCON"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25576
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25576
+                    - variable: mc-rcon-3
+                      label: "MC Port 3 RCON"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25577
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25577
+                    - variable: mc-rcon-4
+                      label: "MC Port 4 RCON"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25578
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25578
+                    - variable: mc-rcon-5
+                      label: "MC Port 1 RCON"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25579
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25579
+                    - variable: mc-rcon-6
+                      label: "MC Port 6 RCON"
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: "Port"
+                            description: "This port exposes the container port on the service"
+                            schema:
+                              type: int
+                              default: 25580
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: "Target Port"
+                                  description: "The internal(!) port on the container the Application runs on"
+                                  schema:
+                                    type: int
+                                    default: 25580
+
   - variable: serviceexpert
     group: Networking and Services
     label: Show Expert Config
@@ -1553,7 +3147,7 @@ questions:
           description: "The group that should own ALL storage."
           schema:
             type: int
-            default: 0
+            default: 568
         - variable: fsGroupChangePolicy
           label: "When should we take ownership?"
           schema:
@@ -2437,25 +4031,26 @@ questions:
                                     required: true
   - variable: docs
     group: Documentation
-    label: 'Please read the documentation at https://truecharts.org'
+    label: "Please read the documentation at https://truecharts.org"
     schema:
       additional_attrs: true
       type: dict
       attrs:
         - variable: confirmDocs
-          label: 'I have checked the documentation'
+          label: I have checked the documentation
           schema:
             type: boolean
             default: true
-#  - variable: donate
-#    group: Documentation
-#    label: 'Please consider supporting TrueCharts, see: https://truecharts.org/docs/about/sponsor'
-#    schema:
-#      additional_attrs: true
-#      type: dict
-#      attrs:
-#        - variable: confirmDonate
-#          label: 'I have considered supporting the project'
-#          schema:
-#            type: boolean
-#            default: true
+  - variable: donate
+    group: Documentation
+    label: "Please consider supporting TrueCharts, see: https://truecharts.org/docs/about/sponsor"
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: confirmDonate
+          label: I have considered donating
+          schema:
+            type: boolean
+            default: true
+            hidden: true

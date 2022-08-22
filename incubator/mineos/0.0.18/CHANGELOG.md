@@ -2,6 +2,15 @@
 
 
 
+## [mineos-0.0.18](https://github.com/truecharts/charts/compare/mineos-0.0.17...mineos-0.0.18) (2022-08-22)
+
+### Fix
+
+- add docs and update chart.yaml ([#3338](https://github.com/truecharts/charts/issues/3338))
+
+
+
+
 ## [mineos-0.0.17](https://github.com/truecharts/charts/compare/mineos-0.0.16...mineos-0.0.17) (2022-08-12)
 
 ### Chore
@@ -86,14 +95,5 @@
 
 
 ## [mineos-0.0.12](https://github.com/truecharts/apps/compare/mineos-0.0.10...mineos-0.0.12) (2022-07-22)
-
-### Chore
-
-- Bump all charts to generate config and container references due to huge increase of repository
-  - update helm general non-major helm releases ([#3268](https://github.com/truecharts/apps/issues/3268))
-
-
-
-## [mineos-0.0.10](https://github.com/truecharts/apps/compare/mineos-0.0.9...mineos-0.0.10) (2022-07-19)
 
 ### Chore
