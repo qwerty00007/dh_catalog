@@ -164,6 +164,52 @@ questions:
                 label: Arg
                 schema:
                   type: string
+  - variable: secretEnv
+    group: "Container Configuration"
+    label: "Image Secrets"
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: ADMIN_PASSWORD
+          label: "Admin Password"
+          description: "The password for the admin user (leave unspecified if you do not want to create it)"
+          schema:
+            type: string
+            private: true
+            default: ""
+        - variable: USER_PASSWORD
+          label: "User Password"
+          description: "The password for the first user user (leave unspecified if you do not want to create it)"
+          schema:
+            type: string
+            private: true
+            default: ""
+  - variable: env
+    group: "Container Configuration"
+    label: "Image Environment"
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: TITLE
+          label: "Title"
+          description: "The name of the instance"
+          schema:
+            type: string
+            default: "Etherpad"
+        - variable: FAVICON
+          label: "Favicon"
+          description: "Favicon default name, or a fully specified URL to your own favicon"
+          schema:
+            type: string
+            default: "favicon.ico"
+        - variable: DEFAULT_PAD_TEXT
+          label: "Default Pad Text"
+          description: "The default text of a pad"
+          schema:
+            type: string
+            default: "Welcome to Etherpad! This pad text is synchronized as you type, so that everyone viewing this page sees the same text. This allows you to collaborate seamlessly on documents! Get involved with Etherpad at https://etherpad.org"
   - variable: TZ
     label: Timezone
     group: Container Configuration
@@ -2579,25 +2625,26 @@ questions:
                                     required: true
   - variable: docs
     group: Documentation
-    label: 'Please read the documentation at https://truecharts.org'
+    label: "Please read the documentation at https://truecharts.org"
     schema:
       additional_attrs: true
       type: dict
       attrs:
         - variable: confirmDocs
-          label: 'I have checked the documentation'
+          label: I have checked the documentation
           schema:
             type: boolean
             default: true
-#  - variable: donate
-#    group: Documentation
-#    label: 'Please consider supporting TrueCharts, see: https://truecharts.org/docs/about/sponsor'
-#    schema:
-#      additional_attrs: true
-#      type: dict
-#      attrs:
-#        - variable: confirmDonate
-#          label: 'I have considered supporting the project'
-#          schema:
-#            type: boolean
-#            default: true
+  - variable: donate
+    group: Documentation
+    label: "Please consider supporting TrueCharts, see: https://truecharts.org/docs/about/sponsor"
+    schema:
+      additional_attrs: true
+      type: dict
+      attrs:
+        - variable: confirmDonate
+          label: I have considered donating
+          schema:
+            type: boolean
+            default: true
+            hidden: true
