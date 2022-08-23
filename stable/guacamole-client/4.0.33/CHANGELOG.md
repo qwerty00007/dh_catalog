@@ -2,6 +2,15 @@
 
 
 
+## [guacamole-client-4.0.33](https://github.com/truecharts/charts/compare/guacamole-client-4.0.32...guacamole-client-4.0.33) (2022-08-23)
+
+### Fix
+
+- booleans don't work the same with `with` ([#3549](https://github.com/truecharts/charts/issues/3549))
+
+
+
+
 ## [guacamole-client-4.0.32](https://github.com/truecharts/charts/compare/guacamole-client-4.0.31...guacamole-client-4.0.32) (2022-08-22)
 
 ### Fix
@@ -88,12 +97,3 @@
 
 - update docker general non-major ([#3295](https://github.com/truecharts/apps/issues/3295))
 
-
-
-
-## [guacamole-client-4.0.24](https://github.com/truecharts/apps/compare/guacamole-client-4.0.23...guacamole-client-4.0.24) (2022-07-23)
-
-### Chore
-
-- Auto-update chart README [skip ci]
-  - Auto-update chart README [skip ci]
