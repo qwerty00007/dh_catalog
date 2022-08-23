@@ -1,0 +1,22 @@
+image:
+  repository: dh.tccr.io/truecharts/drawio
+  tag: 20.2.6@sha256:73293670169cf7a9e86f5e409d326c91294d530e883ad941775bb14934aac4d0
+  pullPolicy: IfNotPresent
+
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+
+podSecurityContext:
+  runAsUser: 0
+  runAsGroup: 0
+
+service:
+  main:
+    ports:
+      main:
+        port: 10214
+        targetPort: 8080
+
+portal:
+  enabled: true
