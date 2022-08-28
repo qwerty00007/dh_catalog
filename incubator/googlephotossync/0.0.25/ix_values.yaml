@@ -1,0 +1,34 @@
+env: {}
+image:
+  pullPolicy: IfNotPresent
+  repository: dh.tccr.io/truecharts/googlephotossync
+  tag: latest@sha256:26977e103243997b2a341f06118a79da5fa91370c9c1aaafe1bce9aa867a93c5
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+  hostpath1:
+    enabled: true
+    mountPath: /storage
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+probes:
+  liveness:
+    enabled: false
+  readiness:
+    enabled: false
+  startup:
+    enabled: false
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+service:
+  main:
+    enabled: false
+    ports:
+      main:
+        enabled: false
+
+portal:
+  enabled: false
