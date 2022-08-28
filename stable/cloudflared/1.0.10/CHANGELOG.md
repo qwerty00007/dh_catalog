@@ -2,6 +2,15 @@
 
 
 
+## [cloudflared-1.0.10](https://github.com/truecharts/charts/compare/cloudflareddns-1.0.15...cloudflared-1.0.10) (2022-08-28)
+
+### Fix
+
+- update the docs. ([#3602](https://github.com/truecharts/charts/issues/3602))
+
+
+
+
 ## [cloudflared-1.0.9](https://github.com/truecharts/charts/compare/cloudflareddns-1.0.14...cloudflared-1.0.9) (2022-08-23)
 
 ### Chore
@@ -85,15 +94,6 @@
 
 - Auto-update chart README [skip ci]
   - update helm general non-major helm releases ([#3280](https://github.com/truecharts/apps/issues/3280))
-
-
-
-
-## [cloudflared-1.0.3](https://github.com/truecharts/apps/compare/cloudflareddns-1.0.6...cloudflared-1.0.3) (2022-07-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3280](https://github.com/truecharts/apps/issues/3280))
 
 
 
