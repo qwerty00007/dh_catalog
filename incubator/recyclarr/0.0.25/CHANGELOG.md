@@ -2,6 +2,11 @@
 
 
 
+## [recyclarr-0.0.25](https://github.com/truecharts/charts/compare/recyclarr-0.0.24...recyclarr-0.0.25) (2022-08-30)
+
+
+
+
 ## [recyclarr-0.0.24](https://github.com/truecharts/charts/compare/recyclarr-0.0.23...recyclarr-0.0.24) (2022-08-29)
 
 ### Chore
@@ -92,8 +97,3 @@
   - update helm general non-major helm releases ([#3302](https://github.com/truecharts/apps/issues/3302))
 
 
-
-
-## [recyclarr-0.0.13](https://github.com/truecharts/apps/compare/recyclarr-0.0.12...recyclarr-0.0.13) (2022-07-25)
-
-### Chore
