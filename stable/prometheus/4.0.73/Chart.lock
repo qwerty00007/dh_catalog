@@ -1,0 +1,12 @@
+dependencies:
+- name: common
+  repository: https://library-charts.truecharts.org
+  version: 10.5.5
+- name: node-exporter
+  repository: https://charts.bitnami.com/bitnami
+  version: 3.1.1
+- name: kube-state-metrics
+  repository: https://charts.bitnami.com/bitnami
+  version: 3.2.1
+digest: sha256:0ce957e3f606302ea003195853d4b594217956392f1c634cd0c8bde820c91dd4
+generated: "2022-08-30T15:21:10.551676612Z"
