@@ -2,6 +2,15 @@
 
 
 
+## [owncloud-ocis-8.1.0](https://github.com/truecharts/charts/compare/owncloud-ocis-8.0.1...owncloud-ocis-8.1.0) (2022-09-02)
+
+### Fix
+
+- Save init logs ([#3663](https://github.com/truecharts/charts/issues/3663))
+
+
+
+
 ## [owncloud-ocis-8.0.1](https://github.com/truecharts/charts/compare/owncloud-ocis-8.0.0...owncloud-ocis-8.0.1) (2022-08-30)
 
 ### Chore
@@ -88,12 +97,3 @@
 
 ## [owncloud-ocis-7.0.22](https://github.com/truecharts/apps/compare/owncloud-ocis-7.0.21...owncloud-ocis-7.0.22) (2022-07-25)
 
-### Chore
-
-- Auto-update chart README [skip ci]
-  - update docker general non-major ([#3295](https://github.com/truecharts/apps/issues/3295))
-
-
-
-
-## [owncloud-ocis-7.0.22](https://github.com/truecharts/apps/compare/owncloud-ocis-7.0.21...owncloud-ocis-7.0.22) (2022-07-25)
