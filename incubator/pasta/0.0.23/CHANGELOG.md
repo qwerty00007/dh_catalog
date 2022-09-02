@@ -2,6 +2,15 @@
 
 
 
+## [pasta-0.0.23](https://github.com/truecharts/charts/compare/pasta-0.0.22...pasta-0.0.23) (2022-09-02)
+
+### Fix
+
+- cleanup and fix service ([#3667](https://github.com/truecharts/charts/issues/3667))
+
+
+
+
 ## [pasta-0.0.22](https://github.com/truecharts/charts/compare/pasta-0.0.20...pasta-0.0.22) (2022-08-30)
 
 ### Chore
@@ -88,12 +97,3 @@
 ### Chore
 
 - update docker general non-major ([#3300](https://github.com/truecharts/apps/issues/3300))
-
-  ### Chore
-
-- add fake digest to new incubator Apps to fetch digests
-
-
-
-
-## [pasta-0.0.12](https://github.com/truecharts/apps/compare/pasta-0.0.11...pasta-0.0.12) (2022-07-23)

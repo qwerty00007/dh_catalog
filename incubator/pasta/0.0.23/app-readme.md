@@ -1,5 +1,4 @@
-PASTA - Audio and Subtitle Track Changer for Plex [br]
-
+PASTA - Audio and Subtitle Track Changer for Plex
 
 This App is supplied by TrueCharts, for more information visit the manual: [https://truecharts.org/docs/charts/incubator/pasta](https://truecharts.org/docs/charts/incubator/pasta)
 
