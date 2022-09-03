@@ -2,6 +2,15 @@
 
 
 
+## [digikam-4.0.29](https://github.com/truecharts/charts/compare/digikam-4.0.28...digikam-4.0.29) (2022-09-03)
+
+### Chore
+
+- update image tag ([#3672](https://github.com/truecharts/charts/issues/3672))
+
+
+
+
 ## [digikam-4.0.28](https://github.com/truecharts/charts/compare/digikam-4.0.27...digikam-4.0.28) (2022-08-30)
 
 ### Chore
@@ -88,12 +97,3 @@
 ### Chore
 
 - Auto-update chart README [skip ci]
-  - update helm general non-major helm releases ([#3280](https://github.com/truecharts/apps/issues/3280))
-
-
-
-
-## [digikam-4.0.21](https://github.com/truecharts/apps/compare/digikam-4.0.20...digikam-4.0.21) (2022-07-23)
-
-### Chore
-
