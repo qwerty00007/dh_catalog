@@ -1,21 +1,21 @@
-# wger
+# inventree
 
-![Version: 1.1.1](https://img.shields.io/badge/Version-1.1.1-informational?style=flat-square) ![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)
+![Version: 4.0.8](https://img.shields.io/badge/Version-4.0.8-informational?style=flat-square) ![AppVersion: 0.8.2](https://img.shields.io/badge/AppVersion-0.8.2-informational?style=flat-square)
 
-Workout Manager is a free, open source web application that helps you manage your personal workouts, weight and diet plans and can also be used as a simple gym management utility.
+InvenTree is an open-source Inventory Management System which provides powerful low-level stock control and part tracking.
 
 TrueCharts can be installed as both *normal* Helm Charts or as Apps on TrueNAS SCALE.
 
 This readme is just an automatically generated general guide on installing our Helm Charts and Apps.
-For more information, please click here: [wger](https://truecharts.org/docs/charts/stable/wger)
+For more information, please click here: [inventree](https://truecharts.org/docs/charts/stable/inventree)
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/truecharts/charts/issues/new/choose)**
 
 ## Source Code
 
-* <https://github.com/truecharts/charts/tree/master/charts/stable/wger>
-* <https://github.com/wger-project/wger>
-* <https://github.com/wger-project/docker>
+* <https://github.com/truecharts/charts/tree/master/charts/stable/inventree>
+* <https://inventree.readthedocs.io>
+* <https://github.com/inventree/InvenTree>
 
 ## Requirements
 
@@ -37,12 +37,12 @@ To install this Chart on TrueNAS SCALE check our [Quick-Start Guide](https://tru
 
 ### Helm
 
-To install the chart with the release name `wger`
+To install the chart with the release name `inventree`
 
 ```console
 helm repo add TrueCharts https://charts.truecharts.org
 helm repo update
-helm install wger TrueCharts/wger
+helm install inventree TrueCharts/inventree
 ```
 
 ## Uninstall
@@ -55,10 +55,10 @@ To upgrade, rollback or delete this Chart from TrueNAS SCALE check our [Quick-St
 
 ### Helm
 
-To uninstall the `wger` deployment
+To uninstall the `inventree` deployment
 
 ```console
-helm uninstall wger
+helm uninstall inventree
 ```
 
 ## Configuration
@@ -75,9 +75,9 @@ Other values may be used from the [values.yaml](https://github.com/truecharts/li
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
-helm install wger \
+helm install inventree \
   --set env.TZ="America/New York" \
-    TrueCharts/wger
+    TrueCharts/inventree
 ```
 
 #### Configure using a yaml file
@@ -85,7 +85,7 @@ helm install wger \
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install wger TrueCharts/wger -f values.yaml
+helm install inventree TrueCharts/inventree -f values.yaml
 ```
 
 #### Connecting to other charts

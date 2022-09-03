@@ -2,6 +2,7 @@
 
 
 
+
 ## [inventree-4.0.7](https://github.com/truecharts/charts/compare/inventree-4.0.6...inventree-4.0.7) (2022-09-03)
 
 ### Fix
@@ -96,4 +97,3 @@
 
 
 
-## [inventree-3.0.42](https://github.com/truecharts/charts/compare/inventree-3.0.41...inventree-3.0.42) (2022-08-17)
