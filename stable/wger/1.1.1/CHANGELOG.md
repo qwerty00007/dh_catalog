@@ -2,6 +2,15 @@
 
 
 
+## [wger-1.1.1](https://github.com/truecharts/charts/compare/wger-1.1.0...wger-1.1.1) (2022-09-03)
+
+### Fix
+
+- update nginx.conf mount method ([#3656](https://github.com/truecharts/charts/issues/3656))
+
+
+
+
 ## [wger-1.1.0](https://github.com/truecharts/charts/compare/wger-1.0.0...wger-1.1.0) (2022-09-01)
 
 ### Feat
@@ -86,14 +95,5 @@
 
 
 ## [wger-0.0.45](https://github.com/truecharts/charts/compare/wger-0.0.44...wger-0.0.45) (2022-08-25)
-
-### Chore
-
-- update docker general non-major ([#3561](https://github.com/truecharts/charts/issues/3561))
-
-
-
-
-## [wger-0.0.44](https://github.com/truecharts/charts/compare/wger-0.0.43...wger-0.0.44) (2022-08-24)
 
 ### Chore

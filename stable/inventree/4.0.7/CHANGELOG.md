@@ -2,6 +2,15 @@
 
 
 
+## [inventree-4.0.7](https://github.com/truecharts/charts/compare/inventree-4.0.6...inventree-4.0.7) (2022-09-03)
+
+### Fix
+
+- update nginx.conf mount method ([#3656](https://github.com/truecharts/charts/issues/3656))
+
+
+
+
 ## [inventree-4.0.6](https://github.com/truecharts/charts/compare/inventree-4.0.4...inventree-4.0.6) (2022-08-30)
 
 ### Chore
@@ -88,12 +97,3 @@
 
 
 ## [inventree-3.0.42](https://github.com/truecharts/charts/compare/inventree-3.0.41...inventree-3.0.42) (2022-08-17)
-
-### Chore
-
-- update helm general non-major helm releases ([#3484](https://github.com/truecharts/charts/issues/3484))
-
-
-
-
-## [inventree-3.0.41](https://github.com/truecharts/charts/compare/inventree-3.0.40...inventree-3.0.41) (2022-08-14)
