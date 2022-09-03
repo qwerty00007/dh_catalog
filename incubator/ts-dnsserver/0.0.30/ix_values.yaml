@@ -1,0 +1,33 @@
+env: {}
+image:
+  pullPolicy: IfNotPresent
+  repository: dh.tccr.io/truecharts/ts-dnsserver
+  tag: latest@sha256:8f777d3746ecc5afbde5a7aba40d1b704fb6e3d3aeb7ec9bd01f32cae4cb5994
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+service:
+  dnsport:
+    enabled: true
+    ports:
+      dnsport:
+        enabled: true
+        port: 53
+        protocol: UDP
+        targetPort: 53
+  main:
+    ports:
+      main:
+        port: 5380
+        protocol: HTTP
+        targetPort: 5380
+
+portal:
+  enabled: true

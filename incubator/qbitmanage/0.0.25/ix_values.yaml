@@ -1,0 +1,32 @@
+env:
+  UMASK: ""
+image:
+  pullPolicy: IfNotPresent
+  repository: dh.tccr.io/truecharts/qbitmanage
+  tag: latest@sha256:eee5eb84edb83eb944cc7898d1bd6bc226238255ce1191be0e44720e374629f2
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+probes:
+  liveness:
+    enabled: false
+  readiness:
+    enabled: false
+  startup:
+    enabled: false
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+service:
+  main:
+    enabled: false
+    ports:
+      main:
+        enabled: false
+
+portal:
+  enabled: false
