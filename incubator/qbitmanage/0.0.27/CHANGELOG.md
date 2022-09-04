@@ -2,6 +2,15 @@
 
 
 
+## [qbitmanage-0.0.27](https://github.com/truecharts/charts/compare/qbitmanage-0.0.26...qbitmanage-0.0.27) (2022-09-04)
+
+### Fix
+
+- wrong variable name ([#3693](https://github.com/truecharts/charts/issues/3693))
+
+
+
+
 
 ## [qbitmanage-0.0.25](https://github.com/truecharts/charts/compare/qbitmanage-0.0.24...qbitmanage-0.0.25) (2022-09-03)
 
@@ -88,12 +97,3 @@
 
 - move extraArgs from .Values.controller to .Values ([#3447](https://github.com/truecharts/charts/issues/3447))
 
-
-
-
-## [qbitmanage-0.0.15](https://github.com/truecharts/charts/compare/qbitmanage-0.0.14...qbitmanage-0.0.15) (2022-08-08)
-
-### Chore
-
-- update helm general non-major helm releases ([#3376](https://github.com/truecharts/charts/issues/3376))
-  - replace questions parts with templates ([#3402](https://github.com/truecharts/charts/issues/3402))
