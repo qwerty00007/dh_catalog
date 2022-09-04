@@ -2,6 +2,15 @@
 
 
 
+## [arksurvivalevolved-0.0.24](https://github.com/truecharts/charts/compare/arksurvivalevolved-0.0.23...arksurvivalevolved-0.0.24) (2022-09-04)
+
+### Fix
+
+- add some default params ([#3694](https://github.com/truecharts/charts/issues/3694))
+
+
+
+
 ## [arksurvivalevolved-0.0.23](https://github.com/truecharts/charts/compare/arksurvivalevolved-0.0.22...arksurvivalevolved-0.0.23) (2022-08-30)
 
 ### Chore
@@ -88,12 +97,3 @@
 - update docker general non-major ([#3300](https://github.com/truecharts/apps/issues/3300))
 
   ### Chore
-
-- add fake digest to new incubator Apps to fetch digests
-
-
-
-
-## [arksurvivalevolved-0.0.12](https://github.com/truecharts/apps/compare/arksurvivalevolved-0.0.11...arksurvivalevolved-0.0.12) (2022-07-23)
-
-### Chore
