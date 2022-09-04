@@ -2,6 +2,15 @@
 
 
 
+## [mattermost-3.0.40](https://github.com/truecharts/charts/compare/mattermost-3.0.39...mattermost-3.0.40) (2022-09-04)
+
+### Chore
+
+- update container image tccr.io/truecharts/mattermost to v7.3 ([#3683](https://github.com/truecharts/charts/issues/3683))
+
+
+
+
 ## [mattermost-3.0.39](https://github.com/truecharts/charts/compare/mattermost-3.0.38...mattermost-3.0.39) (2022-09-02)
 
 ### Chore
@@ -87,13 +96,4 @@
   ### Fix
 
 - move extraArgs from .Values.controller to .Values ([#3447](https://github.com/truecharts/charts/issues/3447))
-
-
-
-
-## [mattermost-3.0.29](https://github.com/truecharts/charts/compare/mattermost-3.0.28...mattermost-3.0.29) (2022-08-09)
-
-### Chore
-
-- update helm general non-major helm releases to v10.4.9 ([#3413](https://github.com/truecharts/charts/issues/3413))
 
