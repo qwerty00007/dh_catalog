@@ -165,15 +165,15 @@ questions:
                 schema:
                   type: string
   - variable: env
-    group: "Container Configuration"
-    label: "Image Environment"
+    group: Container Configuration
+    label: Image Environment
     schema:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: UMASK
-          label: "UMASK"
-          description: "Container Variable UMASK"
+        - variable: HEXO_PLUGINS
+          label: HEXO Plugins
+          description: A space separated list of hexo plugins to install
           schema:
             type: string
             default: ""
@@ -380,7 +380,7 @@ questions:
                             description: "This port exposes the container port on the service"
                             schema:
                               type: int
-                              default: 6969
+                              default: 10306
                               required: true
                           - variable: advanced
                             label: Show Advanced Settings
@@ -421,7 +421,7 @@ questions:
                                   description: "The internal(!) port on the container the Application runs on"
                                   schema:
                                     type: int
-                                    default: 6969
+                                    default: 8080
   - variable: serviceexpert
     group: Networking and Services
     label: Show Expert Config
@@ -698,7 +698,6 @@ questions:
       attrs:
         - variable: config
           label: "config Storage"
-          description: "Container Path config"
           schema:
             additional_attrs: true
             type: dict
@@ -1463,22 +1462,22 @@ questions:
             type: dict
             attrs:
               - variable: privileged
-                label: "Privileged mode"
+                label: Privileged mode
                 schema:
                   type: boolean
                   default: false
               - variable: readOnlyRootFilesystem
-                label: "ReadOnly Root Filesystem"
+                label: ReadOnly Root Filesystem
                 schema:
                   type: boolean
                   default: false
               - variable: allowPrivilegeEscalation
-                label: "Allow Privilege Escalation"
+                label: Allow Privilege Escalation
                 schema:
                   type: boolean
                   default: false
               - variable: runAsNonRoot
-                label: "runAsNonRoot"
+                label: runAsNonRoot
                 schema:
                   type: boolean
                   default: false
@@ -1516,20 +1515,20 @@ questions:
       type: dict
       attrs:
         - variable: runAsUser
-          label: "runAsUser"
-          description: "The UserID of the user running the application"
+          label: runAsUser
+          description: The UserID of the user running the application
           schema:
             type: int
             default: 0
         - variable: runAsGroup
-          label: "runAsGroup"
-          description: The groupID this App of the user running the application"
+          label: runAsGroup
+          description: The groupID this App of the user running the application
           schema:
             type: int
             default: 0
         - variable: fsGroup
-          label: "fsGroup"
-          description: "The group that should own ALL storage."
+          label: fsGroup
+          description: The group that should own ALL storage.
           schema:
             type: int
             default: 568
@@ -2472,7 +2471,9 @@ questions:
                                     required: true
   - variable: docs
     group: Documentation
-    label: "Please read the documentation at https://truecharts.org"
+    label: Please read the documentation at https://truecharts.org
+    description: Please read the documentation at
+      <br /><a href="https://truecharts.org">https://truecharts.org</a>
     schema:
       additional_attrs: true
       type: dict
@@ -2484,7 +2485,9 @@ questions:
             default: true
   - variable: donateNag
     group: Documentation
-    label: "Please consider supporting TrueCharts, see: https://truecharts.org/docs/about/sponsor"
+    label: Please consider supporting TrueCharts, see https://truecharts.org/docs/about/sponsor
+    description: Please consider supporting TrueCharts, see
+      <br /><a href="https://truecharts.org/docs/about/sponsor">https://truecharts.org/docs/about/sponsor</a>
     schema:
       additional_attrs: true
       type: dict

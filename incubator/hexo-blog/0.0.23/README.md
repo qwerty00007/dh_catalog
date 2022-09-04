@@ -1,22 +1,21 @@
-# hexchat
+# hexo-blog
 
-![Version: 0.0.22](https://img.shields.io/badge/Version-0.0.22-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)
+![Version: 0.0.23](https://img.shields.io/badge/Version-0.0.23-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)
 
-HexChat is an IRC client based on XChat, but unlike XChat it’s completely free for both Windows and Unix-like systems. Since XChat is open source, it’s perfectly legal. For more info. HexChat was originally called XChat-WDK which in turn was a successor of freakschat.
+A self-hosted blogging platform in which posts are written in markdown
 
 TrueCharts can be installed as both *normal* Helm Charts or as Apps on TrueNAS SCALE.
 
 This readme is just an automatically generated general guide on installing our Helm Charts and Apps.
-For more information, please click here: [hexchat](https://truecharts.org/docs/charts/incubator/hexchat)
+For more information, please click here: [hexo-blog](https://truecharts.org/docs/charts/incubator/hexo-blog)
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/truecharts/charts/issues/new/choose)**
 
 ## Source Code
 
-* <https://github.com/truecharts/charts/tree/master/charts/incubator/hexchat>
-* <https://hexchat.github.io/>
-* <https://registry.hub.docker.com/r/binhex/arch-hexchat/>
-* <https://github.com/binhex/documentation>
+* <https://github.com/truecharts/charts/tree/master/charts/incubator/hexo-blog>
+* <https://github.com/fletchto99/hexo-dev-docker>
+* <https://hub.docker.com/r/fletchto99/hexo-dev-blog/>
 
 ## Requirements
 
@@ -36,12 +35,12 @@ To install this Chart on TrueNAS SCALE check our [Quick-Start Guide](https://tru
 
 ### Helm
 
-To install the chart with the release name `hexchat`
+To install the chart with the release name `hexo-blog`
 
 ```console
 helm repo add TrueCharts https://charts.truecharts.org
 helm repo update
-helm install hexchat TrueCharts/hexchat
+helm install hexo-blog TrueCharts/hexo-blog
 ```
 
 ## Uninstall
@@ -54,10 +53,10 @@ To upgrade, rollback or delete this Chart from TrueNAS SCALE check our [Quick-St
 
 ### Helm
 
-To uninstall the `hexchat` deployment
+To uninstall the `hexo-blog` deployment
 
 ```console
-helm uninstall hexchat
+helm uninstall hexo-blog
 ```
 
 ## Configuration
@@ -66,7 +65,7 @@ helm uninstall hexchat
 
 #### Available Settings
 
-Read through the [values.yaml](./values.yaml) file. It has several commented out suggested values.
+Read through the values.yaml file. It has several commented out suggested values.
 Other values may be used from the [values.yaml](https://github.com/truecharts/library-charts/tree/main/charts/stable/common/values.yaml) from the [common library](https://github.com/k8s-at-home/library-charts/tree/main/charts/stable/common).
 
 #### Configure using the command line
@@ -74,9 +73,9 @@ Other values may be used from the [values.yaml](https://github.com/truecharts/li
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
-helm install hexchat \
+helm install hexo-blog \
   --set env.TZ="America/New York" \
-    TrueCharts/hexchat
+    TrueCharts/hexo-blog
 ```
 
 #### Configure using a yaml file
@@ -84,7 +83,7 @@ helm install hexchat \
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install hexchat TrueCharts/hexchat -f values.yaml
+helm install hexo-blog TrueCharts/hexo-blog -f values.yaml
 ```
 
 #### Connecting to other charts

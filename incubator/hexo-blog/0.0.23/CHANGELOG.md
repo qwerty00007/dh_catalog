@@ -2,7 +2,16 @@
 
 
 
-## [whisparr-0.0.21](https://github.com/truecharts/charts/compare/whisparr-0.0.19...whisparr-0.0.21) (2022-08-30)
+## [hexchat-0.0.23](https://github.com/truecharts/charts/compare/hexchat-0.0.22...hexchat-0.0.23) (2022-09-04)
+
+### Fix
+
+- hexo-blog, hexchat, qbitmanage, whisparr ([#3688](https://github.com/truecharts/charts/issues/3688))
+
+
+
+
+## [hexchat-0.0.22](https://github.com/truecharts/charts/compare/hexchat-0.0.20...hexchat-0.0.22) (2022-08-30)
 
 ### Chore
 
@@ -13,7 +22,7 @@
 
 
 
-## [whisparr-0.0.20](https://github.com/truecharts/charts/compare/whisparr-0.0.19...whisparr-0.0.20) (2022-08-30)
+## [hexchat-0.0.21](https://github.com/truecharts/charts/compare/hexchat-0.0.20...hexchat-0.0.21) (2022-08-30)
 
 ### Chore
 
@@ -22,7 +31,7 @@
 
 
 
-## [whisparr-0.0.19](https://github.com/truecharts/charts/compare/whisparr-0.0.18...whisparr-0.0.19) (2022-08-29)
+## [hexchat-0.0.20](https://github.com/truecharts/charts/compare/hexchat-0.0.19...hexchat-0.0.20) (2022-08-29)
 
 ### Chore
 
@@ -31,7 +40,7 @@
 
 
 
-## [whisparr-0.0.18](https://github.com/truecharts/charts/compare/whisparr-0.0.16...whisparr-0.0.18) (2022-08-26)
+## [hexchat-0.0.19](https://github.com/truecharts/charts/compare/hexchat-0.0.17...hexchat-0.0.19) (2022-08-26)
 
 ### Fix
 
@@ -40,7 +49,7 @@
 
 
 
-## [whisparr-0.0.16](https://github.com/truecharts/charts/compare/whisparr-0.0.15...whisparr-0.0.16) (2022-08-23)
+## [hexchat-0.0.17](https://github.com/truecharts/charts/compare/hexchat-0.0.16...hexchat-0.0.17) (2022-08-23)
 
 ### Chore
 
@@ -49,7 +58,7 @@
 
 
 
-## [whisparr-0.0.15](https://github.com/truecharts/charts/compare/whisparr-0.0.14...whisparr-0.0.15) (2022-08-12)
+## [hexchat-0.0.16](https://github.com/truecharts/charts/compare/hexchat-0.0.15...hexchat-0.0.16) (2022-08-12)
 
 ### Chore
 
@@ -63,7 +72,7 @@
 
 
 
-## [whisparr-0.0.14](https://github.com/truecharts/charts/compare/whisparr-0.0.13...whisparr-0.0.14) (2022-08-08)
+## [hexchat-0.0.15](https://github.com/truecharts/charts/compare/hexchat-0.0.14...hexchat-0.0.15) (2022-08-08)
 
 ### Chore
 
@@ -73,7 +82,7 @@
 
 
 
-## [whisparr-0.0.13](https://github.com/truecharts/apps/compare/whisparr-0.0.12...whisparr-0.0.13) (2022-07-26)
+## [hexchat-0.0.14](https://github.com/truecharts/apps/compare/hexchat-0.0.13...hexchat-0.0.14) (2022-07-26)
 
 ### Chore
 
@@ -83,17 +92,8 @@
 
 
 
-## [whisparr-0.0.12](https://github.com/truecharts/apps/compare/whisparr-0.0.11...whisparr-0.0.12) (2022-07-23)
+## [hexchat-0.0.13](https://github.com/truecharts/apps/compare/hexchat-0.0.12...hexchat-0.0.13) (2022-07-25)
 
 ### Chore
 
-- Auto-update chart README [skip ci]
-  - Auto-update chart README [skip ci]
-  - update helm general non-major helm releases ([#3280](https://github.com/truecharts/apps/issues/3280))
-
-
-
-
-## [whisparr-0.0.12](https://github.com/truecharts/apps/compare/whisparr-0.0.11...whisparr-0.0.12) (2022-07-23)
-
-### Chore
+- update docker general non-major ([#3300](https://github.com/truecharts/apps/issues/3300))
