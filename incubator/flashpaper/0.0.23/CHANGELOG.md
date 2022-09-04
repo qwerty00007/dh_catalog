@@ -2,6 +2,11 @@
 
 
 
+## [flashpaper-0.0.23](https://github.com/truecharts/charts/compare/flashpaper-0.0.22...flashpaper-0.0.23) (2022-09-04)
+
+
+
+
 ## [flashpaper-0.0.22](https://github.com/truecharts/charts/compare/flashpaper-0.0.21...flashpaper-0.0.22) (2022-08-30)
 
 ### Chore
@@ -92,8 +97,3 @@
 - add fake digest to new incubator Apps to fetch digests
 
 
-
-
-## [flashpaper-0.0.12](https://github.com/truecharts/apps/compare/flashpaper-0.0.11...flashpaper-0.0.12) (2022-07-23)
-
-### Chore

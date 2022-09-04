@@ -1,5 +1,4 @@
-DESCRIPTION
-
+A one-time encrypted zero-knowledge password/secret sharing application focused on simplicity and security. No database or complicated set-up required.
 
 This App is supplied by TrueCharts, for more information visit the manual: [https://truecharts.org/docs/charts/incubator/flashpaper](https://truecharts.org/docs/charts/incubator/flashpaper)
 
