@@ -2,6 +2,15 @@
 
 
 
+## [ring-mqtt-1.0.2](https://github.com/truecharts/charts/compare/ring-mqtt-1.0.1...ring-mqtt-1.0.2) (2022-09-04)
+
+### Fix
+
+- enable ports ([#3686](https://github.com/truecharts/charts/issues/3686))
+
+
+
+
 ## [ring-mqtt-1.0.1](https://github.com/truecharts/charts/compare/ring-mqtt-1.0.0...ring-mqtt-1.0.1) (2022-09-04)
 
 ### Chore
@@ -87,13 +96,4 @@
 
 - move extraArgs from .Values.controller to .Values ([#3447](https://github.com/truecharts/charts/issues/3447))
 
-
-
-
-## [ring-mqtt-0.0.15](https://github.com/truecharts/charts/compare/ring-mqtt-0.0.14...ring-mqtt-0.0.15) (2022-08-08)
-
-### Chore
-
-- update helm general non-major helm releases ([#3376](https://github.com/truecharts/charts/issues/3376))
-  - replace questions parts with templates ([#3402](https://github.com/truecharts/charts/issues/3402))
 
