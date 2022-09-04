@@ -1,7 +1,0 @@
-image:
-  repository: dh.tccr.io/truecharts/minecraft-java11
-  tag: latest@sha256:61121975493c46d5c82400c57401edfa3420eec24e1dc8ade7f9b0fc434dc5f9
-  pullPolicy: Always
-
-env:
-  VERSION: "1.16.1"
