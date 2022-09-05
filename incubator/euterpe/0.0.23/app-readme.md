@@ -1,5 +1,4 @@
-DESCRIPTION
-
+Euterpe is self-hosted streaming service for music. Formerly known as HTTPMS (HTTP Media Server).
 
 This App is supplied by TrueCharts, for more information visit the manual: [https://truecharts.org/docs/charts/incubator/euterpe](https://truecharts.org/docs/charts/incubator/euterpe)
 

@@ -2,6 +2,15 @@
 
 
 
+## [euterpe-0.0.23](https://github.com/truecharts/charts/compare/euterpe-0.0.22...euterpe-0.0.23) (2022-09-05)
+
+### Chore
+
+- add missing descriptions and clean up descriptions for various charts ([#3704](https://github.com/truecharts/charts/issues/3704))
+
+
+
+
 ## [euterpe-0.0.22](https://github.com/truecharts/charts/compare/euterpe-0.0.21...euterpe-0.0.22) (2022-08-30)
 
 ### Chore
@@ -88,12 +97,3 @@
 - update docker general non-major ([#3300](https://github.com/truecharts/apps/issues/3300))
 
   ### Chore
-
-- add fake digest to new incubator Apps to fetch digests
-
-
-
-
-## [euterpe-0.0.12](https://github.com/truecharts/apps/compare/euterpe-0.0.11...euterpe-0.0.12) (2022-07-23)
-
-### Chore

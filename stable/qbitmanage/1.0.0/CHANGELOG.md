@@ -4,6 +4,19 @@
 
 ## [qbitmanage-1.0.0](https://github.com/truecharts/charts/compare/qbitmanage-0.0.27...qbitmanage-1.0.0) (2022-09-05)
 
+### Chore
+
+- Auto-update chart README [skip ci]
+
+  ### Feat
+
+- move to stable ([#3705](https://github.com/truecharts/charts/issues/3705))
+
+
+
+
+## [qbitmanage-1.0.0](https://github.com/truecharts/charts/compare/qbitmanage-0.0.27...qbitmanage-1.0.0) (2022-09-05)
+
 ### Feat
 
 - move to stable ([#3705](https://github.com/truecharts/charts/issues/3705))
@@ -83,17 +96,4 @@
 
 - update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
 
-
-
-
-## [qbitmanage-0.0.17](https://github.com/truecharts/charts/compare/qbitmanage-0.0.16...qbitmanage-0.0.17) (2022-08-14)
-
-### Chore
-
-- update docker general non-major docker tags ([#3465](https://github.com/truecharts/charts/issues/3465))
-
-
-
-
-## [qbitmanage-0.0.16](https://github.com/truecharts/charts/compare/qbitmanage-0.0.15...qbitmanage-0.0.16) (2022-08-12)
 
