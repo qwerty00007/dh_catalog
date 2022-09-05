@@ -407,7 +407,7 @@ questions:
                                   label: Port Type
                                   schema:
                                     type: string
-                                    default: TCP
+                                    default: UDP
                                     enum:
                                       - value: HTTP
                                         description: HTTP
@@ -2310,7 +2310,9 @@ questions:
                                     required: true
   - variable: docs
     group: Documentation
-    label: "Please read the documentation at https://truecharts.org"
+    label: Please read the documentation at https://truecharts.org
+    description: Please read the documentation at
+      <br /><a href="https://truecharts.org">https://truecharts.org</a>
     schema:
       additional_attrs: true
       type: dict
@@ -2322,7 +2324,9 @@ questions:
             default: true
   - variable: donateNag
     group: Documentation
-    label: "Please consider supporting TrueCharts, see: https://truecharts.org/docs/about/sponsor"
+    label: Please consider supporting TrueCharts, see https://truecharts.org/docs/about/sponsor
+    description: Please consider supporting TrueCharts, see
+      <br /><a href="https://truecharts.org/docs/about/sponsor">https://truecharts.org/docs/about/sponsor</a>
     schema:
       additional_attrs: true
       type: dict
