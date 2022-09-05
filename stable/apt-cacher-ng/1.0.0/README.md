@@ -1,20 +1,21 @@
-# orbital-sync
+# apt-cacher-ng
 
-![Version: 0.0.1](https://img.shields.io/badge/Version-0.0.1-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.1.0](https://img.shields.io/badge/AppVersion-1.1.0-informational?style=flat-square)
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 3.7.4](https://img.shields.io/badge/AppVersion-3.7.4-informational?style=flat-square)
 
-Orbital Sync synchronizes multiple Pi-hole instances for high availability.
+Apt-Cacher NG is a caching proxy, specialized for package files from Linux distributors, primarily for Debian (and Debian based) distributions but not limited to those.
 
 TrueCharts can be installed as both *normal* Helm Charts or as Apps on TrueNAS SCALE.
 
 This readme is just an automatically generated general guide on installing our Helm Charts and Apps.
-For more information, please click here: [orbital-sync](https://truecharts.org/docs/charts/incubator/orbital-sync)
+For more information, please click here: [apt-cacher-ng](https://truecharts.org/docs/charts/stable/apt-cacher-ng)
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/truecharts/charts/issues/new/choose)**
 
 ## Source Code
 
-* <https://github.com/truecharts/charts/tree/master/charts/incubator/orbital-sync>
-* <https://github.com/mattwebbio/orbital-sync/pkgs/container/orbital-sync>
+* <https://github.com/truecharts/charts/tree/master/charts/stable/apt-cacher-ng>
+* <https://www.unix-ag.uni-kl.de/~bloch/acng/>
+* <https://hub.docker.com/r/sameersbn/apt-cacher-ng/>
 
 ## Requirements
 
@@ -34,12 +35,12 @@ To install this Chart on TrueNAS SCALE check our [Quick-Start Guide](https://tru
 
 ### Helm
 
-To install the chart with the release name `orbital-sync`
+To install the chart with the release name `apt-cacher-ng`
 
 ```console
 helm repo add TrueCharts https://charts.truecharts.org
 helm repo update
-helm install orbital-sync TrueCharts/orbital-sync
+helm install apt-cacher-ng TrueCharts/apt-cacher-ng
 ```
 
 ## Uninstall
@@ -52,10 +53,10 @@ To upgrade, rollback or delete this Chart from TrueNAS SCALE check our [Quick-St
 
 ### Helm
 
-To uninstall the `orbital-sync` deployment
+To uninstall the `apt-cacher-ng` deployment
 
 ```console
-helm uninstall orbital-sync
+helm uninstall apt-cacher-ng
 ```
 
 ## Configuration
@@ -72,9 +73,9 @@ Other values may be used from the [values.yaml](https://github.com/truecharts/li
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
-helm install orbital-sync \
+helm install apt-cacher-ng \
   --set env.TZ="America/New York" \
-    TrueCharts/orbital-sync
+    TrueCharts/apt-cacher-ng
 ```
 
 #### Configure using a yaml file
@@ -82,7 +83,7 @@ helm install orbital-sync \
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install orbital-sync TrueCharts/orbital-sync -f values.yaml
+helm install apt-cacher-ng TrueCharts/apt-cacher-ng -f values.yaml
 ```
 
 #### Connecting to other charts
