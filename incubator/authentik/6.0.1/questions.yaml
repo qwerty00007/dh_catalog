@@ -429,7 +429,7 @@ questions:
                         subquestions:
                         - variable: token
                           label: API Token
-                          description: Generated in the Authentik GUI > Directory > Token & App Passwords
+                          description: You can get this from Applications > Outposts > View Deployment Info
                           schema:
                             type: string
                             private: true
@@ -499,7 +499,7 @@ questions:
                         subquestions:
                         - variable: token
                           label: API Token
-                          description: Generated in the Authentik GUI > Directory > Token & App Passwords
+                          description: You can get this from Applications > Outposts > View Deployment Info
                           schema:
                             type: string
                             private: true
