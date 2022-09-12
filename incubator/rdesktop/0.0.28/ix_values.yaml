@@ -1,0 +1,29 @@
+env:
+  UMASK: ""
+image:
+  pullPolicy: IfNotPresent
+  repository: dh.tccr.io/truecharts/rdesktop
+  tag: latest@sha256:46f393e1e16f5bcd406a31ba66757f18ce5abb5ac9f76435ded5ef4178a66ff2
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+  pathvarrundocker-sock:
+    enabled: true
+    mountPath: /var/run/docker.sock
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+service:
+  main:
+    ports:
+      main:
+        port: 3389
+        protocol: TCP
+        targetPort: 3389
+
+portal:
+  enabled: true

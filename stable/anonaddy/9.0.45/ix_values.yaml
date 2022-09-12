@@ -1,0 +1,78 @@
+image:
+  repository: dh.tccr.io/truecharts/anonaddy
+  tag: 0.13.7@sha256:d2c92dbd30fa7ebc6d529135bfb20f374b79d8ef049f1fecbabfa3766690b9e9
+  pullPolicy: IfNotPresent
+
+strategy:
+  type: Recreate
+
+securityContext:
+  runAsNonRoot: false
+  readOnlyRootFilesystem: false
+
+podSecurityContext:
+  runAsUser: 0
+  runAsGroup: 0
+
+env:
+  ANONADDY_DOMAIN: "chart-example.local"
+  DB_DATABASE: anonaddy
+  DB_USERNAME: anonaddy
+  DB_HOST:
+    secretKeyRef:
+      name: mariadbcreds
+      key: plainhost
+  DB_PASSWORD:
+    secretKeyRef:
+      name: mariadbcreds
+      key: mariadb-password
+  REDIS_HOST:
+    secretKeyRef:
+      name: rediscreds
+      key: plainhost
+  REDIS_PASSWORD:
+    secretKeyRef:
+      name: rediscreds
+      key: redis-password
+  APP_KEY:
+    secretKeyRef:
+      name: appkey
+      key: appkey
+  ANONADDY_SECRET:
+    secretKeyRef:
+      name: appkey
+      key: secret
+
+service:
+  main:
+    ports:
+      main:
+        port: 10110
+        targetPort: 8000
+  smtp:
+    enabled: true
+    ports:
+      smtp:
+        enabled: true
+        port: 25
+        targetPort: 25
+
+persistence:
+  varrun:
+    enabled: true
+  config:
+    enabled: true
+    mountPath: "/config"
+
+redis:
+  enabled: true
+  existingSecret: "rediscreds"
+
+mariadb:
+  enabled: true
+  mariadbUsername: anonaddy
+  mariadbDatabase: anonaddy
+  existingSecret: "mariadbcreds"
+
+portal:
+  enabled: true

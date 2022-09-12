@@ -1,0 +1,14 @@
+image:
+  repository: dh.tccr.io/truecharts/whoami
+  pullPolicy: IfNotPresent
+  tag: 1.8.6@sha256:eef74223e5dd3037414169342fd497a305d27fca849ea56f61657838507968b7
+
+service:
+  main:
+    ports:
+      main:
+        port: 8080
+
+args:
+  - --port
+  - "8080"

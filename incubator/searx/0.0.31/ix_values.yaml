@@ -1,0 +1,25 @@
+env: {}
+image:
+  pullPolicy: IfNotPresent
+  repository: dh.tccr.io/truecharts/searx
+  tag: latest@sha256:c2cb3f7a3c38c3d15a258023a0e6f7b2c33d6eef3435ca809ef32ed3b8475ec5
+persistence:
+  config:
+    enabled: true
+    mountPath: /etc/searx
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+service:
+  main:
+    ports:
+      main:
+        port: 8080
+        protocol: TCP
+        targetPort: 8080
+
+portal:
+  enabled: true

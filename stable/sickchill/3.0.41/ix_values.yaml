@@ -1,0 +1,29 @@
+image:
+  repository: dh.tccr.io/truecharts/sickchill
+  pullPolicy: IfNotPresent
+  tag: 2022.8.29@sha256:875d1f2d91cb718b8b0b79f77f9ad842becc6ba23ad5c39b1c16c05c4ff21f78
+
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+
+podSecurityContext:
+  runAsUser: 0
+  runAsGroup: 0
+
+service:
+  main:
+    ports:
+      main:
+        port: 10067
+        targetPort: 8081
+
+persistence:
+  config:
+    enabled: true
+    mountPath: "/config"
+  varrun:
+    enabled: true
+
+portal:
+  enabled: true
