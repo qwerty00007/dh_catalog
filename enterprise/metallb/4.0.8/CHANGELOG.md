@@ -2,6 +2,15 @@
 
 
 
+## [metallb-4.0.8](https://github.com/truecharts/charts/compare/metallb-4.0.7...metallb-4.0.8) (2022-09-13)
+
+### Fix
+
+- fix indent issue
+
+
+
+
 ## [metallb-4.0.7](https://github.com/truecharts/charts/compare/metallb-4.0.6...metallb-4.0.7) (2022-09-13)
 
 ### Fix
@@ -87,13 +96,4 @@
 ## [metallb-3.0.0](https://github.com/truecharts/charts/compare/metallb-2.0.14...metallb-3.0.0) (2022-09-11)
 
 ### Chore
-
-- update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
-  - replace questions parts with templates ([#3402](https://github.com/truecharts/charts/issues/3402))
-
-  ### Feat
-
-- update for v0.13 ([#3695](https://github.com/truecharts/charts/issues/3695))
-
-
 
