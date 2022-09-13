@@ -2,6 +2,11 @@
 
 
 
+## [metallb-4.0.5](https://github.com/truecharts/charts/compare/metallb-4.0.4...metallb-4.0.5) (2022-09-13)
+
+
+
+
 ## [metallb-4.0.4](https://github.com/truecharts/charts/compare/metallb-4.0.2...metallb-4.0.4) (2022-09-13)
 
 ### Chore
@@ -92,8 +97,3 @@
 
 ### Chore
 
-- Update Readme and Description on SCALE
-
-
-
-## [metallb-2.0.11](https://github.com/truecharts/apps/compare/metallb-2.0.10...metallb-2.0.11) (2022-07-14)
