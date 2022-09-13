@@ -2,6 +2,11 @@
 
 
 
+## [metallb-4.0.6](https://github.com/truecharts/charts/compare/metallb-4.0.5...metallb-4.0.6) (2022-09-13)
+
+
+
+
 ## [metallb-4.0.5](https://github.com/truecharts/charts/compare/metallb-4.0.4...metallb-4.0.5) (2022-09-13)
 
 
@@ -91,9 +96,4 @@
 - Bump all charts to generate config and container references due to huge increase of repository
   - update helm general non-major helm releases ([#3268](https://github.com/truecharts/apps/issues/3268))
 
-
-
-## [metallb-2.0.12](https://github.com/truecharts/apps/compare/metallb-2.0.11...metallb-2.0.12) (2022-07-19)
-
-### Chore
 
