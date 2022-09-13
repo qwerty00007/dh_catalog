@@ -2,6 +2,15 @@
 
 
 
+## [metallb-4.0.7](https://github.com/truecharts/charts/compare/metallb-4.0.6...metallb-4.0.7) (2022-09-13)
+
+### Fix
+
+- fix error/warning on upgrade
+
+
+
+
 ## [metallb-4.0.6](https://github.com/truecharts/charts/compare/metallb-4.0.5...metallb-4.0.6) (2022-09-13)
 
 
@@ -86,14 +95,5 @@
 
 - update for v0.13 ([#3695](https://github.com/truecharts/charts/issues/3695))
 
-
-
-
-## [metallb-2.0.14](https://github.com/truecharts/apps/compare/metallb-2.0.12...metallb-2.0.14) (2022-07-22)
-
-### Chore
-
-- Bump all charts to generate config and container references due to huge increase of repository
-  - update helm general non-major helm releases ([#3268](https://github.com/truecharts/apps/issues/3268))
 
 
