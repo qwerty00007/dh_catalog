@@ -2,6 +2,33 @@
 
 
 
+## [meshcentral-4.0.6](https://github.com/truecharts/charts/compare/meshcentral-4.0.5...meshcentral-4.0.6) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [meshcentral-4.0.6](https://github.com/truecharts/charts/compare/meshcentral-4.0.5...meshcentral-4.0.6) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [meshcentral-4.0.6](https://github.com/truecharts/charts/compare/meshcentral-4.0.5...meshcentral-4.0.6) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3624](https://github.com/truecharts/charts/issues/3624))
 
-
-
-
-## [meshcentral-4.0.2](https://github.com/truecharts/charts/compare/meshcentral-4.0.0...meshcentral-4.0.2) (2022-08-29)
-
-### Chore
-
-- update helm general non-major ([#3621](https://github.com/truecharts/charts/issues/3621))
-  - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [meshcentral-4.0.0](https://github.com/truecharts/charts/compare/meshcentral-3.0.38...meshcentral-4.0.0) (2022-08-29)
-
-### Chore
-
-- update helm chart mongodb to v2 ([#3617](https://github.com/truecharts/charts/issues/3617))
-
-
-
-
-## [meshcentral-3.0.38](https://github.com/truecharts/charts/compare/meshcentral-3.0.37...meshcentral-3.0.38) (2022-08-29)
-
-### Chore
-
-- update docker general non-major ([#3606](https://github.com/truecharts/charts/issues/3606))

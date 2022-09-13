@@ -6,6 +6,27 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update docker general non-major ([#3743](https://github.com/truecharts/charts/issues/3743))
+
+
+
+
+## [mongodb-2.0.12](https://github.com/truecharts/charts/compare/mongodb-2.0.11...mongodb-2.0.12) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - update docker general non-major ([#3743](https://github.com/truecharts/charts/issues/3743))
+
+
+
+
+## [mongodb-2.0.12](https://github.com/truecharts/charts/compare/mongodb-2.0.11...mongodb-2.0.12) (2022-09-12)
+
+### Chore
+
 - update docker general non-major ([#3743](https://github.com/truecharts/charts/issues/3743))
 
 
@@ -75,25 +96,4 @@
 - Auto-update chart README [skip ci]
   - update helm chart common to v10.5.6 ([#3635](https://github.com/truecharts/charts/issues/3635))
   - update helm chart common to v10.5.5
-
-
-
-
-## [mongodb-2.0.4](https://github.com/truecharts/charts/compare/mongodb-2.0.3...mongodb-2.0.4) (2022-08-30)
-
-### Chore
-
-- update helm chart common to v10.5.5
-
-
-
-
-## [memcached-3.0.66](https://github.com/truecharts/charts/compare/memcached-3.0.65...memcached-3.0.66) (2022-08-30)
-
-### Chore
-
-- update docker general non-major ([#3623](https://github.com/truecharts/charts/issues/3623))
-
-
-
 

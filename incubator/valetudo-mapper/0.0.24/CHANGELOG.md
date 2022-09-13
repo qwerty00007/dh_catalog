@@ -2,6 +2,33 @@
 
 
 
+## [valetudo-mapper-0.0.24](https://github.com/truecharts/charts/compare/valetudo-mapper-0.0.23...valetudo-mapper-0.0.24) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [valetudo-mapper-0.0.24](https://github.com/truecharts/charts/compare/valetudo-mapper-0.0.23...valetudo-mapper-0.0.24) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [valetudo-mapper-0.0.24](https://github.com/truecharts/charts/compare/valetudo-mapper-0.0.23...valetudo-mapper-0.0.24) (2022-09-11)
 
 ### Chore
@@ -69,31 +96,4 @@
 ### Chore
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [vaulthunters-0.0.21](https://github.com/truecharts/charts/compare/vaulthunters-0.0.19...vaulthunters-0.0.21) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-## [vaulthunters-0.0.19](https://github.com/truecharts/charts/compare/vaulthunters-0.0.18...vaulthunters-0.0.19) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [vaulthunters-0.0.18](https://github.com/truecharts/charts/compare/vaulthunters-0.0.17...vaulthunters-0.0.18) (2022-08-23)
-
-### Chore
-
-- update docker general non-major docker tags ([#3544](https://github.com/truecharts/charts/issues/3544))
 

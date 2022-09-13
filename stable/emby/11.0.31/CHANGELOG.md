@@ -2,6 +2,33 @@
 
 
 
+## [emby-11.0.31](https://github.com/truecharts/charts/compare/emby-sync-0.0.22...emby-11.0.31) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [emby-11.0.31](https://github.com/truecharts/charts/compare/emby-sync-0.0.22...emby-11.0.31) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [emby-11.0.31](https://github.com/truecharts/charts/compare/emby-sync-0.0.22...emby-11.0.31) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 
 
-
-## [emby-11.0.27](https://github.com/truecharts/charts/compare/embystat-2.0.25...emby-11.0.27) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [emby-11.0.26](https://github.com/truecharts/charts/compare/emby-11.0.25...emby-11.0.26) (2022-08-12)
-
-### Chore
-
-- update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))
-
-
-
-
-## [emby-11.0.25](https://github.com/truecharts/charts/compare/emby-sync-0.0.15...emby-11.0.25) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update docker general non-major ([#3453](https://github.com/truecharts/charts/issues/3453))
-
-  ### Fix

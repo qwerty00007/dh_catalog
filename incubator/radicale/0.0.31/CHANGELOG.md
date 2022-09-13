@@ -2,6 +2,33 @@
 
 
 
+## [radicale-0.0.31](https://github.com/truecharts/charts/compare/radicale-0.0.30...radicale-0.0.31) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [radicale-0.0.31](https://github.com/truecharts/charts/compare/radicale-0.0.30...radicale-0.0.31) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [radicale-0.0.31](https://github.com/truecharts/charts/compare/radicale-0.0.30...radicale-0.0.31) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
 
-
-
-
-## [radicale-0.0.27](https://github.com/truecharts/charts/compare/radicale-0.0.25...radicale-0.0.27) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-## [radicale-0.0.25](https://github.com/truecharts/charts/compare/radicale-0.0.24...radicale-0.0.25) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [radicale-0.0.24](https://github.com/truecharts/charts/compare/radicale-0.0.23...radicale-0.0.24) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))

@@ -2,6 +2,33 @@
 
 
 
+## [homebridge-1.0.34](https://github.com/truecharts/charts/compare/homebridge-1.0.33...homebridge-1.0.34) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [homebridge-1.0.34](https://github.com/truecharts/charts/compare/homebridge-1.0.33...homebridge-1.0.34) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [homebridge-1.0.34](https://github.com/truecharts/charts/compare/homebridge-1.0.33...homebridge-1.0.34) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
 
-
-
-
-## [homebridge-1.0.30](https://github.com/truecharts/charts/compare/homebridge-1.0.28...homebridge-1.0.30) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-## [homebridge-1.0.28](https://github.com/truecharts/charts/compare/homebridge-1.0.27...homebridge-1.0.28) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [homebridge-1.0.27](https://github.com/truecharts/charts/compare/homebridge-1.0.26...homebridge-1.0.27) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))

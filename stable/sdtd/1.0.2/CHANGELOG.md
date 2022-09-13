@@ -2,6 +2,33 @@
 
 
 
+## [sdtd-1.0.2](https://github.com/truecharts/charts/compare/sdtd-1.0.1...sdtd-1.0.2) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [sdtd-1.0.2](https://github.com/truecharts/charts/compare/sdtd-1.0.1...sdtd-1.0.2) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [sdtd-1.0.2](https://github.com/truecharts/charts/compare/sdtd-1.0.1...sdtd-1.0.2) (2022-09-11)
 
 ### Chore
@@ -67,33 +94,6 @@
 ### Chore
 
 - update helm chart common to v10.5.5 ([#3626](https://github.com/truecharts/charts/issues/3626))
-
-
-
-
-## [sdtd-0.0.21](https://github.com/truecharts/charts/compare/sdtd-0.0.20...sdtd-0.0.21) (2022-08-29)
-
-### Chore
-
-- update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [sdtd-0.0.20](https://github.com/truecharts/charts/compare/sdtd-0.0.18...sdtd-0.0.20) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-## [sdtd-0.0.18](https://github.com/truecharts/charts/compare/sdtd-0.0.17...sdtd-0.0.18) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
 
 
 

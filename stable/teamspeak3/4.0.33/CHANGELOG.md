@@ -2,6 +2,33 @@
 
 
 
+## [teamspeak3-4.0.33](https://github.com/truecharts/charts/compare/teamspeak3-4.0.32...teamspeak3-4.0.33) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [teamspeak3-4.0.33](https://github.com/truecharts/charts/compare/teamspeak3-4.0.32...teamspeak3-4.0.33) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [teamspeak3-4.0.33](https://github.com/truecharts/charts/compare/teamspeak3-4.0.32...teamspeak3-4.0.33) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
 
-
-
-
-## [teamspeak3-4.0.29](https://github.com/truecharts/charts/compare/teamspeak3-4.0.28...teamspeak3-4.0.29) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [teamspeak3-4.0.28](https://github.com/truecharts/charts/compare/teamspeak3-4.0.27...teamspeak3-4.0.28) (2022-08-14)
-
-### Chore
-
-- update docker general non-major docker tags ([#3465](https://github.com/truecharts/charts/issues/3465))
-
-
-
-
-## [teamspeak3-4.0.27](https://github.com/truecharts/charts/compare/teamspeak3-4.0.26...teamspeak3-4.0.27) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))

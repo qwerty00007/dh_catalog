@@ -2,6 +2,33 @@
 
 
 
+## [spotweb-4.0.36](https://github.com/truecharts/charts/compare/spotweb-4.0.35...spotweb-4.0.36) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [spotweb-4.0.36](https://github.com/truecharts/charts/compare/spotweb-4.0.35...spotweb-4.0.36) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [spotweb-4.0.36](https://github.com/truecharts/charts/compare/spotweb-4.0.35...spotweb-4.0.36) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3621](https://github.com/truecharts/charts/issues/3621))
   - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [spotweb-4.0.31](https://github.com/truecharts/charts/compare/spotweb-4.0.30...spotweb-4.0.31) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [spotweb-4.0.30](https://github.com/truecharts/charts/compare/spotweb-4.0.29...spotweb-4.0.30) (2022-08-17)
-
-### Chore
-
-- update helm general non-major helm releases ([#3484](https://github.com/truecharts/charts/issues/3484))
-
-
-
-
-## [spotweb-4.0.29](https://github.com/truecharts/charts/compare/spotweb-4.0.28...spotweb-4.0.29) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps

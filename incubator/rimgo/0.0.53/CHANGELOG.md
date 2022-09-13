@@ -9,6 +9,37 @@
 - Auto-update chart README [skip ci]
   - Auto-update chart README [skip ci]
   - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update docker general non-major ([#3743](https://github.com/truecharts/charts/issues/3743))
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+  - update docker general non-major ([#3736](https://github.com/truecharts/charts/issues/3736))
+
+
+
+
+## [rimgo-0.0.53](https://github.com/truecharts/charts/compare/rimgo-0.0.51...rimgo-0.0.53) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update docker general non-major ([#3743](https://github.com/truecharts/charts/issues/3743))
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+  - update docker general non-major ([#3736](https://github.com/truecharts/charts/issues/3736))
+
+
+
+
+## [rimgo-0.0.53](https://github.com/truecharts/charts/compare/rimgo-0.0.51...rimgo-0.0.53) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
   - update docker general non-major ([#3743](https://github.com/truecharts/charts/issues/3743))
   - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
   - update docker general non-major ([#3736](https://github.com/truecharts/charts/issues/3736))
@@ -65,35 +96,4 @@
 - Auto-update chart README [skip ci]
   - add missing descriptions and clean up descriptions for various charts ([#3704](https://github.com/truecharts/charts/issues/3704))
   - update docker general non-major ([#3710](https://github.com/truecharts/charts/issues/3710))
-
-
-
-
-## [rimgo-0.0.50](https://github.com/truecharts/charts/compare/rimgo-0.0.49...rimgo-0.0.50) (2022-09-06)
-
-### Chore
-
-- add missing descriptions and clean up descriptions for various charts ([#3704](https://github.com/truecharts/charts/issues/3704))
-  - update docker general non-major ([#3710](https://github.com/truecharts/charts/issues/3710))
-
-
-
-
-## [rimgo-0.0.49](https://github.com/truecharts/charts/compare/rimgo-0.0.48...rimgo-0.0.49) (2022-09-05)
-
-### Chore
-
-- update docker general non-major ([#3700](https://github.com/truecharts/charts/issues/3700))
-
-
-
-
-## [rimgo-0.0.48](https://github.com/truecharts/charts/compare/rimgo-0.0.47...rimgo-0.0.48) (2022-09-03)
-
-### Chore
-
-- update docker general non-major ([#3668](https://github.com/truecharts/charts/issues/3668))
-
-
-
 

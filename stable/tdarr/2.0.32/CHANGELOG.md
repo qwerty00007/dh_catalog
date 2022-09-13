@@ -2,6 +2,33 @@
 
 
 
+## [tdarr-2.0.32](https://github.com/truecharts/charts/compare/tdarr-2.0.31...tdarr-2.0.32) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [tdarr-2.0.32](https://github.com/truecharts/charts/compare/tdarr-2.0.31...tdarr-2.0.32) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [tdarr-2.0.32](https://github.com/truecharts/charts/compare/tdarr-2.0.31...tdarr-2.0.32) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
 
-
-
-
-## [tdarr-2.0.28](https://github.com/truecharts/charts/compare/tdarr-2.0.27...tdarr-2.0.28) (2022-08-25)
-
-### Fix
-
-- enable portal button ([#3571](https://github.com/truecharts/charts/issues/3571))
-
-
-
-
-## [tdarr-2.0.27](https://github.com/truecharts/charts/compare/tdarr-2.0.26...tdarr-2.0.27) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [tdarr-2.0.26](https://github.com/truecharts/charts/compare/tdarr-2.0.25...tdarr-2.0.26) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))

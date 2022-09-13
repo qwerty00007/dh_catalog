@@ -2,6 +2,33 @@
 
 
 
+## [pgadmin-7.0.34](https://github.com/truecharts/charts/compare/pgadmin-7.0.33...pgadmin-7.0.34) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [pgadmin-7.0.34](https://github.com/truecharts/charts/compare/pgadmin-7.0.33...pgadmin-7.0.34) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [pgadmin-7.0.34](https://github.com/truecharts/charts/compare/pgadmin-7.0.33...pgadmin-7.0.34) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
 
-
-
-
-## [pgadmin-7.0.30](https://github.com/truecharts/charts/compare/pgadmin-7.0.29...pgadmin-7.0.30) (2022-08-26)
-
-### Chore
-
-- update docker general non-major ([#3573](https://github.com/truecharts/charts/issues/3573))
-
-
-
-
-## [pgadmin-7.0.29](https://github.com/truecharts/charts/compare/pgadmin-7.0.28...pgadmin-7.0.29) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [pgadmin-7.0.28](https://github.com/truecharts/charts/compare/pgadmin-7.0.27...pgadmin-7.0.28) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))

@@ -2,6 +2,33 @@
 
 
 
+## [mymediaforalexa-1.0.9](https://github.com/truecharts/charts/compare/mymediaforalexa-1.0.8...mymediaforalexa-1.0.9) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [mymediaforalexa-1.0.9](https://github.com/truecharts/charts/compare/mymediaforalexa-1.0.8...mymediaforalexa-1.0.9) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [mymediaforalexa-1.0.9](https://github.com/truecharts/charts/compare/mymediaforalexa-1.0.8...mymediaforalexa-1.0.9) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
 
-
-
-
-## [mymediaforalexa-1.0.5](https://github.com/truecharts/charts/compare/mymediaforalexa-1.0.4...mymediaforalexa-1.0.5) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [mymediaforalexa-1.0.4](https://github.com/truecharts/charts/compare/mymediaforalexa-1.0.3...mymediaforalexa-1.0.4) (2022-08-14)
-
-### Chore
-
-- update docker general non-major docker tags ([#3465](https://github.com/truecharts/charts/issues/3465))
-
-
-
-
-## [mymediaforalexa-1.0.3](https://github.com/truecharts/charts/compare/mymediaforalexa-1.0.2...mymediaforalexa-1.0.3) (2022-08-13)
-
-
-
-
-## [mymediaforalexa-1.0.2](https://github.com/truecharts/charts/compare/mymediaforalexa-1.0.1...mymediaforalexa-1.0.2) (2022-08-13)

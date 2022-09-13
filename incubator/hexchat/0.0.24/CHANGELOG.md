@@ -2,6 +2,33 @@
 
 
 
+## [hexchat-0.0.24](https://github.com/truecharts/charts/compare/hexchat-0.0.23...hexchat-0.0.24) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [hexchat-0.0.24](https://github.com/truecharts/charts/compare/hexchat-0.0.23...hexchat-0.0.24) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [hexchat-0.0.24](https://github.com/truecharts/charts/compare/hexchat-0.0.23...hexchat-0.0.24) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 ### Chore
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [hexchat-0.0.19](https://github.com/truecharts/charts/compare/hexchat-0.0.17...hexchat-0.0.19) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-## [hexchat-0.0.17](https://github.com/truecharts/charts/compare/hexchat-0.0.16...hexchat-0.0.17) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [hexchat-0.0.16](https://github.com/truecharts/charts/compare/hexchat-0.0.15...hexchat-0.0.16) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps

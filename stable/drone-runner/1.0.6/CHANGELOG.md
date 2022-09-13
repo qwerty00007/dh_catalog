@@ -2,6 +2,33 @@
 
 
 
+## [drone-runner-1.0.6](https://github.com/truecharts/charts/compare/drone-runner-1.0.5...drone-runner-1.0.6) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [drone-runner-1.0.6](https://github.com/truecharts/charts/compare/drone-runner-1.0.5...drone-runner-1.0.6) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [drone-runner-1.0.6](https://github.com/truecharts/charts/compare/drone-runner-1.0.5...drone-runner-1.0.6) (2022-09-11)
 
 ### Chore
@@ -67,33 +94,6 @@
 ### Chore
 
 - update helm chart common to v10.5.5 ([#3626](https://github.com/truecharts/charts/issues/3626))
-
-
-
-
-## [drone-runner-1.0.2](https://github.com/truecharts/charts/compare/drone-runner-1.0.1...drone-runner-1.0.2) (2022-08-29)
-
-### Chore
-
-- update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [drone-runner-1.0.1](https://github.com/truecharts/charts/compare/drone-runner-1.0.0...drone-runner-1.0.1) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [drone-runner-1.0.0](https://github.com/truecharts/charts/compare/drone-runner-0.0.2...drone-runner-1.0.0) (2022-08-22)
-
-### Feat
-
-- Move to stable ([#3533](https://github.com/truecharts/charts/issues/3533))
 
 
 

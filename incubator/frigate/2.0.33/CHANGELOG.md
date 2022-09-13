@@ -2,6 +2,33 @@
 
 
 
+## [frigate-2.0.33](https://github.com/truecharts/charts/compare/frigate-2.0.32...frigate-2.0.33) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [frigate-2.0.33](https://github.com/truecharts/charts/compare/frigate-2.0.32...frigate-2.0.33) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [frigate-2.0.33](https://github.com/truecharts/charts/compare/frigate-2.0.32...frigate-2.0.33) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 
 
-
-## [frigate-2.0.29](https://github.com/truecharts/charts/compare/frigate-2.0.27...frigate-2.0.29) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-## [frigate-2.0.27](https://github.com/truecharts/charts/compare/frigate-2.0.26...frigate-2.0.27) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [frigate-2.0.26](https://github.com/truecharts/charts/compare/frigate-2.0.25...frigate-2.0.26) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))
-
-  ### Fix

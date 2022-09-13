@@ -2,6 +2,33 @@
 
 
 
+## [sonarr-11.0.33](https://github.com/truecharts/charts/compare/sonarr-11.0.32...sonarr-11.0.33) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [sonarr-11.0.33](https://github.com/truecharts/charts/compare/sonarr-11.0.32...sonarr-11.0.33) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [sonarr-11.0.33](https://github.com/truecharts/charts/compare/sonarr-11.0.32...sonarr-11.0.33) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
 
-
-
-
-## [sonarr-11.0.29](https://github.com/truecharts/charts/compare/sonarr-11.0.28...sonarr-11.0.29) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [sonarr-11.0.28](https://github.com/truecharts/charts/compare/sonarr-11.0.27...sonarr-11.0.28) (2022-08-12)
-
-### Chore
-
-- update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))
-
-
-
-
-## [sonarr-11.0.27](https://github.com/truecharts/charts/compare/sonarr-11.0.26...sonarr-11.0.27) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update docker general non-major ([#3453](https://github.com/truecharts/charts/issues/3453))

@@ -2,6 +2,33 @@
 
 
 
+## [joplin-server-8.0.35](https://github.com/truecharts/charts/compare/joplin-server-8.0.34...joplin-server-8.0.35) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [joplin-server-8.0.35](https://github.com/truecharts/charts/compare/joplin-server-8.0.34...joplin-server-8.0.35) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [joplin-server-8.0.35](https://github.com/truecharts/charts/compare/joplin-server-8.0.34...joplin-server-8.0.35) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3621](https://github.com/truecharts/charts/issues/3621))
   - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [joplin-server-8.0.30](https://github.com/truecharts/charts/compare/joplin-server-8.0.29...joplin-server-8.0.30) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [joplin-server-8.0.29](https://github.com/truecharts/charts/compare/joplin-server-8.0.28...joplin-server-8.0.29) (2022-08-17)
-
-### Chore
-
-- update helm general non-major helm releases ([#3484](https://github.com/truecharts/charts/issues/3484))
-
-
-
-
-## [joplin-server-8.0.28](https://github.com/truecharts/charts/compare/joplin-server-8.0.27...joplin-server-8.0.28) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps

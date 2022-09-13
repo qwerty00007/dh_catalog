@@ -2,6 +2,35 @@
 
 
 
+## [piaware-6.0.35](https://github.com/truecharts/charts/compare/piaware-6.0.34...piaware-6.0.35) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+  - update docker general non-major ([#3736](https://github.com/truecharts/charts/issues/3736))
+
+
+
+
+## [piaware-6.0.35](https://github.com/truecharts/charts/compare/piaware-6.0.34...piaware-6.0.35) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+  - update docker general non-major ([#3736](https://github.com/truecharts/charts/issues/3736))
+
+
+
+
 ## [piaware-6.0.35](https://github.com/truecharts/charts/compare/piaware-6.0.34...piaware-6.0.35) (2022-09-11)
 
 ### Chore
@@ -67,33 +96,4 @@
 
 
 
-
-## [piaware-6.0.32](https://github.com/truecharts/charts/compare/piaware-6.0.31...piaware-6.0.32) (2022-08-29)
-
-### Chore
-
-- update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [piaware-6.0.31](https://github.com/truecharts/charts/compare/piaware-6.0.30...piaware-6.0.31) (2022-08-26)
-
-### Chore
-
-- update docker general non-major ([#3573](https://github.com/truecharts/charts/issues/3573))
-
-
-
-
-## [piaware-6.0.30](https://github.com/truecharts/charts/compare/piaware-6.0.29...piaware-6.0.30) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [piaware-6.0.29](https://github.com/truecharts/charts/compare/piaware-6.0.28...piaware-6.0.29) (2022-08-22)
 

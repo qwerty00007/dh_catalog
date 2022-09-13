@@ -2,6 +2,33 @@
 
 
 
+## [syslog-ng-2.0.32](https://github.com/truecharts/charts/compare/syslog-ng-2.0.31...syslog-ng-2.0.32) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [syslog-ng-2.0.32](https://github.com/truecharts/charts/compare/syslog-ng-2.0.31...syslog-ng-2.0.32) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [syslog-ng-2.0.32](https://github.com/truecharts/charts/compare/syslog-ng-2.0.31...syslog-ng-2.0.32) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update docker general non-major ([#3623](https://github.com/truecharts/charts/issues/3623))
 
-
-
-
-## [syslog-ng-2.0.28](https://github.com/truecharts/charts/compare/syslog-ng-2.0.27...syslog-ng-2.0.28) (2022-08-29)
-
-### Chore
-
-- update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [syslog-ng-2.0.27](https://github.com/truecharts/charts/compare/syslog-ng-2.0.26...syslog-ng-2.0.27) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [syslog-ng-2.0.26](https://github.com/truecharts/charts/compare/syslog-ng-2.0.25...syslog-ng-2.0.26) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))

@@ -2,6 +2,33 @@
 
 
 
+## [flood-6.0.32](https://github.com/truecharts/charts/compare/qflood-0.0.28...flood-6.0.32) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [flood-6.0.32](https://github.com/truecharts/charts/compare/qflood-0.0.28...flood-6.0.32) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [flood-6.0.32](https://github.com/truecharts/charts/compare/qflood-0.0.28...flood-6.0.32) (2022-09-11)
 
 ### Chore
@@ -68,32 +95,5 @@
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
 
-
-
-
-## [flood-6.0.28](https://github.com/truecharts/charts/compare/qflood-0.0.19...flood-6.0.28) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [flood-6.0.27](https://github.com/truecharts/charts/compare/rflood-0.0.16...flood-6.0.27) (2022-08-12)
-
-### Chore
-
-- update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))
-
-
-
-
-## [flood-6.0.26](https://github.com/truecharts/charts/compare/qflood-0.0.14...flood-6.0.26) (2022-08-08)
-
-### Chore
-
-- update helm general non-major helm releases ([#3376](https://github.com/truecharts/charts/issues/3376))
-  - replace questions parts with templates ([#3402](https://github.com/truecharts/charts/issues/3402))
 
 

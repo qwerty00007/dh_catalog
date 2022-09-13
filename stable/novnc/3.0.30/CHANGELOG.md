@@ -2,6 +2,33 @@
 
 
 
+## [novnc-3.0.30](https://github.com/truecharts/charts/compare/prusaslicer-novnc-0.0.27...novnc-3.0.30) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [novnc-3.0.30](https://github.com/truecharts/charts/compare/prusaslicer-novnc-0.0.27...novnc-3.0.30) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [novnc-3.0.30](https://github.com/truecharts/charts/compare/prusaslicer-novnc-0.0.27...novnc-3.0.30) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 
 
-
-## [novnc-3.0.26](https://github.com/truecharts/charts/compare/prusaslicer-novnc-0.0.19...novnc-3.0.26) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [novnc-3.0.25](https://github.com/truecharts/charts/compare/prusaslicer-novnc-0.0.17...novnc-3.0.25) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))
-
-  ### Fix
-
-- move extraArgs from .Values.controller to .Values ([#3447](https://github.com/truecharts/charts/issues/3447))
-
-
-
-
-## [novnc-3.0.24](https://github.com/truecharts/charts/compare/prusaslicer-novnc-0.0.15...novnc-3.0.24) (2022-08-08)
-
-### Chore

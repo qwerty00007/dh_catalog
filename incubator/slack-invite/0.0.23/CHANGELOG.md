@@ -2,6 +2,33 @@
 
 
 
+## [slack-invite-0.0.23](https://github.com/truecharts/charts/compare/slack-invite-0.0.22...slack-invite-0.0.23) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [slack-invite-0.0.23](https://github.com/truecharts/charts/compare/slack-invite-0.0.22...slack-invite-0.0.23) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [slack-invite-0.0.23](https://github.com/truecharts/charts/compare/slack-invite-0.0.22...slack-invite-0.0.23) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
 
-
-
-
-## [slack-invite-0.0.19](https://github.com/truecharts/charts/compare/slack-invite-0.0.17...slack-invite-0.0.19) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-## [slack-invite-0.0.17](https://github.com/truecharts/charts/compare/slack-invite-0.0.16...slack-invite-0.0.17) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [slack-invite-0.0.16](https://github.com/truecharts/charts/compare/slack-invite-0.0.15...slack-invite-0.0.16) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))

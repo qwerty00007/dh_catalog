@@ -2,6 +2,33 @@
 
 
 
+## [duckdns-2.0.40](https://github.com/truecharts/charts/compare/duckdns-2.0.39...duckdns-2.0.40) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [duckdns-2.0.40](https://github.com/truecharts/charts/compare/duckdns-2.0.39...duckdns-2.0.40) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [duckdns-2.0.40](https://github.com/truecharts/charts/compare/duckdns-2.0.39...duckdns-2.0.40) (2022-09-11)
 
 ### Chore
@@ -67,33 +94,6 @@
 ### Chore
 
 - update helm chart common to v10.5.5 ([#3626](https://github.com/truecharts/charts/issues/3626))
-
-
-
-
-## [duckdns-2.0.36](https://github.com/truecharts/charts/compare/duckdns-2.0.35...duckdns-2.0.36) (2022-08-29)
-
-### Chore
-
-- update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [duckdns-2.0.35](https://github.com/truecharts/charts/compare/duckdns-2.0.34...duckdns-2.0.35) (2022-08-25)
-
-### Chore
-
-- update docker general non-major ([#3561](https://github.com/truecharts/charts/issues/3561))
-
-
-
-
-## [duckdns-2.0.34](https://github.com/truecharts/charts/compare/duckdns-2.0.33...duckdns-2.0.34) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
 
 
 

@@ -1,20 +1,21 @@
-# orbital-sync
+# typecho
 
-![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.1.0](https://img.shields.io/badge/AppVersion-1.1.0-informational?style=flat-square)
+![Version: 4.0.0](https://img.shields.io/badge/Version-4.0.0-informational?style=flat-square) ![AppVersion: 1.2.0](https://img.shields.io/badge/AppVersion-1.2.0-informational?style=flat-square)
 
-Orbital Sync synchronizes multiple Pi-hole instances for high availability.
+Typecho is a PHP Blogging Platform.
 
 TrueCharts can be installed as both *normal* Helm Charts or as Apps on TrueNAS SCALE.
 
 This readme is just an automatically generated general guide on installing our Helm Charts and Apps.
-For more information, please click here: [orbital-sync](https://truecharts.org/docs/charts/incubator/orbital-sync)
+For more information, please click here: [typecho](https://truecharts.org/docs/charts/stable/typecho)
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/truecharts/charts/issues/new/choose)**
 
 ## Source Code
 
-* <https://github.com/truecharts/charts/tree/master/charts/incubator/orbital-sync>
-* <https://github.com/mattwebbio/orbital-sync/pkgs/container/orbital-sync>
+* <https://github.com/truecharts/charts/tree/master/charts/stable/typecho>
+* <https://github.com/typecho/typecho>
+* <https://hub.docker.com/r/joyqi/typecho>
 
 ## Requirements
 
@@ -24,6 +25,7 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
+| https://charts.truecharts.org/ | mariadb | 3.0.71 |
 | https://library-charts.truecharts.org | common | 10.5.9 |
 
 ## Installing the Chart
@@ -34,12 +36,12 @@ To install this Chart on TrueNAS SCALE check our [Quick-Start Guide](https://tru
 
 ### Helm
 
-To install the chart with the release name `orbital-sync`
+To install the chart with the release name `typecho`
 
 ```console
 helm repo add TrueCharts https://charts.truecharts.org
 helm repo update
-helm install orbital-sync TrueCharts/orbital-sync
+helm install typecho TrueCharts/typecho
 ```
 
 ## Uninstall
@@ -52,10 +54,10 @@ To upgrade, rollback or delete this Chart from TrueNAS SCALE check our [Quick-St
 
 ### Helm
 
-To uninstall the `orbital-sync` deployment
+To uninstall the `typecho` deployment
 
 ```console
-helm uninstall orbital-sync
+helm uninstall typecho
 ```
 
 ## Configuration
@@ -72,9 +74,9 @@ Other values may be used from the [values.yaml](https://github.com/truecharts/li
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
-helm install orbital-sync \
+helm install typecho \
   --set env.TZ="America/New York" \
-    TrueCharts/orbital-sync
+    TrueCharts/typecho
 ```
 
 #### Configure using a yaml file
@@ -82,7 +84,7 @@ helm install orbital-sync \
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install orbital-sync TrueCharts/orbital-sync -f values.yaml
+helm install typecho TrueCharts/typecho -f values.yaml
 ```
 
 #### Connecting to other charts

@@ -1,19 +1,20 @@
-# synapse
+# orbital-sync
 
-![Version: 4.0.40](https://img.shields.io/badge/Version-4.0.40-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.66.0](https://img.shields.io/badge/AppVersion-1.66.0-informational?style=flat-square)
+![Version: 0.0.4](https://img.shields.io/badge/Version-0.0.4-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 1.1.0](https://img.shields.io/badge/AppVersion-1.1.0-informational?style=flat-square)
 
-A Helm chart to deploy a Matrix homeserver stack into Kubernetes
+Orbital Sync synchronizes multiple Pi-hole instances for high availability.
 
 TrueCharts can be installed as both *normal* Helm Charts or as Apps on TrueNAS SCALE.
 
 This readme is just an automatically generated general guide on installing our Helm Charts and Apps.
-For more information, please click here: [synapse](https://truecharts.org/docs/charts/stable/synapse)
+For more information, please click here: [orbital-sync](https://truecharts.org/docs/charts/incubator/orbital-sync)
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/truecharts/charts/issues/new/choose)**
 
 ## Source Code
 
-* <https://github.com/truecharts/charts/tree/master/charts/stable/synapse>
+* <https://github.com/truecharts/charts/tree/master/charts/incubator/orbital-sync>
+* <https://github.com/mattwebbio/orbital-sync/pkgs/container/orbital-sync>
 
 ## Requirements
 
@@ -23,7 +24,6 @@ Kubernetes: `>=1.16.0-0`
 
 | Repository | Name | Version |
 |------------|------|---------|
-| https://charts.truecharts.org/ | postgresql | 8.0.75 |
 | https://library-charts.truecharts.org | common | 10.5.9 |
 
 ## Installing the Chart
@@ -34,12 +34,12 @@ To install this Chart on TrueNAS SCALE check our [Quick-Start Guide](https://tru
 
 ### Helm
 
-To install the chart with the release name `synapse`
+To install the chart with the release name `orbital-sync`
 
 ```console
 helm repo add TrueCharts https://charts.truecharts.org
 helm repo update
-helm install synapse TrueCharts/synapse
+helm install orbital-sync TrueCharts/orbital-sync
 ```
 
 ## Uninstall
@@ -52,10 +52,10 @@ To upgrade, rollback or delete this Chart from TrueNAS SCALE check our [Quick-St
 
 ### Helm
 
-To uninstall the `synapse` deployment
+To uninstall the `orbital-sync` deployment
 
 ```console
-helm uninstall synapse
+helm uninstall orbital-sync
 ```
 
 ## Configuration
@@ -72,9 +72,9 @@ Other values may be used from the [values.yaml](https://github.com/truecharts/li
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
-helm install synapse \
+helm install orbital-sync \
   --set env.TZ="America/New York" \
-    TrueCharts/synapse
+    TrueCharts/orbital-sync
 ```
 
 #### Configure using a yaml file
@@ -82,7 +82,7 @@ helm install synapse \
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install synapse TrueCharts/synapse -f values.yaml
+helm install orbital-sync TrueCharts/orbital-sync -f values.yaml
 ```
 
 #### Connecting to other charts

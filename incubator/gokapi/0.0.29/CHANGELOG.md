@@ -2,6 +2,33 @@
 
 
 
+## [gokapi-0.0.29](https://github.com/truecharts/charts/compare/gokapi-0.0.28...gokapi-0.0.29) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [gokapi-0.0.29](https://github.com/truecharts/charts/compare/gokapi-0.0.28...gokapi-0.0.29) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [gokapi-0.0.29](https://github.com/truecharts/charts/compare/gokapi-0.0.28...gokapi-0.0.29) (2022-09-11)
 
 ### Chore
@@ -69,31 +96,4 @@
 ### Chore
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [gokapi-0.0.25](https://github.com/truecharts/charts/compare/gokapi-0.0.23...gokapi-0.0.25) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-## [gokapi-0.0.23](https://github.com/truecharts/charts/compare/gokapi-0.0.22...gokapi-0.0.23) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [gokapi-0.0.22](https://github.com/truecharts/charts/compare/gokapi-0.0.21...gokapi-0.0.22) (2022-08-19)
-
-### Chore
-
-- update docker general non-major docker tags ([#3512](https://github.com/truecharts/charts/issues/3512))
 

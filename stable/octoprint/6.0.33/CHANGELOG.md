@@ -2,6 +2,33 @@
 
 
 
+## [octoprint-6.0.33](https://github.com/truecharts/charts/compare/octoprint-6.0.32...octoprint-6.0.33) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [octoprint-6.0.33](https://github.com/truecharts/charts/compare/octoprint-6.0.32...octoprint-6.0.33) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [octoprint-6.0.33](https://github.com/truecharts/charts/compare/octoprint-6.0.32...octoprint-6.0.33) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
 
-
-
-
-## [octoprint-6.0.29](https://github.com/truecharts/charts/compare/octoprint-6.0.28...octoprint-6.0.29) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [octoprint-6.0.28](https://github.com/truecharts/charts/compare/octoprint-6.0.27...octoprint-6.0.28) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))
-
-  ### Fix
-
-- move extraArgs from .Values.controller to .Values ([#3447](https://github.com/truecharts/charts/issues/3447))
-
-
-
-
-## [octoprint-6.0.27](https://github.com/truecharts/charts/compare/octoprint-6.0.26...octoprint-6.0.27) (2022-08-10)

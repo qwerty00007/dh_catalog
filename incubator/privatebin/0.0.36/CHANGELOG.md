@@ -2,6 +2,33 @@
 
 
 
+## [privatebin-0.0.36](https://github.com/truecharts/charts/compare/privatebin-0.0.35...privatebin-0.0.36) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [privatebin-0.0.36](https://github.com/truecharts/charts/compare/privatebin-0.0.35...privatebin-0.0.36) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [privatebin-0.0.36](https://github.com/truecharts/charts/compare/privatebin-0.0.35...privatebin-0.0.36) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3621](https://github.com/truecharts/charts/issues/3621))
   - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [privatebin-0.0.31](https://github.com/truecharts/charts/compare/privatebin-0.0.29...privatebin-0.0.31) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-## [privatebin-0.0.29](https://github.com/truecharts/charts/compare/privatebin-0.0.28...privatebin-0.0.29) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [privatebin-0.0.28](https://github.com/truecharts/charts/compare/privatebin-0.0.27...privatebin-0.0.28) (2022-08-17)
-
-### Chore
-
-- update helm general non-major helm releases ([#3484](https://github.com/truecharts/charts/issues/3484))

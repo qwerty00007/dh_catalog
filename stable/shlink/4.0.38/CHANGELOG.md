@@ -2,6 +2,33 @@
 
 
 
+## [shlink-4.0.38](https://github.com/truecharts/charts/compare/shlink-4.0.37...shlink-4.0.38) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [shlink-4.0.38](https://github.com/truecharts/charts/compare/shlink-4.0.37...shlink-4.0.38) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [shlink-4.0.38](https://github.com/truecharts/charts/compare/shlink-4.0.37...shlink-4.0.38) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3624](https://github.com/truecharts/charts/issues/3624))
 
-
-
-
-## [shlink-4.0.34](https://github.com/truecharts/charts/compare/shlink-web-client-3.0.28...shlink-4.0.34) (2022-08-29)
-
-### Chore
-
-- update helm general non-major ([#3621](https://github.com/truecharts/charts/issues/3621))
-  - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [shlink-4.0.32](https://github.com/truecharts/charts/compare/shlink-4.0.31...shlink-4.0.32) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [shlink-4.0.31](https://github.com/truecharts/charts/compare/shlink-4.0.30...shlink-4.0.31) (2022-08-17)
-
-### Chore
-
-- update helm general non-major helm releases ([#3484](https://github.com/truecharts/charts/issues/3484))

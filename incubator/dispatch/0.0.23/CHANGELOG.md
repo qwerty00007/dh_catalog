@@ -2,6 +2,33 @@
 
 
 
+## [dispatch-0.0.23](https://github.com/truecharts/charts/compare/dispatch-0.0.22...dispatch-0.0.23) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [dispatch-0.0.23](https://github.com/truecharts/charts/compare/dispatch-0.0.22...dispatch-0.0.23) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [dispatch-0.0.23](https://github.com/truecharts/charts/compare/dispatch-0.0.22...dispatch-0.0.23) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 
 
-
-## [dispatch-0.0.19](https://github.com/truecharts/charts/compare/dispatch-0.0.17...dispatch-0.0.19) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-## [dispatch-0.0.17](https://github.com/truecharts/charts/compare/dispatch-0.0.16...dispatch-0.0.17) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [dispatch-0.0.16](https://github.com/truecharts/charts/compare/dispatch-0.0.15...dispatch-0.0.16) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))
-
-  ### Fix

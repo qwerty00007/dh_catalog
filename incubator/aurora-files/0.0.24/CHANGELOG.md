@@ -2,6 +2,35 @@
 
 
 
+## [aurora-files-0.0.24](https://github.com/truecharts/charts/compare/aurora-files-0.0.23...aurora-files-0.0.24) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - add missing descriptions and clean up descriptions for various charts ([#3704](https://github.com/truecharts/charts/issues/3704))
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [aurora-files-0.0.24](https://github.com/truecharts/charts/compare/aurora-files-0.0.23...aurora-files-0.0.24) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - add missing descriptions and clean up descriptions for various charts ([#3704](https://github.com/truecharts/charts/issues/3704))
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [aurora-files-0.0.24](https://github.com/truecharts/charts/compare/aurora-files-0.0.23...aurora-files-0.0.24) (2022-09-11)
 
 ### Chore
@@ -68,32 +97,3 @@
 
 
 ## [cryptpad-0.0.41](https://github.com/truecharts/charts/compare/cryptpad-0.0.40...cryptpad-0.0.41) (2022-08-30)
-
-### Chore
-
-- update helm general non-major ([#3639](https://github.com/truecharts/charts/issues/3639))
-
-
-
-
-## [cryptpad-0.0.40](https://github.com/truecharts/charts/compare/cryptpad-0.0.39...cryptpad-0.0.40) (2022-08-30)
-
-### Chore
-
-- update helm chart common to v10.5.5 ([#3626](https://github.com/truecharts/charts/issues/3626))
-
-
-
-
-## [cryptpad-0.0.39](https://github.com/truecharts/charts/compare/cryptpad-0.0.38...cryptpad-0.0.39) (2022-08-30)
-
-### Chore
-
-- update docker general non-major ([#3623](https://github.com/truecharts/charts/issues/3623))
-
-
-
-
-## [cryptpad-0.0.38](https://github.com/truecharts/charts/compare/cryptpad-0.0.37...cryptpad-0.0.38) (2022-08-29)
-
-### Chore

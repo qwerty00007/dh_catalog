@@ -2,6 +2,33 @@
 
 
 
+## [crafty-4-0.0.27](https://github.com/truecharts/charts/compare/crafty-4-0.0.26...crafty-4-0.0.27) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [crafty-4-0.0.27](https://github.com/truecharts/charts/compare/crafty-4-0.0.26...crafty-4-0.0.27) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [crafty-4-0.0.27](https://github.com/truecharts/charts/compare/crafty-4-0.0.26...crafty-4-0.0.27) (2022-09-11)
 
 ### Chore
@@ -68,32 +95,5 @@
 ### Chore
 
 - update helm chart common to v10.5.5 ([#3626](https://github.com/truecharts/charts/issues/3626))
-
-
-
-
-## [crafty-4-0.0.23](https://github.com/truecharts/charts/compare/crafty-4-0.0.22...crafty-4-0.0.23) (2022-08-29)
-
-### Chore
-
-- update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [crafty-4-0.0.22](https://github.com/truecharts/charts/compare/crafty-4-0.0.21...crafty-4-0.0.22) (2022-08-28)
-
-### Chore
-
-- update docker general non-major ([#3600](https://github.com/truecharts/charts/issues/3600))
-
-
-
-
-## [crafty-4-0.0.21](https://github.com/truecharts/charts/compare/crafty-4-0.0.19...crafty-4-0.0.21) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
 
 

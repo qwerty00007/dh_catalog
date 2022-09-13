@@ -2,6 +2,35 @@
 
 
 
+## [songkong-0.0.23](https://github.com/truecharts/charts/compare/songkong-0.0.22...songkong-0.0.23) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - add missing descriptions and clean up descriptions for various charts ([#3704](https://github.com/truecharts/charts/issues/3704))
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [songkong-0.0.23](https://github.com/truecharts/charts/compare/songkong-0.0.22...songkong-0.0.23) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - add missing descriptions and clean up descriptions for various charts ([#3704](https://github.com/truecharts/charts/issues/3704))
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [songkong-0.0.23](https://github.com/truecharts/charts/compare/songkong-0.0.22...songkong-0.0.23) (2022-09-11)
 
 ### Chore
@@ -68,32 +97,3 @@
 
 
 
-## [songkong-0.0.20](https://github.com/truecharts/charts/compare/songkong-0.0.19...songkong-0.0.20) (2022-08-29)
-
-### Chore
-
-- update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [songkong-0.0.19](https://github.com/truecharts/charts/compare/songkong-0.0.17...songkong-0.0.19) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-
-## [songkong-0.0.16](https://github.com/truecharts/charts/compare/songkong-0.0.15...songkong-0.0.16) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))
-
-  ### Fix
-
-- move extraArgs from .Values.controller to .Values ([#3447](https://github.com/truecharts/charts/issues/3447))

@@ -2,6 +2,33 @@
 
 
 
+## [self-service-password-1.0.37](https://github.com/truecharts/charts/compare/self-service-password-1.0.36...self-service-password-1.0.37) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [self-service-password-1.0.37](https://github.com/truecharts/charts/compare/self-service-password-1.0.36...self-service-password-1.0.37) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [self-service-password-1.0.37](https://github.com/truecharts/charts/compare/self-service-password-1.0.36...self-service-password-1.0.37) (2022-09-11)
 
 ### Chore
@@ -69,31 +96,4 @@
 ### Chore
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
-
-
-
-
-## [self-service-password-1.0.33](https://github.com/truecharts/charts/compare/self-service-password-1.0.30...self-service-password-1.0.33) (2022-08-27)
-
-### Chore
-
-- update docker general non-major ([#3587](https://github.com/truecharts/charts/issues/3587))
-
-  ### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-## [self-service-password-1.0.30](https://github.com/truecharts/charts/compare/self-service-password-1.0.29...self-service-password-1.0.30) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [self-service-password-1.0.29](https://github.com/truecharts/charts/compare/self-service-password-1.0.28...self-service-password-1.0.29) (2022-08-12)
 

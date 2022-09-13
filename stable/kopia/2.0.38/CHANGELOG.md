@@ -2,6 +2,33 @@
 
 
 
+## [kopia-2.0.38](https://github.com/truecharts/charts/compare/kopia-2.0.37...kopia-2.0.38) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [kopia-2.0.38](https://github.com/truecharts/charts/compare/kopia-2.0.37...kopia-2.0.38) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [kopia-2.0.38](https://github.com/truecharts/charts/compare/kopia-2.0.37...kopia-2.0.38) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 - update helm general non-major ([#3619](https://github.com/truecharts/charts/issues/3619))
 
-
-
-
-## [kopia-2.0.34](https://github.com/truecharts/charts/compare/kopia-2.0.33...kopia-2.0.34) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [kopia-2.0.33](https://github.com/truecharts/charts/compare/kopia-2.0.32...kopia-2.0.33) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))
-
-  ### Fix
-
-- move extraArgs from .Values.controller to .Values ([#3447](https://github.com/truecharts/charts/issues/3447))
-
-
-
-
-## [kopia-2.0.32](https://github.com/truecharts/charts/compare/kopia-2.0.31...kopia-2.0.32) (2022-08-08)

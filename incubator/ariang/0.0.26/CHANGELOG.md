@@ -2,6 +2,33 @@
 
 
 
+## [ariang-0.0.26](https://github.com/truecharts/charts/compare/ariang-0.0.25...ariang-0.0.26) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [ariang-0.0.26](https://github.com/truecharts/charts/compare/ariang-0.0.25...ariang-0.0.26) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [ariang-0.0.26](https://github.com/truecharts/charts/compare/ariang-0.0.25...ariang-0.0.26) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 
 
-
-## [ariang-0.0.22](https://github.com/truecharts/charts/compare/ariang-0.0.20...ariang-0.0.22) (2022-08-26)
-
-### Fix
-
-- some cleanup ([#3586](https://github.com/truecharts/charts/issues/3586))
-
-
-
-
-## [ariang-0.0.20](https://github.com/truecharts/charts/compare/ariang-0.0.19...ariang-0.0.20) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [ariang-0.0.19](https://github.com/truecharts/charts/compare/ariang-0.0.18...ariang-0.0.19) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))
-
-  ### Fix

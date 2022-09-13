@@ -2,6 +2,33 @@
 
 
 
+## [filebot-1.0.9](https://github.com/truecharts/charts/compare/filebot-1.0.8...filebot-1.0.9) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
+## [filebot-1.0.9](https://github.com/truecharts/charts/compare/filebot-1.0.8...filebot-1.0.9) (2022-09-12)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
+
+
+
+
 ## [filebot-1.0.9](https://github.com/truecharts/charts/compare/filebot-1.0.8...filebot-1.0.9) (2022-09-11)
 
 ### Chore
@@ -70,30 +97,3 @@
 
 
 
-
-## [filebot-1.0.5](https://github.com/truecharts/charts/compare/filebot-1.0.4...filebot-1.0.5) (2022-08-23)
-
-### Chore
-
-- update helm general non-major helm releases ([#3545](https://github.com/truecharts/charts/issues/3545))
-
-
-
-
-## [filebot-1.0.4](https://github.com/truecharts/charts/compare/filebot-1.0.3...filebot-1.0.4) (2022-08-12)
-
-### Chore
-
-- add documentation checkbox/section to all SCALE Apps
-  - update helm general non-major helm releases ([#3456](https://github.com/truecharts/charts/issues/3456))
-
-  ### Fix
-
-- move extraArgs from .Values.controller to .Values ([#3447](https://github.com/truecharts/charts/issues/3447))
-
-
-
-
-## [filebot-1.0.3](https://github.com/truecharts/charts/compare/filebot-1.0.2...filebot-1.0.3) (2022-08-08)
-
-### Chore
