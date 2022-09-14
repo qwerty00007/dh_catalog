@@ -2,6 +2,15 @@
 
 
 
+## [metallb-4.0.9](https://github.com/truecharts/charts/compare/metallb-4.0.8...metallb-4.0.9) (2022-09-14)
+
+### Fix
+
+- indent issue with L2 advertisements ([#3777](https://github.com/truecharts/charts/issues/3777))
+
+
+
+
 ## [metallb-4.0.8](https://github.com/truecharts/charts/compare/metallb-4.0.7...metallb-4.0.8) (2022-09-13)
 
 ### Fix
@@ -85,15 +94,6 @@
 
 
 ## [metallb-4.0.0](https://github.com/truecharts/charts/compare/metallb-2.0.14...metallb-4.0.0) (2022-09-11)
-
-### Chore
-
-- cleanup and move to enterprise train ([#3740](https://github.com/truecharts/charts/issues/3740))
-
-
-
-
-## [metallb-3.0.0](https://github.com/truecharts/charts/compare/metallb-2.0.14...metallb-3.0.0) (2022-09-11)
 
 ### Chore
 
