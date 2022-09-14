@@ -165,49 +165,61 @@ questions:
       type: dict
       attrs:
         - variable: authkey
-          label: "Auth Key"
-          description: "Provide an auth key to automatically authenticate the node as your user account."
+          label: Auth Key
+          description: Provide an auth key to automatically authenticate the node as your user account.
           schema:
             type: string
             private: true
             default: ""
         - variable: userspace
-          label: "Userspace"
-          description: "Userspace Networking mode allows running Tailscale where you don't have access to create a VPN tunnel device."
+          label: Userspace
+          description: Userspace Networking mode allows running Tailscale where you don't have access to create a VPN tunnel device.
           schema:
             type: boolean
-            default: true
+            default: false
         - variable: accept_dns
-          label: "Accept DNS"
-          description: "Accept DNS configuration from the admin console."
+          label: Accept DNS
+          description: Accept DNS configuration from the admin console.
           schema:
             type: boolean
             default: false
         - variable: routes
-          label: "Routes"
+          label: Routes
           description: Expose physical subnet routes to your entire Tailscale network.
           schema:
             type: string
             default: ""
         - variable: dest_ip
-          label: "Dest IP"
+          label: Dest IP
           description: Tells the DNAT mechanism which Destination IP to set in the IP header, and where to send packets that are matched.
           schema:
             type: string
             default: ""
         - variable: sock5_server
-          label: "Sock5 Server"
+          label: Sock5 Server
           schema:
             type: string
             default: ""
+        - variable: hostname
+          label: Hostname
+          description: You can specify a specific hostname for use inside Tailscale. (Passes --hostname HOSTNAME to extra_args)
+          schema:
+            type: string
+            default: ""
+        - variable: advertise_as_exit_node
+          label: Advertise as exit node
+          description: This is used to pass traffic through tailscale like a private VPN. (Passes --advertise-exit-node to extra_args)
+          schema:
+            type: boolean
+            default: false
         - variable: extra_args
-          label: "Extra Args"
+          label: Extra Args
           description: UP_ARGS or flags to pass along to Tailscale, such as --advertise-exit-node
           schema:
             type: string
             default: ""
         - variable: daemon_extra_args
-          label: "Tailscale Daemon Extra Args"
+          label: Tailscale Daemon Extra Args
           schema:
             type: string
             default: ""
@@ -317,145 +329,6 @@ questions:
                       label: Value
                       schema:
                         type: string
-  - variable: service
-    group: Networking and Services
-    label: Configure Service(s)
-    schema:
-      additional_attrs: true
-      type: dict
-      attrs:
-        - variable: main
-          label: "Main Service"
-          description: "The Primary service on which the healthcheck runs, often the webUI"
-          schema:
-            additional_attrs: true
-            type: dict
-            attrs:
-              - variable: enabled
-                label: Enable the Service
-                schema:
-                  type: boolean
-                  default: true
-                  hidden: true
-              - variable: type
-                label: Service Type
-                description: "ClusterIP's are only internally available, nodePorts expose the container to the host node System, Loadbalancer exposes the service using the system loadbalancer"
-                schema:
-                  type: string
-                  default: Simple
-                  enum:
-                    - value: Simple
-                      description: Simple
-                    - value: ClusterIP
-                      description: ClusterIP
-                    - value: NodePort
-                      description: NodePort (Advanced)
-                    - value: LoadBalancer
-                      description: LoadBalancer (Advanced)
-              - variable: loadBalancerIP
-                label: LoadBalancer IP
-                description: LoadBalancerIP
-                schema:
-                  show_if: [["type", "=", "LoadBalancer"]]
-                  type: string
-                  default: ""
-              - variable: externalIPs
-                label: "External IP's"
-                description: "External IP's"
-                schema:
-                  show_if: [["type", "=", "LoadBalancer"]]
-                  type: list
-                  default: []
-                  items:
-                    - variable: externalIP
-                      label: External IP
-                      schema:
-                        type: string
-              - variable: ipFamilyPolicy
-                label: IP Family Policy
-                description: (Advanced) Specify the IP Policy
-                schema:
-                  show_if: [["type", "!=", "Simple"]]
-                  type: string
-                  default: SingleStack
-                  enum:
-                    - value: SingleStack
-                      description: SingleStack
-                    - value: PreferDualStack
-                      description: PreferDualStack
-                    - value: RequireDualStack
-                      description: RequireDualStack
-              - variable: ipFamilies
-                label: (Advanced) IP Families
-                description: (Advanced) The IP Families that should be used
-                schema:
-                  show_if: [["type", "!=", "Simple"]]
-                  type: list
-                  default: []
-                  items:
-                    - variable: ipFamily
-                      label: IP Family
-                      schema:
-                        type: string
-              - variable: ports
-                label: "Service's Port(s) Configuration"
-                schema:
-                  additional_attrs: true
-                  type: dict
-                  attrs:
-                    - variable: main
-                      label: "Main Service Port Configuration"
-                      schema:
-                        additional_attrs: true
-                        type: dict
-                        attrs:
-                          - variable: port
-                            label: "Port"
-                            description: "This port exposes the container port on the service"
-                            schema:
-                              type: int
-                              default: 41600
-                              required: true
-                          - variable: advanced
-                            label: Show Advanced Settings
-                            schema:
-                              type: boolean
-                              default: false
-                              show_subquestions_if: true
-                              subquestions:
-                                - variable: enabled
-                                  label: Enable the Port
-                                  schema:
-                                    type: boolean
-                                    hidden: true
-                                    default: true
-                                - variable: protocol
-                                  label: Port Type
-                                  schema:
-                                    type: string
-                                    default: UDP
-                                    enum:
-                                      - value: HTTP
-                                        description: HTTP
-                                      - value: HTTPS
-                                        description: HTTPS
-                                      - value: TCP
-                                        description: TCP
-                                      - value: UDP
-                                        description: UDP
-                                - variable: nodePort
-                                  label: Node Port (Optional)
-                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
-                                  schema:
-                                    type: int
-                                    min: 9000
-                                    max: 65535
-                                - variable: targetPort
-                                  label: "Target Port"
-                                  description: "The internal(!) port on the container the Application runs on"
-                                  schema:
-                                    type: int
-                                    default: 41700
   - variable: serviceexpert
     group: Networking and Services
     label: Show Expert Config
@@ -469,7 +342,7 @@ questions:
           label: Host-Networking (Complicated)
           schema:
             type: boolean
-            default: false
+            default: true
         - variable: externalInterfaces
           description: Add External Interfaces
           label: Add external Interfaces
@@ -731,8 +604,8 @@ questions:
       type: dict
       attrs:
         - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+          label: App Config Storage
+          description: Stores the Application Configuration.
           schema:
             additional_attrs: true
             type: dict
@@ -1117,7 +990,7 @@ questions:
       type: dict
       attrs:
         - variable: main
-          label: "Main Ingress"
+          label: Main Ingress
           schema:
             additional_attrs: true
             type: dict
@@ -1497,22 +1370,22 @@ questions:
             type: dict
             attrs:
               - variable: privileged
-                label: "Privileged mode"
+                label: Privileged mode
                 schema:
                   type: boolean
                   default: false
               - variable: readOnlyRootFilesystem
-                label: "ReadOnly Root Filesystem"
+                label: ReadOnly Root Filesystem
                 schema:
                   type: boolean
                   default: false
               - variable: allowPrivilegeEscalation
-                label: "Allow Privilege Escalation"
+                label: Allow Privilege Escalation
                 schema:
                   type: boolean
                   default: false
               - variable: runAsNonRoot
-                label: "runAsNonRoot"
+                label: runAsNonRoot
                 schema:
                   type: boolean
                   default: false
@@ -1550,20 +1423,20 @@ questions:
       type: dict
       attrs:
         - variable: runAsUser
-          label: "runAsUser"
-          description: "The UserID of the user running the application"
+          label: runAsUser
+          description: The UserID of the user running the application
           schema:
             type: int
             default: 0
         - variable: runAsGroup
-          label: "runAsGroup"
-          description: "The groupID this App of the user running the application"
+          label: runAsGroup
+          description: The groupID this App of the user running the application
           schema:
             type: int
             default: 0
         - variable: fsGroup
-          label: "fsGroup"
-          description: "The group that should own ALL storage."
+          label: fsGroup
+          description: The group that should own ALL storage.
           schema:
             type: int
             default: 568
