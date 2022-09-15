@@ -2,6 +2,15 @@
 
 
 
+## [prometheus-4.0.83](https://github.com/truecharts/charts/compare/prometheus-4.0.82...prometheus-4.0.83) (2022-09-15)
+
+### Chore
+
+- split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
 ## [prometheus-4.0.82](https://github.com/truecharts/charts/compare/prometheus-4.0.81...prometheus-4.0.82) (2022-09-13)
 
 ### Chore
@@ -86,14 +95,5 @@
 
 - update docker general non-major ([#3727](https://github.com/truecharts/charts/issues/3727))
 
-
-
-
-## [prometheus-4.0.79](https://github.com/truecharts/charts/compare/prometheus-4.0.78...prometheus-4.0.79) (2022-09-07)
-
-### Chore
-
-- Auto-update chart README [skip ci]
-  - update docker general non-major ([#3710](https://github.com/truecharts/charts/issues/3710))
 
 
