@@ -859,14 +859,6 @@ questions:
                                   label: Value
                                   schema:
                                     type: string
-                    - variable: mountPath
-                      label: "mountPath (Non-editable)"
-                      description: "Path inside the container the storage is mounted"
-                      schema:
-                        type: string
-                        default: "/bitnami/redis"
-                        editable: false
-                        valid_chars: '^\/([a-zA-Z0-9._-]+(\s?[a-zA-Z0-9._-]+|\/?))+$'
   - variable: persistenceList
     label: Additional App Storage
     group: Storage and Persistence
