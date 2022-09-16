@@ -2,6 +2,17 @@
 
 
 
+## [send-0.0.25](https://github.com/truecharts/charts/compare/send-0.0.24...send-0.0.25) (2022-09-16)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+
+
+
+
 ## [send-0.0.25](https://github.com/truecharts/charts/compare/send-0.0.24...send-0.0.25) (2022-09-15)
 
 ### Chore
@@ -86,14 +97,3 @@
 ### Chore
 
 - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
-
-
-
-
-## [send-0.0.23](https://github.com/truecharts/charts/compare/send-0.0.22...send-0.0.23) (2022-09-10)
-
-### Chore
-
-- add missing descriptions and clean up descriptions for various charts ([#3704](https://github.com/truecharts/charts/issues/3704))
-  - update docker general non-major ([#3727](https://github.com/truecharts/charts/issues/3727))
-

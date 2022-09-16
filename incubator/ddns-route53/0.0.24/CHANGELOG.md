@@ -2,6 +2,17 @@
 
 
 
+## [ddns-route53-0.0.24](https://github.com/truecharts/charts/compare/ddns-route53-0.0.23...ddns-route53-0.0.24) (2022-09-16)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+
+
+
+
 ## [ddns-route53-0.0.24](https://github.com/truecharts/charts/compare/ddns-route53-0.0.23...ddns-route53-0.0.24) (2022-09-15)
 
 ### Chore
@@ -86,14 +97,3 @@
 ### Chore
 
 - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
-
-
-
-
-## [ddns-route53-0.0.22](https://github.com/truecharts/charts/compare/ddns-route53-0.0.21...ddns-route53-0.0.22) (2022-08-30)
-
-### Chore
-
-- update helm general non-major ([#3639](https://github.com/truecharts/charts/issues/3639))
-
-

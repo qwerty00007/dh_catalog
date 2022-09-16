@@ -6,6 +6,17 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update docker general non-major ([#3787](https://github.com/truecharts/charts/issues/3787))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
+## [solr-0.0.49](https://github.com/truecharts/charts/compare/solr-0.0.48...solr-0.0.49) (2022-09-16)
+
+### Chore
+
 - update docker general non-major ([#3787](https://github.com/truecharts/charts/issues/3787))
   - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
@@ -84,16 +95,5 @@
 ### Chore
 
 - update helm chart common to v10.5.5
-
-
-
-
-## [solr-0.0.39](https://github.com/truecharts/charts/compare/solr-0.0.38...solr-0.0.39) (2022-08-30)
-
-### Chore
-
-- update docker general non-major ([#3623](https://github.com/truecharts/charts/issues/3623))
-
-
 
 

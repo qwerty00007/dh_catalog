@@ -2,6 +2,7 @@
 
 
 
+
 ## [grist-3.0.38](https://github.com/truecharts/charts/compare/grist-3.0.37...grist-3.0.38) (2022-09-15)
 
 ### Chore
@@ -96,4 +97,3 @@
 
 ### Chore
 
-- update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))

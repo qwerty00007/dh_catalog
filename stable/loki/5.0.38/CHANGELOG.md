@@ -2,6 +2,18 @@
 
 
 
+## [loki-5.0.38](https://github.com/truecharts/charts/compare/loki-5.0.37...loki-5.0.38) (2022-09-16)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
 ## [loki-5.0.38](https://github.com/truecharts/charts/compare/loki-5.0.37...loki-5.0.38) (2022-09-15)
 
 ### Chore
@@ -85,15 +97,3 @@
 ## [loki-5.0.36](https://github.com/truecharts/charts/compare/loki-5.0.35...loki-5.0.36) (2022-09-11)
 
 ### Chore
-
-- Auto-update chart README [skip ci]
-  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
-
-
-
-
-## [loki-5.0.36](https://github.com/truecharts/charts/compare/loki-5.0.35...loki-5.0.36) (2022-09-11)
-
-### Chore
-
-- update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))

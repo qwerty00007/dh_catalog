@@ -2,6 +2,17 @@
 
 
 
+## [mariadb-3.0.74](https://github.com/truecharts/charts/compare/mariadb-3.0.73...mariadb-3.0.74) (2022-09-16)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - update docker general non-major ([#3772](https://github.com/truecharts/charts/issues/3772))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
 ## [mariadb-3.0.74](https://github.com/truecharts/charts/compare/mariadb-3.0.73...mariadb-3.0.74) (2022-09-15)
 
 ### Chore
@@ -85,15 +96,4 @@
 ### Chore
 
 - update helm chart common to v10.5.4 ([#3613](https://github.com/truecharts/charts/issues/3613))
-
-
-
-
-## [mariadb-3.0.63](https://github.com/truecharts/charts/compare/mariadb-3.0.62...mariadb-3.0.63) (2022-08-29)
-
-### Chore
-
-- update helm chart common to v10.5.3 ([#3610](https://github.com/truecharts/charts/issues/3610))
-
-
 
