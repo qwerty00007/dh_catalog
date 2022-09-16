@@ -6,6 +6,16 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+
+
+
+
+## [wireguard-1.0.5](https://github.com/truecharts/charts/compare/wireguard-1.0.4...wireguard-1.0.5) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
 
 
@@ -86,14 +96,4 @@
 ### Chore
 
 - use different port to allow easier deploy for host-net and remove portal ([#3642](https://github.com/truecharts/charts/issues/3642))
-
-
-
-
-## [wireguard-1.0.1](https://github.com/truecharts/charts/compare/wireguard-1.0.0...wireguard-1.0.1) (2022-08-30)
-
-### Chore
-
-- update helm general non-major ([#3639](https://github.com/truecharts/charts/issues/3639))
-
 

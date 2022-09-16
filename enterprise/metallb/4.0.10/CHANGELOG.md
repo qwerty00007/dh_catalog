@@ -6,6 +6,16 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+
+
+
+
+## [metallb-4.0.10](https://github.com/truecharts/charts/compare/metallb-4.0.9...metallb-4.0.10) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
 
 
@@ -87,13 +97,3 @@
   - Auto-update chart README [skip ci]
   - fix questions.yaml ([#3744](https://github.com/truecharts/charts/issues/3744))
   - cleanup and move to enterprise train ([#3740](https://github.com/truecharts/charts/issues/3740))
-
-
-
-
-## [metallb-4.0.1](https://github.com/truecharts/charts/compare/metallb-2.0.14...metallb-4.0.1) (2022-09-12)
-
-### Chore
-
-- Auto-update chart README [skip ci]
-  - fix questions.yaml ([#3744](https://github.com/truecharts/charts/issues/3744))

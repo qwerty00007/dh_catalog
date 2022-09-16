@@ -6,6 +6,17 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
+## [pasta-1.0.2](https://github.com/truecharts/charts/compare/pasta-1.0.1...pasta-1.0.2) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
   - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
@@ -86,14 +97,3 @@
 ### Feat
 
 - move to stable ([#3674](https://github.com/truecharts/charts/issues/3674))
-
-
-
-
-## [pasta-0.0.23](https://github.com/truecharts/charts/compare/pasta-0.0.22...pasta-0.0.23) (2022-09-02)
-
-### Fix
-
-- cleanup and fix service ([#3667](https://github.com/truecharts/charts/issues/3667))
-
-

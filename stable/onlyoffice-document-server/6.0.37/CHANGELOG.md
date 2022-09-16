@@ -6,6 +6,17 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
+## [onlyoffice-document-server-6.0.37](https://github.com/truecharts/charts/compare/onlyoffice-document-server-6.0.36...onlyoffice-document-server-6.0.37) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
   - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
@@ -86,14 +97,3 @@
 ### Chore
 
 - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
-
-
-
-
-## [onlyoffice-document-server-6.0.34](https://github.com/truecharts/charts/compare/onlyoffice-document-server-6.0.32...onlyoffice-document-server-6.0.34) (2022-08-30)
-
-### Chore
-
-- Auto-update chart README [skip ci]
-  - update helm general non-major ([#3639](https://github.com/truecharts/charts/issues/3639))
-  - update helm chart common to v10.5.5 ([#3626](https://github.com/truecharts/charts/issues/3626))

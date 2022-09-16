@@ -6,6 +6,17 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
+## [filerun-3.0.3](https://github.com/truecharts/charts/compare/filerun-3.0.2...filerun-3.0.3) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
   - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
@@ -86,14 +97,3 @@
 ### Chore
 
 - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
-
-
-
-
-## [filerun-3.0.0](https://github.com/truecharts/charts/compare/filerun-2.1.6...filerun-3.0.0) (2022-09-04)
-
-### Feat
-
-- move to stable ([#3687](https://github.com/truecharts/charts/issues/3687))
-
-

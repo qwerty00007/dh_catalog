@@ -6,6 +6,17 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
+## [etesync-0.0.34](https://github.com/truecharts/charts/compare/etesync-0.0.33...etesync-0.0.34) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
   - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
@@ -86,14 +97,3 @@
 ### Chore
 
 - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
-
-
-
-
-## [etesync-0.0.31](https://github.com/truecharts/charts/compare/etesync-0.0.30...etesync-0.0.31) (2022-08-30)
-
-### Chore
-
-- update helm general non-major ([#3639](https://github.com/truecharts/charts/issues/3639))
-
-

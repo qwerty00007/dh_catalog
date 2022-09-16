@@ -6,6 +6,17 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
+## [pastey-0.0.26](https://github.com/truecharts/charts/compare/pastey-0.0.25...pastey-0.0.26) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
   - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
@@ -86,14 +97,3 @@
 ### Chore
 
 - update docker general non-major ([#3727](https://github.com/truecharts/charts/issues/3727))
-
-
-
-
-## [fireshare-0.0.26](https://github.com/truecharts/charts/compare/fireshare-0.0.25...fireshare-0.0.26) (2022-08-31)
-
-### Chore
-
-- update docker general non-major ([#3640](https://github.com/truecharts/charts/issues/3640))
-
-

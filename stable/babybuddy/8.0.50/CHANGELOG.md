@@ -6,6 +6,17 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
+## [babybuddy-8.0.50](https://github.com/truecharts/charts/compare/babybuddy-8.0.49...babybuddy-8.0.50) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
   - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
@@ -85,15 +96,4 @@
 
 
 ## [babybuddy-8.0.47](https://github.com/truecharts/charts/compare/babybuddy-8.0.46...babybuddy-8.0.47) (2022-09-11)
-
-### Chore
-
-- update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
-
-
-
-
-## [babybuddy-8.0.46](https://github.com/truecharts/charts/compare/babybuddy-8.0.45...babybuddy-8.0.46) (2022-08-30)
-
-### Chore
 

@@ -6,6 +6,17 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
+## [outline-3.0.42](https://github.com/truecharts/charts/compare/outline-3.0.41...outline-3.0.42) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
   - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
@@ -86,14 +97,3 @@
 ### Chore
 
 - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
-
-
-
-
-## [outline-3.0.39](https://github.com/truecharts/charts/compare/outline-3.0.38...outline-3.0.39) (2022-09-07)
-
-### Chore
-
-- Auto-update chart README [skip ci]
-  - update docker general non-major ([#3710](https://github.com/truecharts/charts/issues/3710))
-

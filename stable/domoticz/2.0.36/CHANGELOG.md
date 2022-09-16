@@ -6,6 +6,17 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
+## [domoticz-2.0.36](https://github.com/truecharts/charts/compare/domoticz-2.0.35...domoticz-2.0.36) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
   - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
@@ -86,14 +97,3 @@
 ### Chore
 
 - update docker general non-major ([#3727](https://github.com/truecharts/charts/issues/3727))
-
-
-
-
-## [domoticz-2.0.33](https://github.com/truecharts/charts/compare/domoticz-2.0.32...domoticz-2.0.33) (2022-08-30)
-
-### Chore
-
-- update helm general non-major ([#3639](https://github.com/truecharts/charts/issues/3639))
-
-

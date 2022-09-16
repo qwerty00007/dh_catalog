@@ -6,6 +6,16 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+
+
+
+
+## [godaddy-ddns-0.0.24](https://github.com/truecharts/charts/compare/godaddy-ddns-0.0.23...godaddy-ddns-0.0.24) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
 
 
@@ -87,13 +97,3 @@
 
 
 ## [goaccess-npm-logs-0.0.26](https://github.com/truecharts/charts/compare/goaccess-npm-logs-0.0.24...goaccess-npm-logs-0.0.26) (2022-08-30)
-
-### Chore
-
-- Auto-update chart README [skip ci]
-  - update helm general non-major ([#3639](https://github.com/truecharts/charts/issues/3639))
-  - update helm chart common to v10.5.5 ([#3626](https://github.com/truecharts/charts/issues/3626))
-
-
-
-

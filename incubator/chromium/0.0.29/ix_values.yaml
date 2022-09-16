@@ -1,0 +1,29 @@
+env:
+  CUSTOM_RES_H: "768"
+  CUSTOM_RES_W: "1280"
+  EXTRA_PARAMETERS: ""
+  UMASK: "000"
+image:
+  pullPolicy: IfNotPresent
+  repository: dh.tccr.io/truecharts/chromium
+  tag: latest@sha256:50f4a38dd72c1f1f6f09063000a1f62b58c6e1f327f4080f95c1b8cc3816a935
+persistence:
+  datadir:
+    enabled: true
+    mountPath: /chrome
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+service:
+  main:
+    ports:
+      main:
+        port: 8080
+        protocol: TCP
+        targetPort: 8080
+
+portal:
+  enabled: true

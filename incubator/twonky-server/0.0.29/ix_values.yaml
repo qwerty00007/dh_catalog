@@ -1,0 +1,28 @@
+env: {}
+image:
+  pullPolicy: IfNotPresent
+  repository: dh.tccr.io/truecharts/twonky-server
+  tag: latest@sha256:6b5e17ffba6303b35785403da0852c802b5266d2e43957b2fd6a48541ef808b8
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+  data:
+    enabled: true
+    mountPath: /data
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+service:
+  main:
+    ports:
+      main:
+        port: 9000
+        protocol: TCP
+        targetPort: 9000
+
+portal:
+  enabled: true

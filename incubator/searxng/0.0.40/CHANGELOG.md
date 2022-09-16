@@ -6,6 +6,16 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+
+
+
+
+## [searxng-0.0.40](https://github.com/truecharts/charts/compare/searxng-0.0.39...searxng-0.0.40) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
 
 
@@ -87,13 +97,3 @@
 
 - add missing descriptions and clean up descriptions for various charts ([#3704](https://github.com/truecharts/charts/issues/3704))
   - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
-  - update docker general non-major ([#3736](https://github.com/truecharts/charts/issues/3736))
-
-
-
-
-## [searxng-0.0.38](https://github.com/truecharts/charts/compare/searxng-0.0.37...searxng-0.0.38) (2022-09-05)
-
-### Chore
-
-- update docker general non-major ([#3700](https://github.com/truecharts/charts/issues/3700))

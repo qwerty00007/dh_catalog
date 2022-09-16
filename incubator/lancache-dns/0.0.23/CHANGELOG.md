@@ -6,6 +6,17 @@
 
 ### Chore
 
+- Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
+## [lancache-dns-0.0.23](https://github.com/truecharts/charts/compare/lancache-dns-0.0.22...lancache-dns-0.0.23) (2022-09-15)
+
+### Chore
+
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
   - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
@@ -86,14 +97,3 @@
 
 
 
-
-## [lancache-dns-0.0.21](https://github.com/truecharts/charts/compare/lancache-dns-0.0.20...lancache-dns-0.0.21) (2022-09-01)
-
-### Chore
-
-- update docker general non-major ([#3649](https://github.com/truecharts/charts/issues/3649))
-
-
-
-
-## [lancache-dns-0.0.20](https://github.com/truecharts/charts/compare/lancache-dns-0.0.18...lancache-dns-0.0.20) (2022-08-30)
