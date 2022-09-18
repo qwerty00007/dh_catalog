@@ -2,6 +2,18 @@
 
 
 
+## [redis-3.0.76](https://github.com/truecharts/charts/compare/redis-3.0.75...redis-3.0.76) (2022-09-18)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update docker general non-major ([#3772](https://github.com/truecharts/charts/issues/3772))
+
+
+
+
 ## [redis-3.0.76](https://github.com/truecharts/charts/compare/redis-3.0.75...redis-3.0.76) (2022-09-16)
 
 ### Chore
@@ -85,15 +97,3 @@
 ### Chore
 
 - update helm chart common to v10.5.9
-
-
-
-
-## [redis-3.0.71](https://github.com/truecharts/charts/compare/redis-3.0.70...redis-3.0.71) (2022-09-10)
-
-### Chore
-
-- update helm chart common to v10.5.8 ([#3729](https://github.com/truecharts/charts/issues/3729))
-  - update docker general non-major ([#3727](https://github.com/truecharts/charts/issues/3727))
-
-

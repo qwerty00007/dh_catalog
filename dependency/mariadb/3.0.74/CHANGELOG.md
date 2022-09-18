@@ -2,6 +2,19 @@
 
 
 
+## [mariadb-3.0.74](https://github.com/truecharts/charts/compare/mariadb-3.0.73...mariadb-3.0.74) (2022-09-18)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update docker general non-major ([#3772](https://github.com/truecharts/charts/issues/3772))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
 ## [mariadb-3.0.74](https://github.com/truecharts/charts/compare/mariadb-3.0.73...mariadb-3.0.74) (2022-09-16)
 
 ### Chore
@@ -84,16 +97,3 @@
 
 
 ## [mariadb-3.0.68](https://github.com/truecharts/charts/compare/mariadb-3.0.67...mariadb-3.0.68) (2022-09-03)
-
-### Chore
-
-- update docker general non-major ([#3668](https://github.com/truecharts/charts/issues/3668))
-
-
-
-
-
-
-## [mariadb-3.0.65](https://github.com/truecharts/charts/compare/mariadb-3.0.64...mariadb-3.0.65) (2022-08-30)
-
-### Chore

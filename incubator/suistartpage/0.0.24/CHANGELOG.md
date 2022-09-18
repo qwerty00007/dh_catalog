@@ -2,6 +2,19 @@
 
 
 
+## [suistartpage-0.0.24](https://github.com/truecharts/charts/compare/suistartpage-0.0.23...suistartpage-0.0.24) (2022-09-18)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+
+
+
+
 ## [suistartpage-0.0.24](https://github.com/truecharts/charts/compare/suistartpage-0.0.23...suistartpage-0.0.24) (2022-09-16)
 
 ### Chore
@@ -84,16 +97,3 @@
 
 
 ## [suistartpage-0.0.23](https://github.com/truecharts/charts/compare/suistartpage-0.0.22...suistartpage-0.0.23) (2022-09-11)
-
-### Chore
-
-- Auto-update chart README [skip ci]
-  - Auto-update chart README [skip ci]
-  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
-
-
-
-
-## [suistartpage-0.0.23](https://github.com/truecharts/charts/compare/suistartpage-0.0.22...suistartpage-0.0.23) (2022-09-11)
-
-### Chore
