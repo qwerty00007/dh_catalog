@@ -8,6 +8,19 @@
 
 - Auto-update chart README [skip ci]
   - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
+## [libreddit-1.0.25](https://github.com/truecharts/charts/compare/libreddit-1.0.24...libreddit-1.0.25) (2022-09-16)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
   - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
   - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
@@ -83,17 +96,4 @@
   - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
 
 
-
-
-## [libreddit-1.0.24](https://github.com/truecharts/charts/compare/libreddit-1.0.23...libreddit-1.0.24) (2022-09-11)
-
-### Chore
-
-- Auto-update chart README [skip ci]
-  - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
-
-
-
-
-## [libreddit-1.0.24](https://github.com/truecharts/charts/compare/libreddit-1.0.23...libreddit-1.0.24) (2022-09-11)
 

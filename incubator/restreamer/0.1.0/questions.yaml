@@ -49,6 +49,19 @@ questions:
             type: boolean
             default: true
             hidden: true
+  - variable: imageSelector
+    group: Container Image
+    label: Select Image
+    schema:
+      type: string
+      default: image
+      enum:
+        - value: image
+          description: Default Image
+        - value: cudaImage
+          description: CUDA
+        - value: vaapiImage
+          description: VAAPI
   - variable: controller
     group: Controller
     label: ""
@@ -164,112 +177,567 @@ questions:
                 label: Arg
                 schema:
                   type: string
-  - variable: secretEnv
-    group: "Container Configuration"
-    label: "Image Secrets"
+  - variable: restreamer
+    group: Container Configuration
+    label: Restreamer Configuration
     schema:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: DOKUWIKI_USERNAME
-          label: "DokuWiki Username"
-          description: "Dokuwiki application username."
+        - variable: general
+          label: General
           schema:
-            type: string
-            required: true
-            default: ""
-        - variable: DOKUWIKI_PASSWORD
-          label: "DokuWiki Password"
-          description: "Dokuwiki application password."
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: hostname
+                label: Hostname
+                description: Set to the domain name of the host this instance is running on.
+                schema:
+                  type: string
+                  default: ""
+              - variable: host_auto
+                label: Host Auto
+                description: Enable detection of public IP addresses.
+                schema:
+                  type: boolean
+                  default: true
+              - variable: tls_enable
+                label: TLS Enable
+                description: Set to true to enable TLS support.
+                schema:
+                  type: boolean
+                  default: false
+              - variable: origins
+                label: Origins
+                description: List of allowed CORS origins. Will be used for / and /memfs.
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: origin
+                      label: Origin
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: mimetype_file
+                label: Mime Types File
+                description: Path to file with MIME type definitions.
+                schema:
+                  type: string
+                  required: true
+                  default: mime.types
+        - variable: api
+          label: API
           schema:
-            type: string
-            required: true
-            private: true
-            default: ""
-        - variable: DOKUWIKI_FULL_NAME
-          label: "DokuWiki Full Name"
-          description: "Dokuwiki application user full name."
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: api_auth_username
+                label: API Auth Username
+                description: Username for auth
+                schema:
+                  type: string
+                  default: ""
+                  required: true
+              - variable: api_auth_password
+                label: API Auth Password
+                description: Password for auth.
+                schema:
+                  type: string
+                  default: ""
+                  private: true
+                  required: true
+              - variable: api_read_only
+                label: API Read Only
+                description: Allow only ready only access to the API
+                schema:
+                  type: boolean
+                  default: false
+              - variable: api_access_http_allow
+                label: API Access HTTP Allow
+                description: List of IP ranges in CIDR notation
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: ipRangeAllow
+                      label: IP Range to Allow
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: api_access_http_block
+                label: API Access HTTP Block
+                description: List of IP ranges in CIDR notation
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: ipRangeBlock
+                      label: IP Range to Block
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: api_access_https_allow
+                label: API Access HTTPS Allow
+                description: List of IP ranges in CIDR notation
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: ipRangeAllow
+                      label: IP Range to Allow
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: api_access_https_block
+                label: API Access HTTPS Block
+                description: List of IP ranges in CIDR notation
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: ipRangeBlock
+                      label: IP Range to Block
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: api_auth_enable
+                label: API Auth Enable
+                description: Set to false to disable auth for all clients.
+                schema:
+                  type: boolean
+                  default: true
+              - variable: api_auth_disable_localhost
+                label: API Auth Disable Localhost
+                description: Set to true to disable auth for clients from localhost.
+                schema:
+                  type: boolean
+                  default: false
+              - variable: api_auth0_enable
+                label: API Auth0 Enable
+                description: Enable Auth0.
+                schema:
+                  type: boolean
+                  default: false
+              - variable: api_auth0_tenants
+                label: API Auth0 Tenants
+                description: List of base64 encoded Auth0 tenant JSON objects.
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: tenant
+                      label: Tenant
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+        - variable: storage_disk
+          label: Storage Disk
           schema:
-            type: string
-            required: true
-            default: ""
-        - variable: DOKUWIKI_EMAIL
-          label: "DokuWiki Email"
-          description: "Dokuwiki application email."
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: disk_max_size_mb
+                label: Storage Disk Max Size MByte
+                description: Max allowed megabytes for Disk Dir (0 for Unlimited)
+                schema:
+                  type: int
+                  default: 0
+              - variable: cache_enable
+                label: Storage Disk Cache Enable
+                description: Enable cache for files Storage Disk
+                schema:
+                  type: boolean
+                  default: true
+              - variable: cache_max_size_mb
+                label: Storage Disk Cache Max Size MByte
+                description: Max allowed cache size. (0 for Unlimited)
+                schema:
+                  type: int
+                  default: 0
+              - variable: cache_ttl
+                label: Storage Disk Cache TTL Seconds
+                description: Seconds to keep files in cache.
+                schema:
+                  type: int
+                  default: 300
+              - variable: cache_max_file_size_mb
+                label: Storage Disk Max File Size MBytes
+                description: Max. file size to put in cache. (0 for Unlimited)
+                schema:
+                  type: int
+                  default: 0
+              - variable: cache_types
+                label: Cache Types
+                description: List of file extensions to cache
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: type
+                      label: Type
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: log_max_lines
+                label: Log Max Lines
+                schema:
+                  type: int
+                  default: 10000
+        - variable: storage_mem
+          label: Storage memory
           schema:
-            type: string
-            required: true
-            default: ""
-        - variable: DOKUWIKI_WIKI_NAME
-          label: "DokuWiki Wiki Name"
-          description: "Dokuwiki wiki name."
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: storage_mem_auth_enable
+                label: Storage Memory Auth Enable
+                description: Enable basic auth for PUT,POST, and DELETE on /memfs.
+                schema:
+                  type: boolean
+                  default: true
+              - variable: storage_mem_auth_username
+                label: Storage Memory Auth Username
+                description: Username for Basic-Auth of /memfs. Required if auth is enabled.
+                schema:
+                  type: string
+                  default: ""
+                  required: true
+                  show_if: [[storage_mem_auth_enable, "=", true]]
+              - variable: storage_mem_auth_password
+                label: Storage Memory Auth Password
+                description: Password for Basic-Auth of /memfs. Required if auth is enabled.
+                schema:
+                  type: string
+                  default: ""
+                  private: true
+                  required: true
+                  show_if: [[storage_mem_auth_enable, "=", true]]
+              - variable: storage_mem_max_size_mb
+                label: Storage Memory Max Size MBytes
+                description: Max. allowed megabytes for /memfs. (0 for Unlimited)
+                schema:
+                  type: int
+                  default: 0
+              - variable: storage_mem_purge
+                label: Storage Memory Purge
+                description: Set to true to remove the oldest entries if the /memfs is full.
+                schema:
+                  type: boolean
+                  default: false
+        - variable: rtmp
+          label: RTMP
           schema:
-            type: string
-            required: true
-            default: ""
-  - variable: env
-    group: "Container Configuration"
-    label: "Image Environment"
-    schema:
-      additional_attrs: true
-      type: dict
-      attrs:
-        - variable: ENABLE_PHP_CONFIGURATION
-          label: "Enable PHP Configuration"
-          description: "Enables configuration options for PHP"
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: rtmp_enable
+                label: RTMP Enable
+                description: Enable RTMP server.
+                schema:
+                  type: boolean
+                  default: false
+              - variable: rtmps_enable
+                label: RTMPS Enable
+                description: Enable RTMP over TLS (Requires TLS to be enabled)
+                schema:
+                  type: boolean
+                  default: false
+              - variable: rtmp_token
+                label: RTMP Token
+                description: RTMP token for publishing and playing. The token is the value of the URL query parameter token.
+                schema:
+                  type: string
+                  default: ""
+                  private: true
+              - variable: rtmp_app
+                label: RTMP App
+                description: RTMP app for publishing.
+                schema:
+                  type: string
+                  default: "/"
+        - variable: ffmpeg
+          label: FFMPEG
           schema:
-            type: boolean
-            default: false
-            show_subquestions_if: true
-            subquestions:
-              - variable: PHP_ENABLE_OPCACHE
-                label: "PHP Enable OPCache"
-                description: "Enable OPcache for PHP scripts."
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: ffmpeg_binary
+                label: FFMPEG Binary
+                description: Path to FFmpeg binary.
+                schema:
+                  type: string
+                  default: ffmpeg
+                  required: true
+              - variable: ffmpeg_max_processes
+                label: FFMPEG Max Processes
+                description: Max. allowed simultaneously running FFmpeg instances. (0 for unlimited.)
+                schema:
+                  type: string
+                  default: ffmpeg
+              - variable: ffmpeg_access_input_allow
+                label: FFMPEG Access Input Allow
+                description: List of pattern for allowed input URI
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: allowInput
+                      label: Allow Input
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: ffmpeg_access_input_block
+                label: FFMPEG Access Input Block
+                description: List of pattern for blocked input URI
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: blockInput
+                      label: Block Input
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: ffmpeg_access_output_allow
+                label: FFMPEG Access Output Allow
+                description: List of pattern for allowed output URI
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: allowOutput
+                      label: Allow Output
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: ffmpeg_access_output_block
+                label: FFMPEG Access Output Block
+                description: List of pattern for blocked output URI
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: blockOutput
+                      label: Block Output
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: ffmpeg_log_max_lines
+                label: FFMPEG Log Max Lines
+                schema:
+                  type: int
+                  default: 50
+              - variable: ffmpeg_log_max_history
+                label: FFMPEG Log Max History
+                schema:
+                  type: int
+                  default: 3
+        - variable: playout
+          label: Playout
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: playout_enable
+                label: Playout Enable
+                description: Enable playout API where available
+                schema:
+                  type: boolean
+                  default: false
+              - variable: playout_min_port
+                label: Playout Min Port
+                description: Min. port a playout server per input can run on.
+                schema:
+                  type: int
+                  default: 0
+              - variable: playout_max_port
+                label: Playout Max Port
+                description: Max. port a playout server per input can run on.
+                schema:
+                  type: int
+                  default: 0
+        - variable: logs
+          label: Logs
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: log_level
+                label: Log Level
                 schema:
                   type: string
                   default: ""
-              - variable: PHP_EXPOSE_PHP
-                label: "PHP Expose PHP"
-                description: "Enables HTTP header with PHP version."
+                  enum:
+                    - value: info
+                      description: info
+                    - value: silent
+                      description: silent
+                    - value: warn
+                      description: warn
+                    - value: error
+                      description: error
+                    - value: debug
+                      description: debug
+              - variable: log_topics
+                label: Log Topics
+                description: List of topics to log
                 schema:
-                  type: string
-                  default: ""
-              - variable: PHP_MAX_EXECUTION_TIME
-                label: "PHP Max Execution Time"
-                description: "Maximum execution time for PHP scripts."
+                  type: list
+                  default: []
+                  items:
+                    - variable: topic
+                      label: Topic
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: log_max_lines
+                label: Log Max Lines
                 schema:
-                  type: string
-                  default: ""
-              - variable: PHP_MAX_INPUT_TIME
-                label: "PHP Max Input Time"
-                description: " Maximum input time for PHP scripts."
+                  type: int
+                  default: 10000
+        - variable: debug
+          label: Debug
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: debug_profiling
+                label: Debug Profiling
+                description: Set to true to enable profiling endpoint on /profiling.
                 schema:
-                  type: string
-                  default: ""
-              - variable: PHP_MAX_INPUT_VARS
-                label: "PHP Max Input Vars"
-                description: "Maximum amount of input variables for PHP scripts."
+                  type: boolean
+                  default: false
+              - variable: debug_force_gc
+                label: Debug Force GC
+                description: Number of seconds between forcing GC to return memory to the OS.
                 schema:
-                  type: string
-                  default: ""
-              - variable: PHP_MEMORY_LIMIT
-                label: "PHP Memory Limit"
-                description: "Memory limit for PHP scripts."
+                  type: boolean
+                  default: false
+        - variable: metrics
+          label: Metrics
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: metrics_enable
+                label: Metrics Enable
+                description: Enable collecting historic metrics data.
                 schema:
-                  type: string
-                  default: "256M"
-              - variable: PHP_POST_MAX_SIZE
-                label: "PHP Post Max Size"
-                description: "Maximum size for PHP POST requests."
+                  type: boolean
+                  default: false
+              - variable: metrics_prometheus_enable
+                label: Prometheus Metrics Enable
+                description: Enable prometheus endpoint /metrics.
                 schema:
-                  type: string
-                  default: ""
-              - variable: PHP_UPLOAD_MAX_FILESIZE
-                label: "PHP Upload Max Filesize"
-                description: "Maximum file size for PHP uploads."
+                  type: boolean
+                  default: false
+              - variable: metrics_range_seconds
+                label: Metrics Range Seconds
+                description: Seconds to keep history metric data.
                 schema:
-                  type: string
-                  default: ""
+                  type: int
+                  default: 300
+              - variable: metrics_interval_seconds
+                label: Metrics Interval Seconds
+                description: Interval for collecting metrics.
+                schema:
+                  type: int
+                  default: 2
+        - variable: sessions
+          label: Sessions
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: sessions_enable
+                label: Sessions Enable
+                description: Enable HLS statistics for /memfs.
+                schema:
+                  type: boolean
+                  default: false
+              - variable: sessions_ip_ignore_list
+                label: Session IP Ignore List
+                description: List of IP ranges in CIDR notation
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: ignoreIP
+                      label: Ignore IP
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: sessions_timeout_sec
+                label: Session Timeout Seconds
+                description: Timeout of a session in seconds.
+                schema:
+                  type: int
+                  default: 30
+              - variable: sessions_persist
+                label: Sessions Persist
+                description: Whether to persist the session history
+                schema:
+                  type: boolean
+                  default: false
+              - variable: sessions_max_bitrate
+                label: Session Max Bitrate
+                description: Max. allowed outgoing bitrate in mbit/s. (0 for unlimited.)
+                schema:
+                  type: int
+                  default: 0
+              - variable: sessions_max_sessions
+                label: Max Session
+                description: Max. allowed number of simultaneous sessions. (0 for unlimited.)
+                schema:
+                  type: int
+                  default: 0
+        - variable: router
+          label: Router
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: router_blocked_prefixes
+                label: Blocked Prefixes
+                description: List of path prefixes that can't be routed.
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: blockedPrefix
+                      label: Blocked Prefix
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
+              - variable: router_routes
+                label: Routes
+                description: "List of route mappings of the form [from]:[to], e.g."
+                schema:
+                  type: list
+                  default: []
+                  items:
+                    - variable: route
+                      label: Route
+                      schema:
+                        type: string
+                        default: ""
+                        required: true
   - variable: TZ
     label: Timezone
     group: Container Configuration
@@ -384,8 +852,8 @@ questions:
       type: dict
       attrs:
         - variable: main
-          label: "Main Service"
-          description: "The Primary service on which the healthcheck runs, often the webUI"
+          label: Main Service
+          description: The Primary service on which the healthcheck runs, often the webUI
           schema:
             additional_attrs: true
             type: dict
@@ -463,17 +931,17 @@ questions:
                   type: dict
                   attrs:
                     - variable: main
-                      label: "Main Service Port Configuration"
+                      label: Main Service Port Configuration
                       schema:
                         additional_attrs: true
                         type: dict
                         attrs:
                           - variable: port
-                            label: "Port"
-                            description: "This port exposes the container port on the service"
+                            label: Port
+                            description: This port exposes the container port on the service
                             schema:
                               type: int
-                              default: 10123
+                              default: 8080
                               required: true
                           - variable: advanced
                             label: Show Advanced Settings
@@ -492,7 +960,7 @@ questions:
                                   label: Port Type
                                   schema:
                                     type: string
-                                    default: HTTP
+                                    default: TCP
                                     enum:
                                       - value: HTTP
                                         description: HTTP
@@ -510,11 +978,539 @@ questions:
                                     min: 9000
                                     max: 65535
                                 - variable: targetPort
-                                  label: "Target Port"
-                                  description: "The internal(!) port on the container the Application runs on"
+                                  label: Target Port
+                                  description: The internal(!) port on the container the Application runs on
                                   schema:
                                     type: int
                                     default: 8080
+        - variable: https
+          label: HTTPS Service
+          description: The HTTPS service
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: enabled
+                label: Enable the Service
+                schema:
+                  type: boolean
+                  default: true
+                  hidden: true
+              - variable: type
+                label: Service Type
+                description: "ClusterIP's are only internally available, nodePorts expose the container to the host node System, Loadbalancer exposes the service using the system loadbalancer"
+                schema:
+                  type: string
+                  default: Simple
+                  enum:
+                    - value: Simple
+                      description: Simple
+                    - value: ClusterIP
+                      description: ClusterIP
+                    - value: NodePort
+                      description: NodePort (Advanced)
+                    - value: LoadBalancer
+                      description: LoadBalancer (Advanced)
+              - variable: loadBalancerIP
+                label: LoadBalancer IP
+                description: LoadBalancerIP
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: string
+                  default: ""
+              - variable: externalIPs
+                label: "External IP's"
+                description: "External IP's"
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: externalIP
+                      label: External IP
+                      schema:
+                        type: string
+              - variable: ipFamilyPolicy
+                label: IP Family Policy
+                description: (Advanced) Specify the IP Policy
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: string
+                  default: SingleStack
+                  enum:
+                    - value: SingleStack
+                      description: SingleStack
+                    - value: PreferDualStack
+                      description: PreferDualStack
+                    - value: RequireDualStack
+                      description: RequireDualStack
+              - variable: ipFamilies
+                label: (Advanced) IP Families
+                description: (Advanced) The IP Families that should be used
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: ipFamily
+                      label: IP Family
+                      schema:
+                        type: string
+              - variable: ports
+                label: "Service's Port(s) Configuration"
+                schema:
+                  additional_attrs: true
+                  type: dict
+                  attrs:
+                    - variable: https
+                      label: HTTPS Service Port Configuration
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: Port
+                            description: This port exposes the container port on the service
+                            schema:
+                              type: int
+                              default: 8081
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: Target Port
+                                  description: The internal(!) port on the container the Application runs on
+                                  schema:
+                                    type: int
+                                    default: 8081
+        - variable: rtmp
+          label: RTmP Service
+          description: The RTmP service for live streaming
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: enabled
+                label: Enable the Service
+                schema:
+                  type: boolean
+                  default: true
+                  hidden: true
+              - variable: type
+                label: Service Type
+                description: "ClusterIP's are only internally available, nodePorts expose the container to the host node System, Loadbalancer exposes the service using the system loadbalancer"
+                schema:
+                  type: string
+                  default: Simple
+                  enum:
+                    - value: Simple
+                      description: Simple
+                    - value: ClusterIP
+                      description: ClusterIP
+                    - value: NodePort
+                      description: NodePort (Advanced)
+                    - value: LoadBalancer
+                      description: LoadBalancer (Advanced)
+              - variable: loadBalancerIP
+                label: LoadBalancer IP
+                description: LoadBalancerIP
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: string
+                  default: ""
+              - variable: externalIPs
+                label: "External IP's"
+                description: "External IP's"
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: externalIP
+                      label: External IP
+                      schema:
+                        type: string
+              - variable: ipFamilyPolicy
+                label: IP Family Policy
+                description: (Advanced) Specify the IP Policy
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: string
+                  default: SingleStack
+                  enum:
+                    - value: SingleStack
+                      description: SingleStack
+                    - value: PreferDualStack
+                      description: PreferDualStack
+                    - value: RequireDualStack
+                      description: RequireDualStack
+              - variable: ipFamilies
+                label: (Advanced) IP Families
+                description: (Advanced) The IP Families that should be used
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: ipFamily
+                      label: IP Family
+                      schema:
+                        type: string
+              - variable: ports
+                label: "Service's Port(s) Configuration"
+                schema:
+                  additional_attrs: true
+                  type: dict
+                  attrs:
+                    - variable: rtmp
+                      label: RTMP Service Port Configuration
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: Port
+                            description: This port exposes the container port on the service
+                            schema:
+                              type: int
+                              default: 1935
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: Target Port
+                                  description: The internal(!) port on the container the Application runs on
+                                  schema:
+                                    type: int
+                                    default: 1935
+        - variable: rtmps
+          label: RTMP Secure Service
+          description: The RTMP service for live streaming
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: enabled
+                label: Enable the Service
+                schema:
+                  type: boolean
+                  default: true
+                  hidden: true
+              - variable: type
+                label: Service Type
+                description: "ClusterIP's are only internally available, nodePorts expose the container to the host node System, Loadbalancer exposes the service using the system loadbalancer"
+                schema:
+                  type: string
+                  default: Simple
+                  enum:
+                    - value: Simple
+                      description: Simple
+                    - value: ClusterIP
+                      description: ClusterIP
+                    - value: NodePort
+                      description: NodePort (Advanced)
+                    - value: LoadBalancer
+                      description: LoadBalancer (Advanced)
+              - variable: loadBalancerIP
+                label: LoadBalancer IP
+                description: LoadBalancerIP
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: string
+                  default: ""
+              - variable: externalIPs
+                label: "External IP's"
+                description: "External IP's"
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: externalIP
+                      label: External IP
+                      schema:
+                        type: string
+              - variable: ipFamilyPolicy
+                label: IP Family Policy
+                description: (Advanced) Specify the IP Policy
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: string
+                  default: SingleStack
+                  enum:
+                    - value: SingleStack
+                      description: SingleStack
+                    - value: PreferDualStack
+                      description: PreferDualStack
+                    - value: RequireDualStack
+                      description: RequireDualStack
+              - variable: ipFamilies
+                label: (Advanced) IP Families
+                description: (Advanced) The IP Families that should be used
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: ipFamily
+                      label: IP Family
+                      schema:
+                        type: string
+              - variable: ports
+                label: "Service's Port(s) Configuration"
+                schema:
+                  additional_attrs: true
+                  type: dict
+                  attrs:
+                    - variable: rtmps
+                      label: RTSP Secure Service Port Configuration
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: Port
+                            description: This port exposes the container port on the service
+                            schema:
+                              type: int
+                              default: 1936
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: Target Port
+                                  description: The internal(!) port on the container the Application runs on
+                                  schema:
+                                    type: int
+                                    default: 1936
+        - variable: srt
+          label: SRT Data Service
+          description: The SRT service for data
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: enabled
+                label: Enable the Service
+                schema:
+                  type: boolean
+                  default: true
+                  hidden: true
+              - variable: type
+                label: Service Type
+                description: "ClusterIP's are only internally available, nodePorts expose the container to the host node System, Loadbalancer exposes the service using the system loadbalancer"
+                schema:
+                  type: string
+                  default: Simple
+                  enum:
+                    - value: Simple
+                      description: Simple
+                    - value: ClusterIP
+                      description: ClusterIP
+                    - value: NodePort
+                      description: NodePort (Advanced)
+                    - value: LoadBalancer
+                      description: LoadBalancer (Advanced)
+              - variable: loadBalancerIP
+                label: LoadBalancer IP
+                description: LoadBalancerIP
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: string
+                  default: ""
+              - variable: externalIPs
+                label: "External IP's"
+                description: "External IP's"
+                schema:
+                  show_if: [["type", "=", "LoadBalancer"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: externalIP
+                      label: External IP
+                      schema:
+                        type: string
+              - variable: ipFamilyPolicy
+                label: IP Family Policy
+                description: (Advanced) Specify the IP Policy
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: string
+                  default: SingleStack
+                  enum:
+                    - value: SingleStack
+                      description: SingleStack
+                    - value: PreferDualStack
+                      description: PreferDualStack
+                    - value: RequireDualStack
+                      description: RequireDualStack
+              - variable: ipFamilies
+                label: (Advanced) IP Families
+                description: (Advanced) The IP Families that should be used
+                schema:
+                  show_if: [["type", "!=", "Simple"]]
+                  type: list
+                  default: []
+                  items:
+                    - variable: ipFamily
+                      label: IP Family
+                      schema:
+                        type: string
+              - variable: ports
+                label: "Service's Port(s) Configuration"
+                schema:
+                  additional_attrs: true
+                  type: dict
+                  attrs:
+                    - variable: srt
+                      label: SRT Service Port Configuration
+                      schema:
+                        additional_attrs: true
+                        type: dict
+                        attrs:
+                          - variable: port
+                            label: Port
+                            description: This port exposes the container port on the service
+                            schema:
+                              type: int
+                              default: 6000
+                              required: true
+                          - variable: advanced
+                            label: Show Advanced Settings
+                            schema:
+                              type: boolean
+                              default: false
+                              show_subquestions_if: true
+                              subquestions:
+                                - variable: enabled
+                                  label: Enable the Port
+                                  schema:
+                                    type: boolean
+                                    hidden: true
+                                    default: true
+                                - variable: protocol
+                                  label: Port Type
+                                  schema:
+                                    type: string
+                                    default: TCP
+                                    enum:
+                                      - value: HTTP
+                                        description: HTTP
+                                      - value: HTTPS
+                                        description: HTTPS
+                                      - value: TCP
+                                        description: TCP
+                                      - value: UDP
+                                        description: UDP
+                                - variable: nodePort
+                                  label: Node Port (Optional)
+                                  description: This port gets exposed to the node. Only considered when service type is NodePort, Simple or LoadBalancer
+                                  schema:
+                                    type: int
+                                    min: 9000
+                                    max: 65535
+                                - variable: targetPort
+                                  label: Target Port
+                                  description: The internal(!) port on the container the Application runs on
+                                  schema:
+                                    type: int
+                                    default: 6000
   - variable: serviceexpert
     group: Networking and Services
     label: Show Expert Config
@@ -790,8 +1786,185 @@ questions:
       type: dict
       attrs:
         - variable: config
-          label: "App Config Storage"
-          description: "Stores the Application Configuration."
+          label: App Config Storage
+          description: Stores the Application Configuration.
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: type
+                label: Type of Storage
+                description: Sets the persistence type, Anything other than PVC could break rollback!
+                schema:
+                  type: string
+                  default: simplePVC
+                  enum:
+                    - value: simplePVC
+                      description: PVC (simple)
+                    - value: simpleHP
+                      description: Host Path (simple)
+                    - value: emptyDir
+                      description: emptyDir
+                    - value: pvc
+                      description: PVC
+                    - value: hostPath
+                      description: Host Path
+                    - value: nfs
+                      description: NFS Share
+              - variable: server
+                label: NFS Server
+                schema:
+                  show_if: [["type", "=", "nfs"]]
+                  type: string
+                  default: ""
+              - variable: path
+                label: Path on NFS Server
+                schema:
+                  show_if: [["type", "=", "nfs"]]
+                  type: string
+                  default: ""
+              - variable: setPermissionsSimple
+                label: Automatic Permissions
+                description: Automatically set permissions on install
+                schema:
+                  show_if: [["type", "=", "simpleHP"]]
+                  type: boolean
+                  default: false
+              - variable: setPermissions
+                label: Automatic Permissions
+                description: Automatically set permissions on install
+                schema:
+                  show_if: [["type", "=", "hostPath"]]
+                  type: boolean
+                  default: false
+              - variable: readOnly
+                label: Read Only
+                schema:
+                  type: boolean
+                  default: false
+              - variable: hostPathSimple
+                label: Host Path
+                description: Path inside the container the storage is mounted
+                schema:
+                  show_if: [["type", "=", "simpleHP"]]
+                  type: hostpath
+              - variable: hostPath
+                label: Host Path
+                description: Path inside the container the storage is mounted
+                schema:
+                  show_if: [["type", "=", "hostPath"]]
+                  type: hostpath
+              - variable: medium
+                label: EmptyDir Medium
+                schema:
+                  show_if: [["type", "=", "emptyDir"]]
+                  type: string
+                  default: ""
+                  enum:
+                    - value: ""
+                      description: Default
+                    - value: Memory
+                      description: Memory
+              - variable: size
+                label: Size quotum of Storage
+                schema:
+                  show_if: [["type", "=", "pvc"]]
+                  type: string
+                  default: 999Gi
+              - variable: hostPathType
+                label: (Advanced) hostPath Type
+                schema:
+                  show_if: [["type", "=", "hostPath"]]
+                  type: string
+                  default: ""
+                  enum:
+                    - value: ""
+                      description: Default
+                    - value: DirectoryOrCreate
+                      description: DirectoryOrCreate
+                    - value: Directory
+                      description: Directory
+                    - value: FileOrCreate
+                      description: FileOrCreate
+                    - value: File
+                      description: File
+                    - value: Socket
+                      description: Socket
+                    - value: CharDevice
+                      description: CharDevice
+                    - value: BlockDevice
+                      description: BlockDevice
+              - variable: storageClass
+                label: (Advanced) storageClass
+                description: "Warning: Anything other than SCALE-ZFS or empty will break rollback!"
+                schema:
+                  show_if: [["type", "=", "pvc"]]
+                  type: string
+                  default: SCALE-ZFS
+              - variable: accessMode
+                label: (Advanced) Access Mode
+                description: Allow or disallow multiple PVC's writhing to the same PV
+                schema:
+                  show_if: [["type", "=", "pvc"]]
+                  type: string
+                  default: ReadWriteOnce
+                  enum:
+                    - value: ReadWriteOnce
+                      description: ReadWriteOnce
+                    - value: ReadOnlyMany
+                      description: ReadOnlyMany
+                    - value: ReadWriteMany
+                      description: ReadWriteMany
+              - variable: advanced
+                label: Show Advanced Options
+                schema:
+                  type: boolean
+                  default: false
+                  show_subquestions_if: true
+                  subquestions:
+                    - variable: labelsList
+                      label: Labels
+                      schema:
+                        type: list
+                        default: []
+                        items:
+                          - variable: labelItem
+                            label: Label
+                            schema:
+                              additional_attrs: true
+                              type: dict
+                              attrs:
+                                - variable: name
+                                  label: Name
+                                  schema:
+                                    type: string
+                                - variable: value
+                                  label: Value
+                                  schema:
+                                    type: string
+                    - variable: annotationsList
+                      label: Annotations
+                      schema:
+                        type: list
+                        default: []
+                        items:
+                          - variable: annotationItem
+                            label: Label
+                            schema:
+                              additional_attrs: true
+                              type: dict
+                              attrs:
+                                - variable: name
+                                  label: Name
+                                  schema:
+                                    type: string
+                                - variable: value
+                                  label: Value
+                                  schema:
+                                    type: string
+        - variable: data
+          label: App Data Storage
+          description: Stores the Application Data.
           schema:
             additional_attrs: true
             type: dict
@@ -1027,14 +2200,14 @@ questions:
                 schema:
                   show_if: [["type", "=", "simpleHP"]]
                   type: boolean
-                  default: true
+                  default: false
               - variable: setPermissions
                 label: Automatic Permissions
                 description: Automatically set permissions on install
                 schema:
                   show_if: [["type", "=", "hostPath"]]
                   type: boolean
-                  default: true
+                  default: false
               - variable: readOnly
                 label: Read Only
                 schema:
@@ -1176,7 +2349,170 @@ questions:
       type: dict
       attrs:
         - variable: main
-          label: "Main Ingress"
+          label: Main Ingress
+          schema:
+            additional_attrs: true
+            type: dict
+            attrs:
+              - variable: enabled
+                label: Enable Ingress
+                schema:
+                  type: boolean
+                  default: false
+                  show_subquestions_if: true
+                  subquestions:
+                    - variable: hosts
+                      label: Hosts
+                      schema:
+                        type: list
+                        default: []
+                        items:
+                          - variable: hostEntry
+                            label: Host
+                            schema:
+                              additional_attrs: true
+                              type: dict
+                              attrs:
+                                - variable: host
+                                  label: HostName
+                                  schema:
+                                    type: string
+                                    default: ""
+                                    required: true
+                                - variable: paths
+                                  label: Paths
+                                  schema:
+                                    type: list
+                                    default: []
+                                    items:
+                                      - variable: pathEntry
+                                        label: Host
+                                        schema:
+                                          additional_attrs: true
+                                          type: dict
+                                          attrs:
+                                            - variable: path
+                                              label: Path
+                                              schema:
+                                                type: string
+                                                required: true
+                                                default: "/"
+                                            - variable: pathType
+                                              label: Path Type
+                                              schema:
+                                                type: string
+                                                required: true
+                                                default: Prefix
+                    - variable: tls
+                      label: TLS-Settings
+                      schema:
+                        type: list
+                        default: []
+                        items:
+                          - variable: tlsEntry
+                            label: Host
+                            schema:
+                              additional_attrs: true
+                              type: dict
+                              attrs:
+                                - variable: hosts
+                                  label: Certificate Hosts
+                                  schema:
+                                    type: list
+                                    default: []
+                                    items:
+                                      - variable: host
+                                        label: Host
+                                        schema:
+                                          type: string
+                                          default: ""
+                                          required: true
+                                - variable: scaleCert
+                                  label: Select TrueNAS SCALE Certificate
+                                  schema:
+                                    type: int
+                                    $ref:
+                                      - "definitions/certificate"
+                    - variable: entrypoint
+                      label: (Advanced) Traefik Entrypoint
+                      description: Entrypoint used by Traefik when using Traefik as Ingress Provider
+                      schema:
+                        type: string
+                        default: websecure
+                        required: true
+                    - variable: middlewares
+                      label: Traefik Middlewares
+                      description: Add previously created Traefik Middlewares to this Ingress
+                      schema:
+                        type: list
+                        default: []
+                        items:
+                          - variable: name
+                            label: Name
+                            schema:
+                              type: string
+                              default: ""
+                              required: true
+              - variable: expert
+                label: Show Expert Configuration Options
+                schema:
+                  type: boolean
+                  default: false
+                  show_subquestions_if: true
+                  subquestions:
+                    - variable: enableFixedMiddlewares
+                      description: These middlewares enforce a number of best practices.
+                      label: Enable Default Middlewares
+                      schema:
+                        type: boolean
+                        default: true
+                    - variable: ingressClassName
+                      label: IngressClass Name
+                      schema:
+                        type: string
+                        default: ""
+                    - variable: labelsList
+                      label: Labels
+                      schema:
+                        type: list
+                        default: []
+                        items:
+                          - variable: labelItem
+                            label: Label
+                            schema:
+                              additional_attrs: true
+                              type: dict
+                              attrs:
+                                - variable: name
+                                  label: Name
+                                  schema:
+                                    type: string
+                                - variable: value
+                                  label: Value
+                                  schema:
+                                    type: string
+                    - variable: annotationsList
+                      label: Annotations
+                      schema:
+                        type: list
+                        default: []
+                        items:
+                          - variable: annotationItem
+                            label: Label
+                            schema:
+                              additional_attrs: true
+                              type: dict
+                              attrs:
+                                - variable: name
+                                  label: Name
+                                  schema:
+                                    type: string
+                                - variable: value
+                                  label: Value
+                                  schema:
+                                    type: string
+        - variable: https
+          label: HTTPS Ingress
           schema:
             additional_attrs: true
             type: dict
@@ -1556,22 +2892,22 @@ questions:
             type: dict
             attrs:
               - variable: privileged
-                label: "Privileged mode"
+                label: Privileged mode
                 schema:
                   type: boolean
                   default: false
               - variable: readOnlyRootFilesystem
-                label: "ReadOnly Root Filesystem"
+                label: ReadOnly Root Filesystem
                 schema:
                   type: boolean
                   default: false
               - variable: allowPrivilegeEscalation
-                label: "Allow Privilege Escalation"
+                label: Allow Privilege Escalation
                 schema:
                   type: boolean
                   default: false
               - variable: runAsNonRoot
-                label: "runAsNonRoot"
+                label: runAsNonRoot
                 schema:
                   type: boolean
                   default: false
@@ -1609,20 +2945,20 @@ questions:
       type: dict
       attrs:
         - variable: runAsUser
-          label: "runAsUser"
-          description: "The UserID of the user running the application"
+          label: runAsUser
+          description: The UserID of the user running the application
           schema:
             type: int
             default: 0
         - variable: runAsGroup
-          label: "runAsGroup"
-          description: "The groupID this App of the user running the application"
+          label: runAsGroup
+          description: The groupID this App of the user running the application
           schema:
             type: int
             default: 0
         - variable: fsGroup
-          label: "fsGroup"
-          description: "The group that should own ALL storage."
+          label: fsGroup
+          description: The group that should own ALL storage.
           schema:
             type: int
             default: 568

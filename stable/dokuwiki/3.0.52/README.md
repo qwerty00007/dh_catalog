@@ -1,21 +1,20 @@
-# restreamer
+# dokuwiki
 
-![Version: 0.0.24](https://img.shields.io/badge/Version-0.0.24-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)
+![Version: 3.0.52](https://img.shields.io/badge/Version-3.0.52-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 20220731.1](https://img.shields.io/badge/AppVersion-20220731.1-informational?style=flat-square)
 
-Datarhei/Restreamer allows smart free video streaming in real time. Stream H.264 video of IP cameras live to your website. Pump your live video to YouTube-Live, Ustream, Twitch, Livestream.com or any other streaming-solutions e.g. Wowza-Streaming-Engine. Our Chart-Image is easy to install and runs on Linux, MacOS and Windows. Datarhei/Restreamer can be perfectly combined with single-board computers like Raspberry Pi and Odroid.
+Dokuwiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.
 
 TrueCharts can be installed as both *normal* Helm Charts or as Apps on TrueNAS SCALE.
 
 This readme is just an automatically generated general guide on installing our Helm Charts and Apps.
-For more information, please click here: [restreamer](https://truecharts.org/docs/charts/incubator/restreamer)
+For more information, please click here: [dokuwiki](https://truecharts.org/docs/charts/stable/dokuwiki)
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/truecharts/charts/issues/new/choose)**
 
 ## Source Code
 
-* <https://github.com/truecharts/charts/tree/master/charts/incubator/restreamer>
-* <https://datarhei.github.io/restreamer/>
-* <https://hub.docker.com/r/datarhei/restreamer>
+* <https://github.com/truecharts/charts/tree/master/charts/stable/dokuwiki>
+* <https://hub.docker.com/r/bitnami/dokuwiki>
 
 ## Requirements
 
@@ -35,12 +34,12 @@ To install this Chart on TrueNAS SCALE check our [Quick-Start Guide](https://tru
 
 ### Helm
 
-To install the chart with the release name `restreamer`
+To install the chart with the release name `dokuwiki`
 
 ```console
 helm repo add TrueCharts https://charts.truecharts.org
 helm repo update
-helm install restreamer TrueCharts/restreamer
+helm install dokuwiki TrueCharts/dokuwiki
 ```
 
 ## Uninstall
@@ -53,10 +52,10 @@ To upgrade, rollback or delete this Chart from TrueNAS SCALE check our [Quick-St
 
 ### Helm
 
-To uninstall the `restreamer` deployment
+To uninstall the `dokuwiki` deployment
 
 ```console
-helm uninstall restreamer
+helm uninstall dokuwiki
 ```
 
 ## Configuration
@@ -73,9 +72,9 @@ Other values may be used from the [values.yaml](https://github.com/truecharts/li
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
-helm install restreamer \
+helm install dokuwiki \
   --set env.TZ="America/New York" \
-    TrueCharts/restreamer
+    TrueCharts/dokuwiki
 ```
 
 #### Configure using a yaml file
@@ -83,7 +82,7 @@ helm install restreamer \
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install restreamer TrueCharts/restreamer -f values.yaml
+helm install dokuwiki TrueCharts/dokuwiki -f values.yaml
 ```
 
 #### Connecting to other charts

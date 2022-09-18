@@ -1,20 +1,21 @@
-# dokuwiki
+# plextraktsync
 
-![Version: 3.0.51](https://img.shields.io/badge/Version-3.0.51-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 20200729.0](https://img.shields.io/badge/AppVersion-20200729.0-informational?style=flat-square)
+![Version: 1.0.0](https://img.shields.io/badge/Version-1.0.0-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: latest](https://img.shields.io/badge/AppVersion-latest-informational?style=flat-square)
 
-Dokuwiki is a simple to use and highly versatile Open Source wiki software that doesn't require a database.
+Two-way-sync between trakt.tv and Plex Media Server.
 
 TrueCharts can be installed as both *normal* Helm Charts or as Apps on TrueNAS SCALE.
 
 This readme is just an automatically generated general guide on installing our Helm Charts and Apps.
-For more information, please click here: [dokuwiki](https://truecharts.org/docs/charts/stable/dokuwiki)
+For more information, please click here: [plextraktsync](https://truecharts.org/docs/charts/incubator/plextraktsync)
 
 **This chart is not maintained by the upstream project and any issues with the chart should be raised [here](https://github.com/truecharts/charts/issues/new/choose)**
 
 ## Source Code
 
-* <https://github.com/truecharts/charts/tree/master/charts/stable/dokuwiki>
-* <https://hub.docker.com/r/bitnami/dokuwiki>
+* <https://github.com/truecharts/charts/tree/master/charts/incubator/plextraktsync>
+* <https://github.com/Taxel/PlexTraktSync>
+* <https://ghcr.io/taxel/plextraktsync>
 
 ## Requirements
 
@@ -34,12 +35,12 @@ To install this Chart on TrueNAS SCALE check our [Quick-Start Guide](https://tru
 
 ### Helm
 
-To install the chart with the release name `dokuwiki`
+To install the chart with the release name `plextraktsync`
 
 ```console
 helm repo add TrueCharts https://charts.truecharts.org
 helm repo update
-helm install dokuwiki TrueCharts/dokuwiki
+helm install plextraktsync TrueCharts/plextraktsync
 ```
 
 ## Uninstall
@@ -52,10 +53,10 @@ To upgrade, rollback or delete this Chart from TrueNAS SCALE check our [Quick-St
 
 ### Helm
 
-To uninstall the `dokuwiki` deployment
+To uninstall the `plextraktsync` deployment
 
 ```console
-helm uninstall dokuwiki
+helm uninstall plextraktsync
 ```
 
 ## Configuration
@@ -72,9 +73,9 @@ Other values may be used from the [values.yaml](https://github.com/truecharts/li
 Specify each parameter using the `--set key=value[,key=value]` argument to `helm install`.
 
 ```console
-helm install dokuwiki \
+helm install plextraktsync \
   --set env.TZ="America/New York" \
-    TrueCharts/dokuwiki
+    TrueCharts/plextraktsync
 ```
 
 #### Configure using a yaml file
@@ -82,7 +83,7 @@ helm install dokuwiki \
 Alternatively, a YAML file that specifies the values for the above parameters can be provided while installing the chart.
 
 ```console
-helm install dokuwiki TrueCharts/dokuwiki -f values.yaml
+helm install plextraktsync TrueCharts/plextraktsync -f values.yaml
 ```
 
 #### Connecting to other charts

@@ -49,6 +49,29 @@ questions:
             type: boolean
             default: true
             hidden: true
+  - variable: imageSelector
+    group: Container Image
+    label: Select Image
+    schema:
+      type: string
+      default: image
+      enum:
+        - value: image
+          description: Base Notebook
+        - value: imageMinimal
+          description: Minimal Notebook
+        - value: imageR
+          description: R Notebook
+        - value: imageScipy
+          description: Scipy Notebook
+        - value: imageTensorflow
+          description: Tensorflow Notebook
+        - value: imageDataScience
+          description: Data Science Notebook
+        - value: imagePySpark
+          description: Pyspark Notebook
+        - value: imageAllSpark
+          description: All Spark Notebook
   - variable: controller
     group: Controller
     label: ""
@@ -164,25 +187,34 @@ questions:
                 label: Arg
                 schema:
                   type: string
-  - variable: env
-    group: "Container Configuration"
-    label: "Image Environment"
+  - variable: jupyter
+    group: Container Configuration
+    label: Jupyter Configuration
     schema:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: RS_USERNAME
-          label: "RS_USERNAME"
-          description: "Backend login username"
+        - variable: jupyter_cmd
+          label: Jupyter Start Command
+          description: Choose the start up command for Jupyter
           schema:
             type: string
-            default: "admin"
-        - variable: RS_PASSWORD
-          label: "RS_PASSWORD"
-          description: "Backend login password"
+            default: lab
+            enum:
+            - value: lab
+              description: Lab
+            - value: notebook
+              description: Notebook
+            - value: nbclassic
+              description: Notebook Classic
+            - value: server
+              description: Server
+        - variable: restartable
+          label: Restartable
+          description: Choose whether restarting Jupyter will kill the container or not
           schema:
-            type: string
-            default: "Password"
+            type: boolean
+            default: true
   - variable: TZ
     label: Timezone
     group: Container Configuration
@@ -297,8 +329,8 @@ questions:
       type: dict
       attrs:
         - variable: main
-          label: "Main Service"
-          description: "The Primary service on which the healthcheck runs, often the webUI"
+          label: Main Service
+          description: The Primary service on which the healthcheck runs, often the webUI
           schema:
             additional_attrs: true
             type: dict
@@ -376,17 +408,17 @@ questions:
                   type: dict
                   attrs:
                     - variable: main
-                      label: "Main Service Port Configuration"
+                      label: Main Service Port Configuration
                       schema:
                         additional_attrs: true
                         type: dict
                         attrs:
                           - variable: port
-                            label: "Port"
-                            description: "This port exposes the container port on the service"
+                            label: Port
+                            description: This port exposes the container port on the service
                             schema:
                               type: int
-                              default: 8080
+                              default: 10300
                               required: true
                           - variable: advanced
                             label: Show Advanced Settings
@@ -405,7 +437,7 @@ questions:
                                   label: Port Type
                                   schema:
                                     type: string
-                                    default: TCP
+                                    default: HTTP
                                     enum:
                                       - value: HTTP
                                         description: HTTP
@@ -423,11 +455,11 @@ questions:
                                     min: 9000
                                     max: 65535
                                 - variable: targetPort
-                                  label: "Target Port"
-                                  description: "The internal(!) port on the container the Application runs on"
+                                  label: Target Port
+                                  description: The internal(!) port on the container the Application runs on
                                   schema:
                                     type: int
-                                    default: 8080
+                                    default: 8888
   - variable: serviceexpert
     group: Networking and Services
     label: Show Expert Config
@@ -702,9 +734,9 @@ questions:
       additional_attrs: true
       type: dict
       attrs:
-        - variable: datapath
-          label: "datapath Storage"
-          description: "Main data path"
+        - variable: data
+          label: data Storage
+          description: Container Data Path
           schema:
             additional_attrs: true
             type: dict
@@ -940,14 +972,14 @@ questions:
                 schema:
                   show_if: [["type", "=", "simpleHP"]]
                   type: boolean
-                  default: true
+                  default: false
               - variable: setPermissions
                 label: Automatic Permissions
                 description: Automatically set permissions on install
                 schema:
                   show_if: [["type", "=", "hostPath"]]
                   type: boolean
-                  default: true
+                  default: false
               - variable: readOnly
                 label: Read Only
                 schema:
@@ -1089,7 +1121,7 @@ questions:
       type: dict
       attrs:
         - variable: main
-          label: "Main Ingress"
+          label: Main Ingress
           schema:
             additional_attrs: true
             type: dict
@@ -1469,22 +1501,22 @@ questions:
             type: dict
             attrs:
               - variable: privileged
-                label: "Privileged mode"
+                label: Privileged mode
                 schema:
                   type: boolean
                   default: false
               - variable: readOnlyRootFilesystem
-                label: "ReadOnly Root Filesystem"
+                label: ReadOnly Root Filesystem
                 schema:
                   type: boolean
                   default: false
               - variable: allowPrivilegeEscalation
-                label: "Allow Privilege Escalation"
+                label: Allow Privilege Escalation
                 schema:
                   type: boolean
                   default: false
               - variable: runAsNonRoot
-                label: "runAsNonRoot"
+                label: runAsNonRoot
                 schema:
                   type: boolean
                   default: false
@@ -1522,20 +1554,20 @@ questions:
       type: dict
       attrs:
         - variable: runAsUser
-          label: "runAsUser"
-          description: "The UserID of the user running the application"
+          label: runAsUser
+          description: The UserID of the user running the application
           schema:
             type: int
             default: 0
         - variable: runAsGroup
-          label: "runAsGroup"
-          description: The groupID this App of the user running the application"
+          label: runAsGroup
+          description: The groupID this App of the user running the application
           schema:
             type: int
             default: 0
         - variable: fsGroup
-          label: "fsGroup"
-          description: "The group that should own ALL storage."
+          label: fsGroup
+          description: The group that should own ALL storage.
           schema:
             type: int
             default: 568
