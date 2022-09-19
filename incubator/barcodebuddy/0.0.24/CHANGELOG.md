@@ -2,6 +2,7 @@
 
 
 
+
 ## [barcodebuddy-0.0.24](https://github.com/truecharts/charts/compare/barcodebuddy-0.0.23...barcodebuddy-0.0.24) (2022-09-19)
 
 ### Chore
@@ -96,4 +97,3 @@
 
 
 ## [barcodebuddy-0.0.23](https://github.com/truecharts/charts/compare/barcodebuddy-0.0.22...barcodebuddy-0.0.23) (2022-09-12)
-

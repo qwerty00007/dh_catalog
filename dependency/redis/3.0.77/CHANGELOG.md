@@ -11,6 +11,23 @@
   - Auto-update chart README [skip ci]
   - Auto-update chart README [skip ci]
   - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - refactor Services SCALE GUI
+  - update docker general non-major ([#3790](https://github.com/truecharts/charts/issues/3790))
+  - update docker general non-major ([#3772](https://github.com/truecharts/charts/issues/3772))
+
+
+
+
+## [redis-3.0.77](https://github.com/truecharts/charts/compare/redis-3.0.75...redis-3.0.77) (2022-09-19)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
   - refactor Services SCALE GUI
   - update docker general non-major ([#3790](https://github.com/truecharts/charts/issues/3790))
   - update docker general non-major ([#3772](https://github.com/truecharts/charts/issues/3772))
@@ -80,20 +97,3 @@
 
 - remove unneeded element from UI ([#3779](https://github.com/truecharts/charts/issues/3779))
 
-
-
-
-## [redis-3.0.74](https://github.com/truecharts/charts/compare/redisinsight-0.0.24...redis-3.0.74) (2022-09-13)
-
-### Chore
-
-- update helm chart common to v10.5.10
-
-
-
-
-## [redis-3.0.73](https://github.com/truecharts/charts/compare/redis-3.0.72...redis-3.0.73) (2022-09-12)
-
-### Chore
-
-- Auto-update chart README [skip ci]
