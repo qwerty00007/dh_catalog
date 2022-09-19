@@ -2,6 +2,21 @@
 
 
 
+## [solr-0.0.49](https://github.com/truecharts/charts/compare/solr-0.0.48...solr-0.0.49) (2022-09-17)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - refactor Services SCALE GUI
+  - update docker general non-major ([#3787](https://github.com/truecharts/charts/issues/3787))
+  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
+
+
+
+
 ## [solr-0.0.49](https://github.com/truecharts/charts/compare/solr-0.0.48...solr-0.0.49) (2022-09-18)
 
 ### Chore
@@ -81,19 +96,4 @@
 
 - update helm chart common to v10.5.8 ([#3729](https://github.com/truecharts/charts/issues/3729))
   - update docker general non-major ([#3727](https://github.com/truecharts/charts/issues/3727))
-
-
-
-
-
-## [solr-0.0.43](https://github.com/truecharts/charts/compare/solr-0.0.42...solr-0.0.43) (2022-09-03)
-
-### Chore
-
-- update helm chart common to v10.5.7 ([#3676](https://github.com/truecharts/charts/issues/3676))
-
-
-
-
-## [solr-0.0.42](https://github.com/truecharts/charts/compare/solr-0.0.41...solr-0.0.42) (2022-09-02)
 

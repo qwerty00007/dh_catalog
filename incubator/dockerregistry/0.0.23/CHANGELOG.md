@@ -2,7 +2,21 @@
 
 
 
-## [dockerregistry-0.0.23](https://github.com/truecharts/charts/compare/dockerregistry-0.0.22...dockerregistry-0.0.23) (2022-09-18)
+## [docker-hub-rss-0.0.24](https://github.com/truecharts/charts/compare/docker-hub-rss-0.0.23...docker-hub-rss-0.0.24) (2022-09-18)
+
+### Chore
+
+- Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - Auto-update chart README [skip ci]
+  - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
+
+
+
+
+## [docker-hub-rss-0.0.24](https://github.com/truecharts/charts/compare/docker-hub-rss-0.0.23...docker-hub-rss-0.0.24) (2022-09-18)
 
 ### Chore
 
@@ -11,12 +25,11 @@
   - Auto-update chart README [skip ci]
   - Auto-update chart README [skip ci]
   - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
-  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
 
 
 
-## [dockerregistry-0.0.23](https://github.com/truecharts/charts/compare/dockerregistry-0.0.22...dockerregistry-0.0.23) (2022-09-16)
+## [docker-hub-rss-0.0.24](https://github.com/truecharts/charts/compare/docker-hub-rss-0.0.23...docker-hub-rss-0.0.24) (2022-09-16)
 
 ### Chore
 
@@ -24,45 +37,41 @@
   - Auto-update chart README [skip ci]
   - Auto-update chart README [skip ci]
   - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
-  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
 
 
 
-## [dockerregistry-0.0.23](https://github.com/truecharts/charts/compare/dockerregistry-0.0.22...dockerregistry-0.0.23) (2022-09-16)
+## [docker-hub-rss-0.0.24](https://github.com/truecharts/charts/compare/docker-hub-rss-0.0.23...docker-hub-rss-0.0.24) (2022-09-16)
 
 ### Chore
 
 - Auto-update chart README [skip ci]
   - Auto-update chart README [skip ci]
   - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
-  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
 
 
 
-## [dockerregistry-0.0.23](https://github.com/truecharts/charts/compare/dockerregistry-0.0.22...dockerregistry-0.0.23) (2022-09-15)
+## [docker-hub-rss-0.0.24](https://github.com/truecharts/charts/compare/docker-hub-rss-0.0.23...docker-hub-rss-0.0.24) (2022-09-15)
 
 ### Chore
 
 - Auto-update chart README [skip ci]
   - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
-  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
 
 
 
-## [dockerregistry-0.0.23](https://github.com/truecharts/charts/compare/dockerregistry-0.0.22...dockerregistry-0.0.23) (2022-09-15)
+## [docker-hub-rss-0.0.24](https://github.com/truecharts/charts/compare/docker-hub-rss-0.0.23...docker-hub-rss-0.0.24) (2022-09-15)
 
 ### Chore
 
 - update helm general non-major ([#3767](https://github.com/truecharts/charts/issues/3767))
-  - split serviceSelector ([#3751](https://github.com/truecharts/charts/issues/3751))
 
 
 
 
-## [dockerregistry-0.0.22](https://github.com/truecharts/charts/compare/dockerregistry-0.0.21...dockerregistry-0.0.22) (2022-09-12)
+## [docker-hub-rss-0.0.23](https://github.com/truecharts/charts/compare/docker-hub-rss-0.0.22...docker-hub-rss-0.0.23) (2022-09-12)
 
 ### Chore
 
@@ -77,7 +86,7 @@
 
 
 
-## [dockerregistry-0.0.22](https://github.com/truecharts/charts/compare/dockerregistry-0.0.21...dockerregistry-0.0.22) (2022-09-12)
+## [docker-hub-rss-0.0.23](https://github.com/truecharts/charts/compare/docker-hub-rss-0.0.22...docker-hub-rss-0.0.23) (2022-09-12)
 
 ### Chore
 
@@ -88,12 +97,3 @@
   - add missing descriptions and clean up descriptions for various charts ([#3704](https://github.com/truecharts/charts/issues/3704))
   - update helm general non-major ([#3711](https://github.com/truecharts/charts/issues/3711))
 
-
-
-
-## [dockerregistry-0.0.22](https://github.com/truecharts/charts/compare/dockerregistry-0.0.21...dockerregistry-0.0.22) (2022-09-11)
-
-### Chore
-
-- Auto-update chart README [skip ci]
-  - Auto-update chart README [skip ci]
