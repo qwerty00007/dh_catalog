@@ -1,0 +1,25 @@
+env:
+  ADDRESS: 0.0.0.0
+  FORCE_WEBP: "0"
+  IMGUR_CLIENT_ID: 546c25a59c58ad7
+image:
+  pullPolicy: IfNotPresent
+  repository: dh.tccr.io/truecharts/rimgo
+  tag: latest@sha256:74b34a7c304c8a0f05250ebacf647da9235be4aaa9b2d813dffc1059dfc4ecb6
+persistence: {}
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+service:
+  main:
+    ports:
+      main:
+        port: 3000
+        protocol: TCP
+        targetPort: 3000
+
+portal:
+  enabled: true

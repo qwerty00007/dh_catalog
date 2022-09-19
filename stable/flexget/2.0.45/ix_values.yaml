@@ -1,0 +1,38 @@
+image:
+  repository: dh.tccr.io/truecharts/flexget
+  pullPolicy: IfNotPresent
+  tag: 3.3.26@sha256:0655c1646c624df1334dc03b18ec1720970ccd751c191de7a6a25543c519a1c6
+
+securityContext:
+  runAsNonRoot: false
+  readOnlyRootFilesystem: false
+
+podSecurityContext:
+  runAsUser: 0
+  runAsGroup: 0
+
+service:
+  main:
+    ports:
+      main:
+        port: 10174
+        targetPort: 5050
+
+env:
+  FG_LOG_LEVEL: info
+  FG_LOG_FILE: flexget.log
+
+secretEnv:
+  FG_WEBUI_PASSWD: "jLeT78KBDPW"
+
+persistence:
+  config:
+    enabled: true
+    mountPath: "/config"
+
+  data:
+    enabled: true
+    mountPath: "/data"
+
+portal:
+  enabled: true

@@ -1,0 +1,32 @@
+env: {}
+image:
+  pullPolicy: IfNotPresent
+  repository: dh.tccr.io/truecharts/factorio
+  tag: vstable@sha256:3ec91b15ae9b9a16edea94ba0f0875ef9e1ded01b9166ad72a40c28a07d2e90c
+persistence:
+  path:
+    enabled: true
+    mountPath: /factorio
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+probes:
+  liveness:
+    enabled: false
+  readiness:
+    enabled: false
+  startup:
+    enabled: false
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+service:
+  main:
+    ports:
+      main:
+        port: 34197
+        protocol: UDP
+        targetPort: 34197
+
+portal:
+  enabled: true
