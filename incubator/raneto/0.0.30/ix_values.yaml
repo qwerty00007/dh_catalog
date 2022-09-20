@@ -1,0 +1,26 @@
+env:
+  UMASK: ""
+image:
+  pullPolicy: IfNotPresent
+  repository: dh.tccr.io/truecharts/raneto
+  tag: latest@sha256:477663389d36364b15b8ececdbe79f3994ca132c3f67a4ed4b98d68215567188
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+service:
+  main:
+    ports:
+      main:
+        port: 3000
+        protocol: TCP
+        targetPort: 3000
+
+portal:
+  enabled: true
