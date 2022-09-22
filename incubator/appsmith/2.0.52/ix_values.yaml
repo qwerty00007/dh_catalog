@@ -1,0 +1,51 @@
+image:
+  repository: dh.tccr.io/truecharts/appsmith
+  tag: 1.8.1@sha256:f20bd63189fa06dc01aa597081d837debe446eecd10290d0183e7e10fa0d2d69
+  pullPolicy: IfNotPresent
+
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+
+podSecurityContext:
+  runAsUser: 0
+  runAsGroup: 0
+
+env:
+  APPSMITH_ADMIN_EMAILS: "me@example.com,you@example.com"
+  APPSMITH_REDIS_URL:
+    secretKeyRef:
+      name: rediscreds
+      key: url
+
+service:
+  main:
+    ports:
+      main:
+        port: 10217
+        targetPort: 80
+  supervisor:
+    enabled: true
+    ports:
+      supervisor:
+        enabled: true
+        port: 10218
+        targetPort: 9001
+
+persistence:
+  appsmithstacks:
+    enabled: true
+    mountPath: "/appsmith-stacks"
+
+redis:
+  enabled: true
+  existingSecret: "rediscreds"
+  redisUsername: appsmith
+# mongodb:
+#   enabled: true
+#   mongodbUsername: appsmith
+#   mongodbDatabase: appsmith
+#   existingSecret: "mongodbcreds"
+
+portal:
+  enabled: true

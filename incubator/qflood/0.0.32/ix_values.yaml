@@ -1,0 +1,35 @@
+env:
+  FLOOD_AUTH: ""
+  UMASK: ""
+image:
+  pullPolicy: IfNotPresent
+  repository: dh.tccr.io/truecharts/qflood
+  tag: latest@sha256:18b90f7b531b473f7d45c13c7016f358a53f6ada1ae69e63581c88f60e658806
+persistence:
+  config:
+    enabled: true
+    mountPath: /config
+podSecurityContext:
+  runAsGroup: 0
+  runAsUser: 0
+securityContext:
+  readOnlyRootFilesystem: false
+  runAsNonRoot: false
+service:
+  hostportfor808:
+    enabled: true
+    ports:
+      hostportfor808:
+        enabled: true
+        port: 8080
+        protocol: TCP
+        targetPort: 8080
+  main:
+    ports:
+      main:
+        port: 3000
+        protocol: HTTP
+        targetPort: 3000
+
+portal:
+  enabled: true
