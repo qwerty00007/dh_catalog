@@ -1,7 +1,7 @@
 image:
-  repository: dh.tccr.io/truecharts/jellyfin
+  repository: nyanmisaka/jellyfin
   pullPolicy: IfNotPresent
-  tag: 10.8.4@sha256:e13124f441178fc8068ea038bf8c470c05840cd503bbd2b611ad99a885437897
+  tag: latest@sha256:9d118b12137b29be796dc8e5ac5a0faef1f67058c2d0d64c66d21317d45c9f18
 
 securityContext:
   readOnlyRootFilesystem: false
